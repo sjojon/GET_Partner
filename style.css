@@ -1,0 +1,29 @@
+/*
+orange #f44e01
+gul #f4a41b
+grå #f0f0f0
+hvit #ffffff
+blå hover: #1239ff
+*/
+
+/*------------- HTML MAIN -------------*/
+body { /*setter bakgrunn på hele siden*/
+    background-color: #f0f0f0; /*bakgrunns farge*/
+    color: #000000; /*tekst farge*/
+}
+
+button { /*denne styrer hoved knappe designet*/
+    background-color: #f44e01; /*farge på knapp*/
+    color: #ffffff; /*farge på tekst*/
+    cursor: pointer; /*setter mus on hover til pekefinger*/
+    border-radius: 8px; /*runde kanter*/
+    border: none; /*fjerner sort ramme*/
+    font-size: 16px; /*tekst størelse */
+    line-height: 24px; /*fastsatt linje bredde*/
+    padding: 8px 20px; /* bredde og lengde på knapp*/
+    text-transform: none; /*små eller store bokstaver anarchy*/
+}
+
+button:hover { /*denne styrer "on hover" på alle knappene*/
+    background-color: #1239ff; /*knappe farge*/
+}
