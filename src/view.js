@@ -7,7 +7,7 @@ function updateView() {
   mainPage.innerHTML = `
     ${updateHeaderView()}
     ${updatePage()}
-  `;
+    `;
 }
 
 // render header

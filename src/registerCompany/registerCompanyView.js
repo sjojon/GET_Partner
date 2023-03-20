@@ -1,61 +1,98 @@
 let errorMessage = ''
 
 function registerCompanyView() {
+    const regCompany = model.inputs.registerCompany
     return /*html*/`
-    <div>
-    <div>Firmanavn:</div>
-    <input 
-    type="text"
-    value="${model.inputs.registerCompany.name}"
-    onchange="model.inputs.registerCompany.name=this.value">
-</div>
-<div>
-    <div>Organisasjonsnr:</div>
-    <input 
-    type="text"
-    value="${model.inputs.registerCompany.orgNr}"
-    onchange="model.inputs.registerCompany.orgNr=this.value">
-</div>
-<div>
-    <div>Kontaktperson:</div>
-    <input 
-    type="text"
-    value="${model.inputs.registerCompany.contactPerson}"
-    onchange="model.inputs.registerCompany.contactPerson=this.value">
-</div>
-<div>
-    <div>Epost:</div>
-    <input 
-    type="text"
-    value="${model.inputs.registerCompany.email}"
-    onchange="model.inputs.registerCompany.email=this.value">
-</div>
-<div>
-    <div>Passord:</div>
-    <input 
-    type="password"
-    value="${model.inputs.registerCompany.password}"
-    onchange="model.inputs.registerCompany.password=this.value">
-</div>
-<div>
-    <div>Gjenta passord:</div>
-    <input 
-    type="password"
-    value="${model.inputs.registerCompany.repeatedPassword}"
-    onchange="model.inputs.registerCompany.repeatedPassword=this.value"
-    id="passwordInput">
-</div>
-<div>
-    <input type="checkbox" onclick="showPassword()"> Vis passord </input>
-</div>
-<div>
-    <button onclick="registerCompanyButton()">Registrer</button>
-    <br> ${errorMessage} 
-</div>    
+    <div id="outer">
+        <div>
+            <div class="text-box">
+                <div>Firmanavn:</div>
+            </div>
+            <input 
+            type="text"
+            value="${regCompany.name}"
+            onchange="regCompany.name=this.value"
+            >
+        </div>
+        <div>
+            <div class="text-box">
+                <div>
+                    Organisasjonsnr:
+                </div>
+            </div>
+            <input 
+            type="text"
+            value="${regCompany.orgNr}"
+            onchange="regCompany.orgNr=this.value"
+            >
+        </div>
+        <div>
+            <div class="text-box">
+                <div>
+                    Kontaktperson:
+                </div>
+            </div>
+            <input 
+            type="text"
+            value="${regCompany.contactPerson}"
+            onchange="regCompany.contactPerson=this.value"
+            >
+        </div>
+        <div>
+            <div class="text-box">
+                <div>
+                    Epost:
+                </div>
+            </div>
+            <input 
+            type="text"
+            value="${regCompany.email}"
+            onchange="regCompany.email=this.value"
+            >
+        </div>
+        <div>
+            <div class="text-box">
+                <div>
+                    Passord:
+                </div>
+            </div>
+            <input 
+            type="password"
+            value="${regCompany.password}"
+            onchange="regCompany.password=this.value"
+            id="passwordInput"
+            >
+        </div>
+        <div>
+            <div class="text-box">
+                <div>
+                    Gjenta passord:
+                </div>
+            </div>
+            <input 
+            type="password"
+            value="${regCompany.repeatedPassword}"
+            onchange="regCompany.repeatedPassword=this.value"
+            id="passwordInput2"
+            >
+        </div>
+        <div>
+            <div id="checkbox-box">
+                <input 
+                    type="checkbox"
+                    id="checkbox" 
+                    onclick="showPassword()"> Vis passord
+                </div>        
+            </div>
+        <div>
+            <button id="reg-button" onclick="registerCompanyButton()">Registrer</button>
+            <br> ${errorMessage} 
+        </div>   
+    </div> 
     `}
 
 
-function registerCompanyCompletedView(){
+function registerCompanyCompletedView() {
     return /*html*/`
     <div>
         Takk for registreringen, du vil få en epost når vi har fått bekreftet informasjonen. <br>

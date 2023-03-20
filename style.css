@@ -13,6 +13,8 @@ body, html {
     color: #000000;
     margin:0;
     padding:0;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
 }
 
 button {
@@ -93,3 +95,4 @@ header {
   #header-contact-button {
     margin-left: 10px;
   }
+
