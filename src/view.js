@@ -17,11 +17,11 @@ function updateHeaderView() {
         <li>tekst1</li>
         <li>tekst2</li>
         <li class="dropdown">
-          <a href="#">dropdown</a>
+          <a>dropdown</a>
           <ul class="dropdown-menu">
-            <li><a href="#">tekst4</a></li>
-            <li><a href="#">tekst5</a></li>
-            <li><a href="#">tekst6</a></li>
+            <li><onclick>tekst4</onclick></li>
+            <li><onclick>tekst5</onclick></li>
+            <li><onclick>tekst6</onclick></li>
           </ul>
         </li>
         <li>tekst3</li>
