@@ -2,6 +2,7 @@ const mainPage = document.getElementById("app")
 
 // render whole page
 updateView()
+
 function updateView() {
   mainPage.innerHTML = `
     ${updateHeaderView()}
@@ -27,6 +28,7 @@ function updateHeaderView() {
       </ul>
     </nav>
   `;
+}
 
 function updatePage() {
   const page = model.app.page
