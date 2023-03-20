@@ -1,16 +1,32 @@
 const mainPage = document.getElementById("app")
 
-//renders the client
+// render whole page
 updateView()
+
 function updateView() {
-  mainPage.innerHTML = /*html*/`
-    hello world hello world hello world<br>
-    hello world hello world hello world<br>
-    hello world hello world hello world<br><br>
-    <button>trykk her</button><br>
-    <button>rediger</button><br>
-    <button>slett</button><br><br><br><br>
-    <button>fritt stående knapp</button>
+  mainPage.innerHTML = `
+    ${updateHeaderView()}
+  `;
+}
+
+// render header
+function updateHeaderView() {
+  return /*html*/ `
+    <nav>
+      <ul>
+        <li>tekst1</li>
+        <li>tekst2</li>
+        <li class="dropdown">
+          <a>dropdown</a>
+          <ul class="dropdown-menu">
+            <li><onclick>tekst4</onclick></li>
+            <li><onclick>tekst5</onclick></li>
+            <li><onclick>tekst6</onclick></li>
+          </ul>
+        </li>
+        <li>tekst3</li>
+      </ul>
+    </nav>
   `;
 }
 

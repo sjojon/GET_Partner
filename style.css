@@ -7,23 +7,65 @@ Blå: #1239ff (hover farge)
 */
 
 /*------------- HTML MAIN -------------*/
-body { /*setter bakgrunn på hele siden*/
-    background-color: #f0f0f0; /*bakgrunns farge*/
-    color: #000000; /*tekst farge*/
+body {
+    background-color: #f0f0f0;
+    color: #000000;
 }
 
-button { /*denne styrer hoved knappe designet*/
-    background-color: #f44e01; /*farge på knapp*/
-    color: #ffffff; /*farge på tekst*/
-    cursor: pointer; /*setter mus on hover til pekefinger*/
-    border-radius: 8px; /*runde kanter*/
-    border: none; /*fjerner sort ramme*/
-    font-size: 16px; /*tekst størelse */
-    line-height: 24px; /*fastsatt linje bredde*/
-    padding: 8px 20px; /* bredde og lengde på knapp*/
-    text-transform: none; /*små eller store bokstaver anarchy*/
+button {
+    background-color: #f44e01;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 20px;
+    text-transform: none;
+
 }
 
-button:hover { /*denne styrer "on hover" på alle knappene*/
-    background-color: #1239ff; /*knappe farge*/
+button:hover {
+    background-color: #1239ff;
+}
+
+
+/*------------- HEADER -------------*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    border: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+header {
+    background-color: #448557;
+    color: #000000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+    position: absolute;
 }
