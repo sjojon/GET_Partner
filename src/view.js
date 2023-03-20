@@ -26,6 +26,9 @@ function updatePage() {
     case 'registerCompany':
       registerCompanyView()
       break
+    case 'registerCompanyCompleted':
+      registerCompanyCompletedView()
+      break
     case 'registerStudent':
       registerStudentView()
       break
