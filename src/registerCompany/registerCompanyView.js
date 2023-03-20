@@ -14,14 +14,14 @@ function registerCompanyView() {
     <div>Organisasjonsnr:</div>
     <input 
     type="text"
-    value="${model.inputs.orgNr.orgNr}"
+    value="${model.inputs.registerCompany.orgNr}"
     onchange="model.inputs.registerCompany.orgNr=this.value">
 </div>
 <div>
     <div>Kontaktperson:</div>
     <input 
     type="text"
-    value="${model.inputs.contactPerson.contactPerson}"
+    value="${model.inputs.registerCompany.contactPerson}"
     onchange="model.inputs.registerCompany.contactPerson=this.value">
 </div>
 <div>
