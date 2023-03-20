@@ -10,21 +10,6 @@ $(function() {
   });
 
 
-
-
-<div class="dropdown"> trykk her
-
-    <div class="dropdown-menu">
-        <div id="box">
-            <text>pikk</text>
-            <text>baller</text>
-        </div>
-    </div>
-
-
-</div>
-
-
 header {
     background-color: #333;
     color: #fff;
