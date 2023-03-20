@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: 'registerCompany',
+        page: 'registerCompanyCompleted',
         isLoggedIn: false,
     },
 

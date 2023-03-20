@@ -6,7 +6,7 @@ input {
     height: 20px;
     margin-bottom: 10px;
 }
-#outer{
+.outer{
     background-color: #ffffff;
     text-align: center;
     border: solid 1px;
@@ -21,6 +21,7 @@ input {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
 #checkbox-box{
     text-align: left;
     margin-left: 36px;

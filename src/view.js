@@ -46,7 +46,7 @@ function updateHeaderView() {
 function updatePage() {
   const page = model.app.page
   let html = ''
-  switch (page) {
+  switch (model.app.page) {
     case 'login':
       html = loginView()
       break
