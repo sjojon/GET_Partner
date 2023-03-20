@@ -12,23 +12,35 @@ function updateView() {
 // render header
 function updateHeaderView() {
   return /*html*/ `
+  <header>
+  <div id="header-box">
     <nav>
+      <div id="header-logo">
+        <img src="images/GETPartner_logo_header.png" />
+      </div>
       <ul>
-        <li>tekst1</li>
-        <li>tekst2</li>
+        <li>Tekst 1</li>
+        <li>Tekst 2</li>
         <li class="dropdown">
-          <a>dropdown</a>
+          <a>Dropdown</a>
           <ul class="dropdown-menu">
-            <li><onclick>tekst4</onclick></li>
-            <li><onclick>tekst5</onclick></li>
-            <li><onclick>tekst6</onclick></li>
+            <li><onclick>Valg1</onclick></li>
+            <li><onclick>Valg2</onclick></li>
+            <li><onclick>Valg3</onclick></li>
           </ul>
         </li>
-        <li>tekst3</li>
+        <li>Tekst 3</li>
       </ul>
+      <div id="header-contact-button">
+        <button>Kontakt oss</button>
+      </div>
     </nav>
+  </div>
+</header>
+
   `;
 }
+
 
 function updatePage() {
   const page = model.app.page
