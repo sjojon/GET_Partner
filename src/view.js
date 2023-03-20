@@ -45,36 +45,38 @@ function updateHeaderView() {
 
 function updatePage() {
   const page = model.app.page
+  let html = ''
   switch (page) {
     case 'login':
-      loginView()
+      html = loginView()
       break
     case 'registerChoice':
-      registerChoiceView()
+      html = registerChoiceView()
       break
     case 'registerCompany':
-      registerCompanyView()
+      html = registerCompanyView()
       break
     case 'registerCompanyCompleted':
-      registerCompanyCompletedView()
+      html = registerCompanyCompletedView()
       break
     case 'registerStudent':
-      registerStudentView()
+      html = registerStudentView()
       break
     case 'browseStudentSearch':
-      studentSearchView()
+      html = studentSearchView()
       break
     case 'browseStudent':
-      browseStudentView()
+      html = browseStudentView()
       break
     case 'editStudentProfile':
-      editStudentProfileView()
+      html = editStudentProfileView()
       break
     case 'studentProfile':
-      studentProfileView()
+      html = studentProfileView()
       break
     case 'acceptCompany':
-      acceptCompanyView()
+      html = acceptCompanyView()
       break
   }
+  return html
 }

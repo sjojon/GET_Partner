@@ -1,8 +1,7 @@
 let errorMessage = ''
 
 function registerCompanyView() {
-    const html = document.getElementById('app')
-    html.innerHTML = /*html*/`
+    return /*html*/`
     <div>
     <div>Firmanavn:</div>
     <input 
@@ -47,7 +46,7 @@ function registerCompanyView() {
     id="passwordInput">
 </div>
 <div>
-    <input type="checkbox" onclick="showPassword()"> Vis passord
+    <input type="checkbox" onclick="showPassword()"> Vis passord </input>
 </div>
 <div>
     <button onclick="registerCompanyButton()">Registrer</button>
@@ -57,11 +56,10 @@ function registerCompanyView() {
 
 
 function registerCompanyCompletedView(){
-    const html = document.getElementById('app')
-    html.innerHTML = /*html*/`
+    return /*html*/`
     <div>
-        Takk for registreringen, du vil få en epost når vi har fått bekreftet informasjonen deres. <br>
-        God dag videre fra oss i GetAcademy!
+        Takk for registreringen, du vil få en epost når vi har fått bekreftet informasjonen. <br>
+        God dag videre fra oss i GetPartner!
     </div>
     `
 

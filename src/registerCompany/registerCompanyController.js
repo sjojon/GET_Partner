@@ -17,17 +17,17 @@ function registerCompanyButton() {
         company.password == '' ||
         company.repeatedPassword == ''
     ) {
-        errorMessage = 'Alle felt må fylles ut'
+        errorMessage = 'Alle felt må fylles ut!'
         updateView()
 }
 
-    else if (orgNr.length !== 9){
-        errorMessage = 'Orgasnisjonsnr er ikke riktig lengde'
+    else if (company.orgNr.length !== 9){
+        errorMessage = 'Orgasnisjonsnr er ikke riktig lengde!'
         updateView()
     }
 
     else if (company.password !== company.repeatedPassword){
-        errorMessage = 'Passordet er ikke likt i begge feltene'
+        errorMessage = 'Passordet er ikke likt i begge feltene!'
         updateView()
     }
 
