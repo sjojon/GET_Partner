@@ -2,7 +2,6 @@ const mainPage = document.getElementById("app")
 
 // render whole page
 updateView()
-
 function updateView() {
   mainPage.innerHTML = `
     ${updateHeaderView()}
@@ -28,4 +27,36 @@ function updateHeaderView() {
       </ul>
     </nav>
   `;
+
+function updatePage() {
+  const page = model.app.page
+  switch (page) {
+    case 'login':
+      loginView()
+      break
+    case 'registerChoice':
+      registerChoiceView()
+      break
+    case 'registerCompany':
+      registerCompanyView()
+      break
+    case 'registerStudent':
+      registerStudentView()
+      break
+    case 'browseStudentSearch':
+      studentSearchView()
+      break
+    case 'browseStudent':
+      browseStudentView()
+      break
+    case 'editStudentProfile':
+      editStudentProfileView()
+      break
+    case 'studentProfile':
+      studentProfileView()
+      break
+    case 'acceptCompany':
+      acceptCompanyView()
+      break
+  }
 }
