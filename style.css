@@ -85,6 +85,7 @@ header {
     background-color: #ffffff;
     padding: 10px;
     border: none;
+    right: -45px;
   }
   
   .dropdown:hover .dropdown-menu {
