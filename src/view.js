@@ -46,6 +46,9 @@ function updatePage() {
   const page = model.app.page
   let html = ''
   switch (page) {
+    case 'home':
+      html = homeView()
+      break
     case 'login':
       html = loginView()
       break
