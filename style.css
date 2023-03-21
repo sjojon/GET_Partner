@@ -60,6 +60,7 @@ header {
   
   #header-logo {
     margin-right: 10px;
+    cursor: pointer;
   }
   
   ul {

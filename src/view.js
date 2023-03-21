@@ -17,7 +17,7 @@ function updateHeaderView() {
   <div id="header-box">
     <nav>
       <div id="header-logo">
-        <img src="images/GETPartner_logo_header.png" />
+        <img src="images/GETPartner_logo_header.png" onclick="clickLogoGoHome()"/>
       </div>
       <ul>
         <li>Tekst 1</li>
