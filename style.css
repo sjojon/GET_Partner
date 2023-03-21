@@ -97,3 +97,26 @@ header {
     margin-left: 10px;
   }
 
+  .list-button{
+    background-color: #be4c4c00;
+    color: #000000;
+
+  }
+
+  .list-button:hover {
+    background-color: #f0f0f000;
+}
+
+.list-button-dropdown{
+  background-color: #f0f0f0;
+  color: #000000;
+  margin: 2px;
+  padding: 0px 0px;
+  width: 100px;
+
+}
+
+.list-button-dropdown:hover {
+  background-color: #f44e01;
+}
+

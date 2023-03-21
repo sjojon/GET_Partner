@@ -17,20 +17,20 @@ function updateHeaderView() {
   <div id="header-box">
     <nav>
       <div id="header-logo">
-        <img src="images/GETPartner_logo_header.png" onclick="clickLogoGoHome()"/>
+        <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
       </div>
       <ul>
-        <li>Tekst 1</li>
-        <li>Tekst 2</li>
+      <button class="list-button" onclick="tekst2()">Tekst 1</button>
+        <button class="list-button" onclick="tekst2()">Tekst 2</button>
         <li class="dropdown">
-          <a>Dropdown</a>
+          <a>Profil</a>
           <ul class="dropdown-menu">
-            <li><onclick>Valg1</onclick></li>
-            <li><onclick>Valg2</onclick></li>
-            <li><onclick>Valg3</onclick></li>
+            <button class="list-button-dropdown" onclick="tekst2()">Se profil</button>
+            <button class="list-button-dropdown" onclick="tekst2()">Endre profil</button>
+            <button class="list-button-dropdown" onclick="goToLogin()">Log inn/ut</button> <!--endre til  dollar tag log inn/ logg ut-->
           </ul>
         </li>
-        <li>Tekst 3</li>
+        <button class="list-button" onclick="tekst3()">Søk</button>
       </ul>
       <div id="header-contact-button">
         <button>Kontakt oss</button>
@@ -38,7 +38,6 @@ function updateHeaderView() {
     </nav>
   </div>
 </header>
-
   `;
 }
 
