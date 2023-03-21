@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: 'home',
+        page: 'acceptCompany',
         isLoggedIn: false,
     },
 
@@ -60,7 +60,7 @@ const model = {
                 { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com' },
             ],
             pendingCompanies: [
-                { name: 'Nidar', password: '!Freia', userType: 'company', email: 'nidar@orkla.com', orgNr: '110010001' }
+                { name: 'Nidar', password: '!Freia', userType: 'company', contactPerson: 'Jens', email: 'jens@nidar.no', orgNr: '110010001' }
             ],
         },
         codeLanguages: [
