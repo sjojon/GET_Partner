@@ -2,10 +2,21 @@ function acceptCompanyView() {
     return /*html*/`
     <div id="outer">
         <div id="inner">
-            ${createCompanyList()}
+            ${emptyListOrNot()}
         </div>
     </div>    
     `}
+
+function emptyListOrNot(){
+    if(Object.keys(model.data.accounts.pendingCompanies).length > 0){        
+        return createCompanyList()
+    } else {
+        return /*html*/`
+        Ingen bedrifter som venter.
+        `
+        
+    }
+}
 
 function createCompanyList() {
     let html = '';
@@ -37,6 +48,6 @@ function createCompanyList() {
                 </div>
             </div>
             `
-        }
-        return html
     }
+    return html
+}
