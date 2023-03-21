@@ -60,7 +60,9 @@ const model = {
                 { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com' },
             ],
             pendingCompanies: [
-                { id: 1, name: 'Nidar', password: '!Freia', userType: 'company', contactPerson: 'Jens', email: 'jens@nidar.no', orgNr: '110010001' }
+                { id: 1, name: 'Nidar', password: '!Freia', userType: 'company', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
+                { id: 2, name: 'Freia', password: '!Nidar', userType: 'company', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
+                { id: 3, name: 'Komplett', password: 'Penger', userType: 'company', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
             ],
         },
         codeLanguages: [

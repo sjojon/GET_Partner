@@ -30,22 +30,22 @@ function createCompanyList() {
                     ${company.name}
                 </div>
                 <div class="company-nr">
-                    Org Nr: ${company.orgNr}
+                    ${company.orgNr}
                 </div>
                 <div class="company-person">
-                    Kontaktperson: ${company.contactPerson}
+                    ${company.contactPerson}
                 </div>
                 <div class="company-mail">
-                    Email: ${company.email}
+                    ${company.email}
                 </div>
-                <div class="buttons">
-                    <div class="accept-buttons">
+                
+                    <div class="accept-button">
                         <button onclick="acceptCompany(${company.id})">Godta</button>
                     </div>
-                    <div class="decline-buttons">
+                    <div class="decline-button">
                         <button onclick="declineCompany(${company.id})">Avvis</button>
                     </div>
-                </div>
+                
             </div>
             `
     }
