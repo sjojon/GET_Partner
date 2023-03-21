@@ -40,6 +40,3 @@ function createCompanyList() {
         }
         return html
     }
-
-    
-   // <button onclick="goToDeletePage(${person.id})">X</button>
