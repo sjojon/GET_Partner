@@ -5,7 +5,8 @@ input {
     border-radius: 5px;
     height: 20px;
     margin-bottom: 10px;
-}
+    }
+
 #outer{
     background-color: #ffffff;
     text-align: center;
@@ -13,29 +14,55 @@ input {
     border-radius: 8px;
     border-color: #d7d9e3;
     width: 400px;
-    margin-top: px;
     padding: 15px;
     position: absolute;
     top: 20%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    }
+
+#header-text{
+    margin-bottom: 40px;
+    font-weight: 700;
+}    
+
+.text-over-box{
+    font-size: 14px;
 }
+
+#top-margin{
+    margin-top: 30px;
+    }
+
 #checkbox-box{
     text-align: left;
     margin-left: 36px;
-}
+    }
+
 #checkbox{
     width: 20px;
     height: 15px;
-}
+    }
+
 #reg-button{
     margin-top: 10px;
-}
+    margin-top: 40px;
+    }
+
+#error-text{
+    margin-top: 10px;
+    font-size: 12px;
+    }
+
+#bottom-margin{
+    margin-bottom: 20px;
+    }
+
 .text-box{
     text-align: left;
     margin-left: 36px;
     left: 50%;
     width: 320px;
     text-size-adjust: 60%;
-}
+    }

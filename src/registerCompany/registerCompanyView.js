@@ -4,9 +4,14 @@ function registerCompanyView() {
     const regCompany = model.inputs.registerCompany
     return /*html*/`
     <div id="outer">
-        <div>
+        <div id="top-margin">
+            <h3 id="header-text">
+                Registrer ny bedriftskonto
+            </h3>
             <div class="text-box">
-                <div>Firmanavn:</div>
+                <div class="text-over-box">
+                    Firmanavn:
+                </div>
             </div>
             <input 
             type="text"
@@ -16,7 +21,7 @@ function registerCompanyView() {
         </div>
         <div>
             <div class="text-box">
-                <div>
+                <div class="text-over-box">
                     Organisasjonsnr:
                 </div>
             </div>
@@ -28,7 +33,7 @@ function registerCompanyView() {
         </div>
         <div>
             <div class="text-box">
-                <div>
+                <div class="text-over-box">
                     Kontaktperson:
                 </div>
             </div>
@@ -40,7 +45,7 @@ function registerCompanyView() {
         </div>
         <div>
             <div class="text-box">
-                <div>
+                <div class="text-over-box">
                     Epost:
                 </div>
             </div>
@@ -52,7 +57,7 @@ function registerCompanyView() {
         </div>
         <div>
             <div class="text-box">
-                <div>
+                <div class="text-over-box">
                     Passord:
                 </div>
             </div>
@@ -65,7 +70,7 @@ function registerCompanyView() {
         </div>
         <div>
             <div class="text-box">
-                <div>
+                <div class="text-over-box">
                     Gjenta passord:
                 </div>
             </div>
@@ -78,15 +83,17 @@ function registerCompanyView() {
         </div>
         <div>
             <div id="checkbox-box">
+                <div class="text-over-box">
                 <input 
                     type="checkbox"
                     id="checkbox" 
-                    onclick="showPassword()"> Vis passord
+                    onclick="showPassword()">Vis passord
+                </div>
                 </div>        
             </div>
-        <div>
+        <div id="bottom-margin">
             <button id="reg-button" onclick="registerCompanyButton()">Registrer</button>
-            <br> ${errorMessage} 
+            <br> <div id="error-text">${errorMessage}</div>
         </div>   
     </div> 
     `}
