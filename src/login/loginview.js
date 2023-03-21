@@ -1,5 +1,5 @@
 function loginView() {
-    const login = model.inputs.login;
+    const loginPage = model.inputs.login;
     return /*HTML*/ `
     
     `;
