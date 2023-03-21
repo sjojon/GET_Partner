@@ -60,7 +60,7 @@ const model = {
                 { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com' },
             ],
             pendingCompanies: [
-                { name: 'Nidar', password: '!Freia', userType: 'company', contactPerson: 'Jens', email: 'jens@nidar.no', orgNr: '110010001' }
+                { id: 1, name: 'Nidar', password: '!Freia', userType: 'company', contactPerson: 'Jens', email: 'jens@nidar.no', orgNr: '110010001' }
             ],
         },
         codeLanguages: [
