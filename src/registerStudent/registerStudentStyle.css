@@ -1,0 +1,45 @@
+.outer-box{
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    background-color: white;
+    width: 500px;
+    padding-left: 25px;
+    height: 400px;
+}
+
+.showPasswordDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 20px;
+    
+}
+.checkBox{
+    width: 20px;
+    margin-bottom: 3px;
+}
+.labelCheckBox{
+    align-self: center;
+}
+.profileButton{
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #f44e01;
+    color: white;
+    font-weight: bold;
+}
+.pageHeading{
+    color: #f44e01;
+    font-weight: bolder;
+}
+.pageMinusHeader{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
