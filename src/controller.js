@@ -13,17 +13,15 @@ $(function() {
 
 //tar deg til hjemme skjermen når du hitter logoen
 function goToHome() {
-  if (model.app.page !== 'homePage') {
-      model.app.page = 'homePage';
+      model.app.page = 'home';
       console.log(model.app.page);
       updateView()
-  }
 }
 
 
 //tar deg til login
 function goToLogin(){
-  model.app.page = 'loginPage'
+  model.app.page = 'login'
   console.log(model.app.page);
   updateView()
 }
