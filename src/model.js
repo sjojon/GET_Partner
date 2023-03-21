@@ -63,31 +63,31 @@ const model = {
                 { name: 'Nidar', password: '!Freia', userType: 'company', email: 'nidar@orkla.com', orgNr: '110010001' }
             ],
         },
-        codeLanguages:[
-            {id: 1, name: 'JavaScript'},
-            {id: 2, name: 'Java'},
-            {id: 3, name: 'C'},
-            {id: 4, name: 'C++'},
-            {id: 5, name: 'C#'},
-            {id: 6, name: 'Python'},
-            {id: 7, name: 'Kotlin'},
-            {id: 8, name: 'Julia'},
-            {id: 9, name: 'PHP'},
-            {id: 10, name: 'SQL'},
-            {id: 11, name: 'Ruby'},
-            {id: 12, name: 'Assembly'},
+        codeLanguages: [
+            { id: 1, name: 'JavaScript' },
+            { id: 2, name: 'Java' },
+            { id: 3, name: 'C' },
+            { id: 4, name: 'C++' },
+            { id: 5, name: 'C#' },
+            { id: 6, name: 'Python' },
+            { id: 7, name: 'Kotlin' },
+            { id: 8, name: 'Julia' },
+            { id: 9, name: 'PHP' },
+            { id: 10, name: 'SQL' },
+            { id: 11, name: 'Ruby' },
+            { id: 12, name: 'Assembly' },
         ],
-        frameworks:[
-            {id: 1, name: 'Node.js'},
-            {id: 2, name: 'React.js'},
-            {id: 3, name: 'Angular.js'},
-            {id: 4, name: 'Vue.js'},
-            {id: 5, name: 'Django'},
-            {id: 6, name: 'Apache'},
-            {id: 7, name: 'TypeScript'},
-            {id: 8, name: '.NET'},
-            {id: 9, name: 'Rails'},
-            {id: 10, name: 'Express.js'},
+        frameworks: [
+            { id: 1, name: 'Node.js' },
+            { id: 2, name: 'React.js' },
+            { id: 3, name: 'Angular.js' },
+            { id: 4, name: 'Vue.js' },
+            { id: 5, name: 'Django' },
+            { id: 6, name: 'Apache' },
+            { id: 7, name: 'TypeScript' },
+            { id: 8, name: '.NET' },
+            { id: 9, name: 'Rails' },
+            { id: 10, name: 'Express.js' },
         ],
 
         county: [
@@ -112,4 +112,4 @@ const model = {
 
 
 
-}
+};
