@@ -4,6 +4,6 @@ function homeView() {
     hei kjekk1 <br>
     dette er hjemmeskjermen<br>
     <br>
-    <img src="https://i.ytimg.com/vi/SQJrYw1QvSQ/maxresdefault.jpg"/>
+    <img src="https://i.ytimg.com/vi/SQJrYw1QvSQ/maxresdefault.jpg" width="200"/>
     `;
 }
