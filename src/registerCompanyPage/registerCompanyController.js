@@ -1,7 +1,7 @@
-function showPassword() {
+function showRegCompanyPassword() {
     const input = document.getElementById('passwordInput')
     const input2 = document.getElementById('passwordInput2')
-    if (!model.inputs.registerCompany.showPassword) {
+    if (model.inputs.registerCompany.showPassword) {
         input.type = 'text'
         input2.type = 'text'
     } else {
@@ -22,38 +22,39 @@ function registerCompanyButton() {
     ) {
         errorMessage = 'Alle felt må fylles ut!'
         updateView()
-}
+    }
 
-    else if (company.orgNr.length !== 9){
+    else if (company.orgNr.length !== 9) {
         errorMessage = 'Orgasnisjonsnr er ikke riktig lengde!'
         updateView()
     }
 
-    else if (company.password !== company.repeatedPassword){
+    else if (company.password !== company.repeatedPassword) {
         errorMessage = 'Passordet er ikke likt i begge feltene!'
         updateView()
     }
 
     else {
         errorMessage = ''
-        createCompany()     
+        createCompany()
         updateView()
     }
 }
 
-function createCompany(){
+function createCompany() {
     const company = model.inputs.registerCompany
-    const pending = model.data.accounts.pendingCompanies
     const newCompany = {}
 
-    newCompany.id = Object.keys(pending).length + 1    
-    newCompany.userType = 'company'
+    newCompany.id = findAvailableAccountId()
+
+    newCompany.userType = 'pendingCompany'
     newCompany.name = company.name
     newCompany.orgNr = company.orgNr
     newCompany.contactPerson = company.contactPerson
     newCompany.email = company.email
     newCompany.password = company.password
 
-    pending.push(newCompany)
+    model.data.accounts.allAccounts.push(newCompany)
     model.app.page = 'registerCompanyCompleted'
 }
+

@@ -1,28 +1,13 @@
 function acceptCompany(id){
-    const company = findPendingCompanyById(id)
-    //console.log(Object.keys(model.data.accounts.allAccounts).length)
-    //console.log(Object.keys(model.data.accounts.pendingCompanies).length)
-    company.id = Object.keys(model.data.accounts.allAccounts).length + 1
-    model.data.accounts.allAccounts.push(company)
-    model.data.accounts.pendingCompanies.splice(company, 1)
-    //console.log(Object.keys(model.data.accounts.allAccounts).length)
-    //console.log(Object.keys(model.data.accounts.pendingCompanies).length)
+    const company = findAccountById(id)
+    company.userType = 'company'
+    console.log(company)
     updateView()
 }
 
 function declineCompany(id){
-    const company = findPendingCompanyById(id)
-    model.data.accounts.pendingCompanies.splice(company, 1)
+    const company = findAccountById(id)
+    const accounts = model.data.accounts.allAccounts
+    model.data.accounts.allAccounts = accounts.filter(obj => obj.id !== company.id)
     updateView()
 }
-///////////////////////////UTESTET//////////////////////////////
-
-function findPendingCompanyById(id){
-    for(let company of model.data.accounts.pendingCompanies){
-        if(company.id === id)
-        return company
-    }
-    return null
-}
-
-////////////////////////////////////////////////////////////////

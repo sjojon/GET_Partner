@@ -5,11 +5,12 @@ updateView()
 
 function updateView() {
   mainPage.innerHTML = `
+  
+
     ${updateHeaderView()}
     ${updatePage()}
     `;
 }
-
 // render header
 function updateHeaderView() {
   return /*html*/ `

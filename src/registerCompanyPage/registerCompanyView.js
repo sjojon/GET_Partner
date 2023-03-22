@@ -2,8 +2,8 @@ let errorMessage = ''
 
 function registerCompanyView() {
     return /*html*/`
-    <link rel="stylesheet" href="src/registerCompanyPage/regCompanyStyle.css">
-    <div id="outer">
+
+    <div class="outer">
         <div id="top-margin">
             <h3 id="header-text">
                 Registrer ny bedriftskonto
@@ -86,8 +86,7 @@ function registerCompanyView() {
             <input 
             id="checkbox"
             type="checkbox"
-            oninput="model.inputs.registerCompany.showPassword = this.checked" 
-            onclick="showPassword()"
+            oninput="model.inputs.registerCompany.showPassword = this.checked, showRegCompanyPassword()" 
             >Vis passord             
             </div>        
         </div>
@@ -104,6 +103,9 @@ function registerCompanyCompletedView() {
     <div class="outer">
         <div>
             Takk for registreringen! <br> Du får en epost når vi har bekreftet informasjonen
+        </div>
+        <div id="completed-button">
+            <button onclick="goToHome()">OnLick</button>
         </div>
     </div>
     `
