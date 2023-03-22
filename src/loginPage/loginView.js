@@ -34,7 +34,7 @@ function loginView() {
 
                 <button id="margin-button" onclick="login()">Logg inn</button>
 
-                <div>Har du ikke bruker?</div>
+                <div>Er du bedrift uten bruker?</div>
                 <button id="margin-button" onclick="register()">Registrer deg</button>
             
             <div>${invalid}</div>

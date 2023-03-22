@@ -23,6 +23,7 @@ input {
 }
 
 #header {
+    margin-top: 20px;
     margin-bottom: 40px;
     font-weight: 700;
 }
@@ -50,6 +51,6 @@ input {
 }
 
 #margin-button {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
