@@ -2,6 +2,7 @@ const registerNewStAccount= model.inputs.registerStudent
 let switchInputType="password"
 function registerStudentView(){
     return /*html*/`
+    <link rel="stylesheet" href="src/registerStudent/registerStudentStyle.css" />
     <div class="pageMinusHeader">
     <div class="outer-box">
        <h3 class="pageHeading"> Registrer student</h3>
