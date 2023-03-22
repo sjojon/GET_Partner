@@ -7,16 +7,32 @@ input {
     margin-bottom: 10px;
 }
 
+.text-box {
+    text-align: left;
+    margin-left: 36px;
+    left: 50%;
+    width: 320px;
+    text-size-adjust: 60%;
+}
+
+.text-over-box {
+    font-size: 14px;
+}
+
+#checkbox-box {
+    text-align: left;
+    margin-left: 36px;
+
+}
+
 #outer {
     background-color: #ffffff;
-    text-align: center;
     border: solid 1px;
     border-radius: 8px;
     border-color: #d7d9e3;
     width: 400px;
     padding: 15px;
     position: absolute;
-    top: 20%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -27,18 +43,10 @@ input {
     font-weight: 700;
 }
 
-.text-over-box {
-    font-size: 14px;
-}
-
 #top-margin {
     margin-top: 30px;
 }
 
-#checkbox-box {
-    text-align: left;
-    margin-left: 36px;
-}
 
 #checkbox {
     width: 20px;
@@ -56,12 +64,4 @@ input {
 
 #bottom-margin {
     margin-bottom: 20px;
-}
-
-.text-box {
-    text-align: left;
-    margin-left: 36px;
-    left: 50%;
-    width: 320px;
-    text-size-adjust: 60%;
 }

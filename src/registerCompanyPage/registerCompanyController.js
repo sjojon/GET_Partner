@@ -1,7 +1,7 @@
 function showPassword() {
     const input = document.getElementById('passwordInput')
     const input2 = document.getElementById('passwordInput2')
-    if (input.type === 'password') {
+    if (!model.inputs.registerCompany.showPassword) {
         input.type = 'text'
         input2.type = 'text'
     } else {

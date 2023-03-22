@@ -2,6 +2,7 @@ let errorMessage = ''
 
 function registerCompanyView() {
     return /*html*/`
+    <link rel="stylesheet" href="src/registerCompanyPage/regCompanyStyle.css">
     <div id="outer">
         <div id="top-margin">
             <h3 id="header-text">
@@ -82,14 +83,14 @@ function registerCompanyView() {
         </div>
         <div>
             <div id="checkbox-box">
-                <div class="text-over-box">
-                <input 
-                    type="checkbox"
-                    id="checkbox" 
-                    onclick="showPassword()">Vis passord
-                </div>
-                </div>        
-            </div>
+            <input 
+            id="checkbox"
+            type="checkbox"
+            oninput="model.inputs.registerCompany.showPassword = this.checked" 
+            onclick="showPassword()"
+            >Vis passord             
+            </div>        
+        </div>
         <div id="bottom-margin">
             <button id="reg-button" onclick="registerCompanyButton()">Registrer</button>
             <br> <div id="error-text">${errorMessage}</div>

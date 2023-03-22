@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: '',
+        page: 'registerCompany',
         isLoggedIn: false,
     },
 
@@ -16,7 +16,8 @@ const model = {
             contactPerson: '',
             email: '',
             password: '',
-            repeatedPassword: ''
+            repeatedPassword: '',
+            showPassword: false,
         },
         registerStudent: {
             name: '',
