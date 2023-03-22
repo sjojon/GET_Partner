@@ -1,5 +1,6 @@
 function acceptCompanyView() {
     return /*html*/`
+    <link rel="stylesheet" href="src/acceptCompanyPage/accCompanyStyle.css">
     <div id="outer">
         <div id="inner">
             ${emptyListOrNot()}

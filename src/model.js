@@ -1,7 +1,11 @@
 const model = {
 
     app: {
+<<<<<<< HEAD
+        page: 'registerCompany',
+=======
         page: 'home',
+>>>>>>> 17afcedaddeb377f1d122aebfb604b81d108ea5b
         isLoggedIn: false,
     },
 
@@ -16,7 +20,8 @@ const model = {
             contactPerson: '',
             email: '',
             password: '',
-            repeatedPassword: ''
+            repeatedPassword: '',
+            showPassword: false,
         },
         registerStudent: {
             name: '',
@@ -32,7 +37,7 @@ const model = {
             location: '',
             codeExp: '',
             codeExpList: [],
-            interesets: '',
+            interests: '',
             importantInfo: '',
             cv: '',
             profilePicture: ''
@@ -65,7 +70,7 @@ const model = {
                 { id: 3, name: 'Komplett', password: 'Penger', userType: 'company', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
             ],
         },
-        interesets: [
+        interests: [
             { accountId: 1, technologyId: 1 },
             { accountId: 2, technologyId: 1 }
         ],
