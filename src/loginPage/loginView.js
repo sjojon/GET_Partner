@@ -3,6 +3,7 @@ let invalid = '';
 function loginView() {
     const loginPage = model.inputs.login;
     return /*HTML*/ `
+    <link rel="stylesheet" href="src/loginPage/loginstyle.css">
     <div id="outer">
         <div id="header">Logg inn</div>
             <div class="text-box">
@@ -19,7 +20,8 @@ function loginView() {
                 Passord:
                 </div>
             </div>
-                    <input type="password" 
+                    <input
+                    type="password" 
                     value="${loginPage.password}" 
                     onchange="loginPage.password=this.value">
 
@@ -28,7 +30,7 @@ function loginView() {
                 <input 
                     type="checkbox"
                     id="checkbox" 
-                    onclick="showPassword()">Vis passord
+                    onclick="">Vis passord
             </div>
             </div>  
 
