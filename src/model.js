@@ -70,7 +70,7 @@ const model = {
                 { id: 3, name: 'Komplett', password: 'Penger', userType: 'company', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
             ],
         },
-        interesets: [
+        interests: [
             { accountId: 1, technologyId: 1 },
             { accountId: 2, technologyId: 1 }
         ],
