@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: 'home',
+        page: '',
         isLoggedIn: false,
     },
 
@@ -52,7 +52,7 @@ const model = {
         },
         accounts: {
             allAccounts: [
-                { id: 1, name: 'admin', password: 'admin', userType: 'admin' },
+                { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
                 { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com' },
                 { id: 3, name: 'Bedrift1', password: 'passord1', userType: 'company', email: 'bedrift1@mail.com', orgNr: '010010001' },
             ],
@@ -65,6 +65,10 @@ const model = {
                 { id: 3, name: 'Komplett', password: 'Penger', userType: 'company', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
             ],
         },
+        interesets: [
+            {accountId: 1, technologyId: 1},
+            {accountId: 2, technologyId: 1}
+        ],
         codeLanguages: [
             { id: 1, name: 'JavaScript' },
             { id: 2, name: 'Java' },
