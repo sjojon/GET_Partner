@@ -37,7 +37,7 @@ const model = {
             location: '',
             codeExp: '',
             codeExpList: [],
-            interesets: '',
+            interests: '',
             importantInfo: '',
             cv: '',
             profilePicture: ''
