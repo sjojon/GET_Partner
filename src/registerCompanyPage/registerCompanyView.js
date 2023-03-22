@@ -1,7 +1,6 @@
 let errorMessage = ''
 
 function registerCompanyView() {
-    const regCompany = model.inputs.registerCompany
     return /*html*/`
     <div id="outer">
         <div id="top-margin">
@@ -15,8 +14,8 @@ function registerCompanyView() {
             </div>
             <input 
             type="text"
-            value="${regCompany.name}"
-            onchange="regCompany.name=this.value"
+            value="${model.inputs.registerCompany.name}"
+            onchange="model.inputs.registerCompany.name=this.value"
             >
         </div>
         <div>
@@ -27,8 +26,8 @@ function registerCompanyView() {
             </div>
             <input 
             type="text"
-            value="${regCompany.orgNr}"
-            onchange="regCompany.orgNr=this.value"
+            value="${model.inputs.registerCompany.orgNr}"
+            onchange="model.inputs.registerCompany.orgNr=this.value"
             >
         </div>
         <div>
@@ -39,8 +38,8 @@ function registerCompanyView() {
             </div>
             <input 
             type="text"
-            value="${regCompany.contactPerson}"
-            onchange="regCompany.contactPerson=this.value"
+            value="${model.inputs.registerCompany.contactPerson}"
+            onchange="model.inputs.registerCompany.contactPerson=this.value"
             >
         </div>
         <div>
@@ -51,8 +50,8 @@ function registerCompanyView() {
             </div>
             <input 
             type="text"
-            value="${regCompany.email}"
-            onchange="regCompany.email=this.value"
+            value="${model.inputs.registerCompany.email}"
+            onchange="model.inputs.registerCompany.email=this.value"
             >
         </div>
         <div>
@@ -63,8 +62,8 @@ function registerCompanyView() {
             </div>
             <input 
             type="password"
-            value="${regCompany.password}"
-            onchange="regCompany.password=this.value"
+            value="${model.inputs.registerCompany.password}"
+            onchange="model.inputs.registerCompany.password=this.value"
             id="passwordInput"
             >
         </div>
@@ -76,8 +75,8 @@ function registerCompanyView() {
             </div>
             <input 
             type="password"
-            value="${regCompany.repeatedPassword}"
-            onchange="regCompany.repeatedPassword=this.value"
+            value="${model.inputs.registerCompany.repeatedPassword}"
+            onchange="model.inputs.registerCompany.repeatedPassword=this.value"
             id="passwordInput2"
             >
         </div>
@@ -101,9 +100,10 @@ function registerCompanyView() {
 
 function registerCompanyCompletedView() {
     return /*html*/`
-    <div>
-        Takk for registreringen, du vil få en epost når vi har fått bekreftet informasjonen. <br>
-        God dag videre fra oss i GetPartner!
+    <div class="outer">
+        <div>
+            Takk for registreringen! <br> Du får en epost når vi har bekreftet informasjonen
+        </div>
     </div>
     `
 

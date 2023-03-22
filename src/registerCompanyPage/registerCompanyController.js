@@ -43,10 +43,10 @@ function registerCompanyButton() {
 
 function createCompany(){
     const company = model.inputs.registerCompany
+    const pending = model.data.accounts.pendingCompanies
     const newCompany = {}
 
-    newCompany.id = Object.keys(model.data.accounts.allAccounts).length + 1 // Husk å sette denne linjen i funksjonen som aksepterer firma, så man får riktig id
-    
+    newCompany.id = Object.keys(pending).length + 1    
     newCompany.userType = 'company'
     newCompany.name = company.name
     newCompany.orgNr = company.orgNr
@@ -54,6 +54,6 @@ function createCompany(){
     newCompany.email = company.email
     newCompany.password = company.password
 
-    model.data.accounts.pendingCompanies.push(newCompany)
+    pending.push(newCompany)
     model.app.page = 'registerCompanyCompleted'
 }

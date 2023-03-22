@@ -1,0 +1,55 @@
+#outer{
+    background-color: #ffffff;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 600px;
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.company-box{
+    display: grid;
+    grid-template-areas: 
+    "topleft topmid right Right"
+    "botleft botmid right Right";
+    grid-template-columns: 2fr 2fr  0.5fr 0.5fr;
+    grid-template-rows: 26px 26px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #e3e3e7;
+}
+
+.company-name{
+    grid-area: topleft;
+}
+
+.company-nr{
+    grid-area: botleft;
+}
+
+.company-person{
+    grid-area: topmid;
+    margin-right: 5px;
+}
+
+.company-mail{
+    grid-area: botmid;
+    margin-right: 5px;
+}
+
+.accept-button{
+    grid-area: right;
+    margin-right: 5px;
+}
+
+.decline-button{
+    grid-area: Right;
+    margin-right: 5px;
+}
