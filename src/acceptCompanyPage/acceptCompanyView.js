@@ -40,10 +40,10 @@ function createCompanyList() {
                 </div>
                 
                     <div class="accept-button">
-                        <button onclick="acceptCompany(${company.id})">Godta</button>
+                        <button class="button" onclick="acceptCompany(${company.id})">Godta</button>
                     </div>
                     <div class="decline-button">
-                        <button onclick="declineCompany(${company.id})">Avvis</button>
+                        <button class="button" onclick="declineCompany(${company.id})">Avvis</button>
                     </div>
                 
             </div>
