@@ -32,11 +32,10 @@ function loginView() {
             </div>
             </div>  
 
-                <button onclick="login()">Logg inn</button><br><br>
+                <button id="margin-button" onclick="login()">Logg inn</button>
 
-                <div>Har du ikke bruker?<br>
-                <button onclick="register()">Registrer deg</button>
-                </div>
+                <div>Har du ikke bruker?</div>
+                <button id="margin-button" onclick="register()">Registrer deg</button>
             
             <div>${invalid}</div>
     </div>

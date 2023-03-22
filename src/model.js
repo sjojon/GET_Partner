@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: '',
+        page: 'home',
         isLoggedIn: false,
     },
 
@@ -66,8 +66,8 @@ const model = {
             ],
         },
         interesets: [
-            {accountId: 1, technologyId: 1},
-            {accountId: 2, technologyId: 1}
+            { accountId: 1, technologyId: 1 },
+            { accountId: 2, technologyId: 1 }
         ],
         codeLanguages: [
             { id: 1, name: 'JavaScript' },

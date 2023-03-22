@@ -48,3 +48,8 @@ input {
     text-align: left;
     margin-left: 36px;
 }
+
+#margin-button {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
