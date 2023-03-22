@@ -79,6 +79,9 @@ function updatePage() {
     case 'acceptCompany':
       html = acceptCompanyView()
       break
+    case 'adminDash':
+      html = adminDashView()
+      break
   }
   return html
 }
