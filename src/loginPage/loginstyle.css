@@ -10,4 +10,41 @@ input {
 #outer {
     background-color: #ffffff;
     text-align: center;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 400px;
+    padding: 15px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header {
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.text-box {
+    text-align: left;
+    margin-left: 36px;
+    left: 50%;
+    width: 320px;
+    text-size-adjust: 60%;
+}
+
+.text-over-box {
+    font-size: 14px;
+}
+
+#checkbox {
+    width: 20px;
+    height: 15px;
+}
+
+#checkbox-box {
+    text-align: left;
+    margin-left: 36px;
 }

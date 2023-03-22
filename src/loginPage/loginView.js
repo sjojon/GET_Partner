@@ -5,25 +5,39 @@ function loginView() {
     return /*HTML*/ `
     <div id="outer">
         <div id="header">Logg inn</div>
-            <h4>
-                <div>Brukernavn:<br>
-                    <input type="text" 
-                    value="${loginPage.username}" 
-                    onchange="loginPage.username=this.value">
+            <div class="text-box">
+                <div class="text-over-box">
+                Brukernavn:
                 </div>
+            </div>
+                <input type="text" 
+                value="${loginPage.username}" 
+                onchange="loginPage.username=this.value">
 
-                <div>Passord:<br>
+            <div class="text-box">
+                <div class="text-over-box">
+                Passord:
+                </div>
+            </div>
                     <input type="password" 
                     value="${loginPage.password}" 
                     onchange="loginPage.password=this.value">
-                </div>
+
+            <div id="checkbox-box">
+            <div class="text-over-box">
+                <input 
+                    type="checkbox"
+                    id="checkbox" 
+                    onclick="showPassword()">Vis passord
+            </div>
+            </div>  
 
                 <button onclick="login()">Logg inn</button><br><br>
 
                 <div>Har du ikke bruker?<br>
                 <button onclick="register()">Registrer deg</button>
                 </div>
-            </h4>
+            
             <div>${invalid}</div>
     </div>
     `;
