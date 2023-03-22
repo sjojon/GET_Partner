@@ -3,7 +3,7 @@ let invalid = '';
 function loginView() {
     const loginPage = model.inputs.login;
     return /*HTML*/ `
-    <link rel="stylesheet" href="src/loginPage/loginstyle.css">
+    <link rel="stylesheet" href="src/loginPage/loginStyle.css">
     <div id="outer">
         <div id="header">Logg inn</div>
             <div class="text-box">
