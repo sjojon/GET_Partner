@@ -1,7 +1,11 @@
 const model = {
 
     app: {
+<<<<<<< HEAD
         page: 'registerCompany',
+=======
+        page: 'home',
+>>>>>>> 17afcedaddeb377f1d122aebfb604b81d108ea5b
         isLoggedIn: false,
     },
 
@@ -67,8 +71,8 @@ const model = {
             ],
         },
         interesets: [
-            {accountId: 1, technologyId: 1},
-            {accountId: 2, technologyId: 1}
+            { accountId: 1, technologyId: 1 },
+            { accountId: 2, technologyId: 1 }
         ],
         codeLanguages: [
             { id: 1, name: 'JavaScript' },
