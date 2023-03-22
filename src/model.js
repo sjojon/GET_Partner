@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: 'home',
+        page: 'home', //Skal alltid stå på 'home' når man pusher
         isLoggedIn: false,
     },
 
