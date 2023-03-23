@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: '',
+        page: 'acceptPendingStudentView',
         isLoggedIn: false,
     },
 
