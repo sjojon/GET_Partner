@@ -36,7 +36,7 @@ function login() {
                     model.app.isLoggedIn=true
                     break;
                 case "student":
-                case "pendingStudent":
+                case "pendingStudentProfile":
                     model.app.page="studentProfile"
                     model.app.isLoggedIn=true
                     break;  
