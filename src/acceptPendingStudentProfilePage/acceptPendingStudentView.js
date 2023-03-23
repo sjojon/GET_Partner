@@ -1,17 +1,18 @@
+const pendingStudentAccounts = model.data.accounts.allAccounts.filter(obj => obj.userType === 'pendingStudentProfile');
+
 function acceptPendingStudentView() {
-    const acceptStudent = model.data.accounts.allAccounts.filter(obj => obj.userType === 'student');
     // console.log(acceptStudent);
     return /*HTML*/ `
     <div class="outer">
         <div class="inner">
-        ${isStudentProfilePendingListEmpty()}
+            ${isStudentProfilePendingListEmpty()}
         </div>
     </div>
     `;
 }
 
 function isStudentProfilePendingListEmpty() {
-    const acceptStudent = model.data.accounts.allAccounts.filter(obj => obj.userType === 'student');
+    const acceptStudent = pendingStudentAccounts;
     if (acceptStudent.length === 0) {
         return /*HTML*/ `
         <div>
@@ -25,5 +26,24 @@ function isStudentProfilePendingListEmpty() {
 }
 
 function pendingStudentList() {
+    html = '';
+    const acceptStudent = pendingStudentAccounts;
+    for (let i = 0; i < acceptStudent.length; i++) {
+        const student = acceptStudent[i];
+        html += /*html*/ `
+        <div class="">
+            <div class ="">
+                ${student.name} 
+            </div>
+            <div>
+                <button onclick="showProfileChange(student.id)">Se endring</button>
+            </div>
+        </div>
+        `;
+    }
+    return html;
+}
+
+function showProfileChange(id) {
 
 }

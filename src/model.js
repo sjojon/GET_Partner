@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: 'acceptCompany',
+        page: 'acceptStudent',
         isLoggedIn: false,
     },
 
@@ -55,7 +55,7 @@ const model = {
             allAccounts: [
                 { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
                 { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
-                { id: 10, name: 'Student2', password: 'passord2', userType: 'student', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
+                { id: 10, name: 'Student2', password: 'passord2', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
                 { id: 3, name: 'Bedrift1', password: 'passord1', userType: 'company', email: 'bedrift1@mail.com', orgNr: '010010001' },
                 { id: 4, name: 'Nidar', password: '!Freia', userType: 'pendingCompany', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
                 { id: 5, name: 'Freia', password: '!Nidar', userType: 'pendingCompany', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
