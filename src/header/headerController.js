@@ -1,5 +1,5 @@
 //Velger hvilken header som skal vises
-function toggleMenuLeft(headerId){
+function toggleHeader(headerId){
     if (headerVisible === headerId) {
         headerVisible = 0;
     } 
