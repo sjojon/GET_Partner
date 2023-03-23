@@ -3,7 +3,7 @@ const pendingStudentAccounts = model.data.accounts.allAccounts.filter(obj => obj
 function acceptPendingStudentView() {
     // console.log(acceptStudent);
     return /*HTML*/ `
-    <div class="outer">
+    <div class="outerFrame">
         <div class="inner">
             ${isStudentProfilePendingListEmpty()}
         </div>
@@ -31,11 +31,11 @@ function pendingStudentList() {
     for (let i = 0; i < acceptStudent.length; i++) {
         const student = acceptStudent[i];
         html += /*html*/ `
-        <div class="">
-            <div class ="">
+        <div>
+            <div class ="studentDiv">
                 ${student.name} 
             </div>
-            <div>
+            <div class="studentButton">
                 <button onclick="showProfileChange(student.id)">Se endring</button>
             </div>
         </div>
