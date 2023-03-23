@@ -1,8 +1,8 @@
 let invalid = '';
 let passwordInput="password"
+const loginPage = model.inputs.login;
 
 function loginView() {
-    const loginPage = model.inputs.login;
     return /*HTML*/ `
     <div id="outer">
         <div id="header">Logg inn</div>
