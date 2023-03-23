@@ -33,19 +33,16 @@ function updateHeaderView() {
   function currentHeader(){
     let currentHeader;
     if (headerVisible === 0) {
-        currentMenu = renderMenuText()
+        currentMenu = renderHomeHeader()
     } 
     else if (headerVisible === 1) {
-             currentHeader = renderMenuFight()
+             currentHeader = renderStudentHeader()
     }
     else if (headerVisible === 2){
-             currentHeader = renderMenuBag()
+             currentHeader = renderCompanyHeader()
     }
     else if (headerVisible === 3){
-             currentHeader = renderMenuPokemon()
-    }
-    else if (headerVisible === 4){
-             currentHeader = resetGame()
+             currentHeader = renderAdminHeader()
     }
     return currentMenu;
   }
