@@ -1,7 +1,7 @@
 const model = {
 
     app: {
-        page: 'acceptPendingStudentView',
+        page: 'acceptCompany',
         isLoggedIn: false,
     },
 
