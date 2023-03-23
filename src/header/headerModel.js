@@ -1,1 +1,0 @@
-var headerVisible = 0;

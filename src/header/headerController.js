@@ -1,16 +1,4 @@
-//Velger hvilken header som skal vises
-function toggleHeader(headerId){
-    if (headerVisible === headerId) {
-        headerVisible = 0;
-    } 
-    else { 
-      headerVisible = headerId;
-    }
-    renderGame();
-  }
-  
-  
-  // dropdown header funksjon
+// dropdown header funksjon
   $(function () {
     $('.dropdown').hover(
       function () {
@@ -36,4 +24,10 @@ function toggleHeader(headerId){
     model.app.page = 'login'
     console.log(model.app.page);
     updateView()
+  }
+
+
+  //logger bruker ut
+  function Logout(){
+
   }

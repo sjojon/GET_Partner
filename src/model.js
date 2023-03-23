@@ -1,7 +1,8 @@
 const model = {
 
     app: {
-        page: 'acceptStudent',
+        header: '',  //home,student,company,admin
+        page: 'home',
         isLoggedIn: false,
     },
 

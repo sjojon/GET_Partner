@@ -1,110 +1,59 @@
-const mainPage = document.getElementById("app");
+const mainPage = document.getElementById("app")
 
 // render whole page
-updateView();
+updateView()
 
 function updateView() {
   mainPage.innerHTML = `
   
 
-    ${updateHeaderView()}
+    ${updateHeader()}
     ${updatePage()}
     `;
-}
-// render header
-function updateHeaderView() {
-  return /*html*/ `
-  <header>
-  <div id="header-box">
-    <nav>
-      <div id="header-logo">
-        <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
-      </div>
-      <ul>
-      <button class="list-button" onclick="tekst2()">Tekst 1</button>
-        <button class="list-button" onclick="tekst2()">Tekst 2</button>
-        <li class="dropdown">
-          <a>Profil</a>
-          <ul class="dropdown-menu">
-            <button class="list-button-dropdown" onclick="tekst2()">Se profil</button>
-            <button class="list-button-dropdown" onclick="tekst2()">Endre profil</button>
-            <button class="list-button-dropdown" onclick="goToLogin()">Log inn/ut</button> <!--endre til  dollar tag log inn/ logg ut-->
-          </ul>
-        </li>
-        <button class="list-button" onclick="tekst3()">Søk</button>
-      </ul>
-      <div id="header-contact-button">
-        <button>Kontakt oss</button>
-      </div>
-    </nav>
-  </div>
-</header>
-  `;
 }
 
 
 function updatePage() {
-  const page = model.app.page;
-  let html = '';
+  const page = model.app.page
+  //headerVisible = 0 home/not logged in, 1 student, 2 company, 3 admin
+  let html = ''
   switch (page) {
     case 'home':
-      html = homeView();
-      break;
+      html = homeView()
+      break
     case 'login':
-      html = loginView();
-      break;
+      html = loginView()
+      break
     case 'registerChoice':
-      html = registerChoiceView();
-      break;
+      html = registerChoiceView()
+      break
     case 'registerCompany':
-      html = registerCompanyView();
-      break;
+      html = registerCompanyView()
+      break
     case 'registerCompanyCompleted':
-      html = registerCompanyCompletedView();
-      break;
+      html = registerCompanyCompletedView()
+      break
     case 'registerStudent':
-      html = registerStudentView();
-      break;
+      html = registerStudentView()
+      break
     case 'browseStudentSearch':
-      html = studentSearchView();
-      break;
+      html = studentSearchView()
+      break
     case 'browseStudent':
-      html = browseStudentView();
-      break;
+      html = browseStudentView()
+      break
     case 'editStudentProfile':
-      html = editStudentProfileView();
-      break;
+      html = editStudentProfileView()
+      break
     case 'studentProfile':
-      html = studentProfileView();
-      break;
+      html = studentProfileView()
+      break
     case 'acceptCompany':
-      html = acceptCompanyView();
-      break;
-    case 'acceptStudent':
-      html = acceptPendingStudentView();
-      break;
+      html = acceptCompanyView()
+      break
     case 'adminDash':
-      html = adminDashView();
-      break;
+      html = adminDashView()
+      break
   }
   return html
-}
-
-function adminDashView(){
-  return /*html*/`
-  <p>Admin dashboard</p>
-  
-  `
-}
-function studentProfileView(){
-  return /*html*/`
-  <p>Student profile</p>
-  
-  `
-}
-function studentSearchView() {
-  return /*html*/`
-  <p> Search amongst students</p>
-  
-  `
 }
