@@ -86,3 +86,22 @@ function updatePage() {
   }
   return html
 }
+
+function adminDashView(){
+  return /*html*/`
+  <p>Admin dashboard</p>
+  
+  `
+}
+function studentProfileView(){
+  return /*html*/`
+  <p>Student profile</p>
+  
+  `
+}
+function studentSearchView() {
+  return /*html*/`
+  <p> Search amongst students</p>
+  
+  `
+}

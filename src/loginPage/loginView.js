@@ -1,4 +1,5 @@
 let invalid = '';
+let passwordInput="password"
 
 function loginView() {
     const loginPage = model.inputs.login;
@@ -20,7 +21,7 @@ function loginView() {
                 </div>
             </div>
                     <input
-                    type="password" 
+                    type="${passwordInput}" 
                     value="${loginPage.password}" 
                     onchange="loginPage.password=this.value">
 
@@ -29,7 +30,7 @@ function loginView() {
                 <input 
                     type="checkbox"
                     id="checkbox" 
-                    onclick="">Vis passord
+                    onclick="showLoginPagePassword(this)">Vis passord
             </div>
             </div>  
 
