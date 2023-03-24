@@ -7,6 +7,27 @@ input {
     margin-bottom: 10px;
 }
 
+#outer {
+    background-color: #ffffff;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 400px;
+    padding: 15px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
 .text-box {
     text-align: left;
     margin-left: 36px;
@@ -19,18 +40,9 @@ input {
     font-size: 14px;
 }
 
-.outer {
-    background-color: #ffffff;
-    border: solid 1px;
-    border-radius: 8px;
-    border-color: #d7d9e3;
-    width: 400px;
-    padding: 15px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+#checkbox {
+    width: 20px;
+    height: 15px;
 }
 
 #checkbox-box {
@@ -38,33 +50,7 @@ input {
     margin-left: 36px;
 }
 
-#header-text {
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
-#top-margin {
-    margin-top: 30px;
-}
-
-#checkbox {
-    width: 20px;
-    height: 15px;
-}
-
-#reg-button {
-    margin-top: 30px;
-}
-
-#error-text {
-    margin-top: 10px;
-    font-size: 12px;
-}
-
-#bottom-margin {
+#margin-button {
+    margin-top: 15px;
     margin-bottom: 20px;
-}
-
-#completed-button{
-    margin-top: 10px;
 }

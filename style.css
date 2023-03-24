@@ -28,7 +28,6 @@ button {
   line-height: 24px;
   padding: 8px 20px;
   text-transform: none;
-
 }
 
 button:hover {
@@ -49,9 +48,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* center horizontally */
   height: 100%;
-  /* make the header box full height */
   font-family: Lato, sans-serif;
   font-size: 16px;
 }
@@ -104,7 +101,6 @@ li {
 .list-button {
   background-color: #be4c4c00;
   color: #000000;
-
 }
 
 .list-button:hover {
@@ -117,7 +113,6 @@ li {
   margin: 2px;
   padding: 0px 0px;
   width: 100px;
-
 }
 
 .list-button-dropdown:hover {

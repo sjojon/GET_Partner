@@ -43,3 +43,11 @@
    
     
 }
+.input-element{
+    width: 320px;
+    background-color: #f0f0f0;
+    border-color: transparent;
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 10px;
+}

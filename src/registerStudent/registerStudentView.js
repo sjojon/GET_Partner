@@ -2,6 +2,7 @@ const registerNewStAccount= model.inputs.registerStudent
 let switchInputType="password"
 function registerStudentView(){
     return /*html*/`
+    <link rel="stylesheet" href="src/registerStudent/registerStudentStyle.css" />
     <div class="pageMinusHeader">
     <div class="outer-box">
        <h3 class="pageHeading"> Registrer student</h3>
@@ -14,7 +15,7 @@ function registerStudentView(){
        <label for="gjenta-passord" class="info-element">Gjenta passord</label> 
        <input type=${switchInputType} name="gjenta-passord" class="input-element passord" value="${registerNewStAccount.repeatedPassword}" onchange="registerNewStAccount.repeatedPassword=this.value">
        <div class="showPasswordDiv">
-       <input type="checkbox" name="show-password" class="input-element checkBox" onclick="showPassword(this)">
+       <input type="checkbox" name="show-password" class="checkBox" onclick="showPassword(this)">
        <label for="show-password" class="info-element labelCheckBox">Vis passord</label> 
        </div>
        <button onclick="saveProfile()" class="profileButton">Opprett profil</button>

@@ -1,7 +1,8 @@
 const model = {
 
     app: {
-        page: 'acceptCompany',
+        header: '',  //home,student,company,admin
+        page: 'home',
         isLoggedIn: false,
     },
 
@@ -16,7 +17,8 @@ const model = {
             contactPerson: '',
             email: '',
             password: '',
-            repeatedPassword: ''
+            repeatedPassword: '',
+            showPassword: false,
         },
         registerStudent: {
             name: '',
@@ -32,7 +34,7 @@ const model = {
             location: '',
             codeExp: '',
             codeExpList: [],
-            interesets: '',
+            interests: '',
             importantInfo: '',
             cv: '',
             profilePicture: ''
@@ -52,18 +54,27 @@ const model = {
         },
         accounts: {
             allAccounts: [
-                { id: 1, name: 'admin', password: 'admin', userType: 'admin' },
-                { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com' },
+                { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
+                { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
+                { id: 10, name: 'Student2', password: 'passord2', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
                 { id: 3, name: 'Bedrift1', password: 'passord1', userType: 'company', email: 'bedrift1@mail.com', orgNr: '010010001' },
+                { id: 4, name: 'Nidar', password: '!Freia', userType: 'pendingCompany', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
+                { id: 5, name: 'Freia', password: '!Nidar', userType: 'pendingCompany', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
+                { id: 6, name: 'Komplett', password: 'Penger', userType: 'pendingCompany', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
             ],
-            studentAccounts: [
-                { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com' },
-            ],
-            pendingCompanies: [
-                { id: 1, name: 'Nidar', password: '!Freia', userType: 'company', contactPerson: 'Jens', email: 'jens@nidar.no', orgNr: '110010001' }
-            ],
+
         },
-        codeLanguages: [
+
+        interests: [
+            { accountId: 1, technologyId: 1 },
+            { accountId: 1, technologyId: 2 },
+            { accountId: 1, technologyId: 10 },
+            { accountId: 4, technologyId: 1 },
+            { accountId: 5, technologyId: 1 },
+            { accountId: 6, technologyId: 1 },
+        ],
+
+        techXp: [
             { id: 1, name: 'JavaScript' },
             { id: 2, name: 'Java' },
             { id: 3, name: 'C' },
@@ -76,18 +87,16 @@ const model = {
             { id: 10, name: 'SQL' },
             { id: 11, name: 'Ruby' },
             { id: 12, name: 'Assembly' },
-        ],
-        frameworks: [
-            { id: 1, name: 'Node.js' },
-            { id: 2, name: 'React.js' },
-            { id: 3, name: 'Angular.js' },
-            { id: 4, name: 'Vue.js' },
-            { id: 5, name: 'Django' },
-            { id: 6, name: 'Apache' },
-            { id: 7, name: 'TypeScript' },
-            { id: 8, name: '.NET' },
-            { id: 9, name: 'Rails' },
-            { id: 10, name: 'Express.js' },
+            { id: 13, name: 'Node.js' },
+            { id: 14, name: 'React.js' },
+            { id: 15, name: 'Angular.js' },
+            { id: 16, name: 'Vue.js' },
+            { id: 17, name: 'Django' },
+            { id: 18, name: 'Apache' },
+            { id: 19, name: 'TypeScript' },
+            { id: 20, name: '.NET' },
+            { id: 21, name: 'Rails' },
+            { id: 22, name: 'Express.js' },
         ],
 
         county: [

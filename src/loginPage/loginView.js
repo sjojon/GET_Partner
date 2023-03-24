@@ -1,27 +1,45 @@
+let invalid = '';
+let passwordInput="password"
+const loginPage = model.inputs.login;
+
 function loginView() {
-    const loginPage = model.inputs.login;
     return /*HTML*/ `
     <div id="outer">
-        <h2>Logg inn</h2>
-            <h4>
-                <div>Brukernavn:<br>
-                    <input type="text" 
-                    value="${loginPage.username}" 
-                    onchange="loginPage.username=this.value">
+        <div id="header">Logg inn</div>
+            <div class="text-box">
+                <div class="text-over-box">
+                Brukernavn:
                 </div>
+            </div>
+                <input type="text" 
+                value="${loginPage.username}" 
+                onchange="loginPage.username=this.value">
 
-                <div>Passord:<br>
-                    <input type="text" 
+            <div class="text-box">
+                <div class="text-over-box">
+                Passord:
+                </div>
+            </div>
+                    <input
+                    type="${passwordInput}" 
                     value="${loginPage.password}" 
                     onchange="loginPage.password=this.value">
-                </div>
 
-                <button onclick="">Logg inn</button><br><br>
+            <div id="checkbox-box">
+            <div class="text-over-box">
+                <input 
+                    type="checkbox"
+                    id="checkbox" 
+                    onclick="showLoginPagePassword(this)">Vis passord
+            </div>
+            </div>  
 
-                <div>Har du ikke bruker?<br>
-                <button onclick="">Registrer deg</button>
-                </div>
-            </h4>
+                <button id="margin-button" onclick="login()">Logg inn</button>
+
+                <div>Er du bedrift uten bruker?</div>
+                <button id="margin-button" onclick="register()">Registrer deg</button>
+            
+            <div>${invalid}</div>
     </div>
     `;
 }

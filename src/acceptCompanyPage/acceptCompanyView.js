@@ -7,20 +7,22 @@ function acceptCompanyView() {
     </div>    
     `}
 
-function emptyListOrNot(){
-    if(Object.keys(model.data.accounts.pendingCompanies).length > 0){        
+function emptyListOrNot() {
+    let companies = model.data.accounts.allAccounts.filter(obj => obj.userType === 'pendingCompany')
+    if (companies.length > 0) {
         return createCompanyList()
     } else {
         return /*html*/`
         Ingen bedrifter som venter.
         `
-        
+
     }
 }
 
 function createCompanyList() {
     let html = '';
-    let companies = model.data.accounts.pendingCompanies
+    let companies = model.data.accounts.allAccounts.filter(
+        obj => obj.userType === 'pendingCompany')
 
     for (let i = 0; i < companies.length; i++) {
         const company = companies[i];
@@ -30,22 +32,23 @@ function createCompanyList() {
                     ${company.name}
                 </div>
                 <div class="company-nr">
-                    Org Nr: ${company.orgNr}
+                    ${company.orgNr}
                 </div>
+                
                 <div class="company-person">
-                    Kontaktperson: ${company.contactPerson}
+                ${company.contactPerson}
                 </div>
                 <div class="company-mail">
-                    Email: ${company.email}
+                    ${company.email}
                 </div>
-                <div class="buttons">
-                    <div class="accept-buttons">
-                        <button onclick="acceptCompany(${company.id})">Godta</button>
-                    </div>
-                    <div class="decline-buttons">
-                        <button onclick="declineCompany(${company.id})">Avvis</button>
-                    </div>
+
+                <div class="accept-button">
+                    <button class="button" onclick="acceptCompany(${company.id})">Godta</button>
                 </div>
+                <div class="decline-button">
+                    <button class="button" onclick="declineCompany(${company.id})">Avvis</button>
+                </div>
+                
             </div>
             `
     }
