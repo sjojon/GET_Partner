@@ -27,3 +27,26 @@ function findAvailableAccountId() {
     }
   }
 }
+
+
+// Finner passordet til accounten når man bruker brukernavnet som parameter
+// Funker ikke riktig hvis det er lov å ha duplicate names på accounts
+function findAccountPasswordByName(name) {
+  for (let account of model.data.accounts.allAccounts) {
+    if (account.name === name) {
+      return account.password
+    }
+  }
+  return null
+}
+
+// Finner id til accounten når man bruker brukernavnet som parameter
+// Funker ikke riktig hvis det er lov å ha duplicate names på accounts
+function findAccountIdByName(name)  {
+  for (let account of model.data.accounts.allAccounts) {
+    if (account.name === name) {
+      return account.id
+    }
+  }
+  return null
+}
