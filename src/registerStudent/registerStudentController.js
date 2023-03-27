@@ -45,7 +45,7 @@ function saveProfile(){
     bothPasswordsMatch()
     if (bothPasswordsMatchBoolean==true&&allInputsWrittenBoolean==true) {
         let newStudentAccountId= findAvailableAccountId()
-        newMadeAccount.push({id:newStudentAccountId,name:registerNewStAccount.name,password:registerNewStAccount.password, userType:"student",email:registerNewStAccount.email, gitHub: '', pic: '', cv: '', counter: 0})
+        newMadeAccount.push({id:newStudentAccountId,name:registerNewStAccount.name,password:registerNewStAccount.password, userType:"student", adress:"",email:registerNewStAccount.email, gitHub: '', pic: '', cv: '', counter: 0})
         alert("Profil opprettet. Brukernavn: "+ registerNewStAccount.name +" Passord: " + registerNewStAccount.password)
         clearInputFiles()
         

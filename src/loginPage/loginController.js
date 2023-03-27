@@ -2,6 +2,8 @@ let allUsernames=[]
 let allPasswords=[]
 let accountsToBeChecked= model.data.accounts.allAccounts
 let AccountExcists=true
+let passwordIsCorrect=false
+let usernameIndex;
 function getAllNamesAndPasswords(){
     allUsernames=[]
     allPasswords=[]
@@ -9,27 +11,37 @@ function getAllNamesAndPasswords(){
         allUsernames.push(accountsToBeChecked[key].name) 
        allPasswords.push(accountsToBeChecked[key].password)
     }
-    if(!allUsernames.includes(model.inputs.login.username)||!allPasswords.includes(model.inputs.login.password)) {
-        alert("Brukernavn eller passord er feil, sjekk at du har skrevet begge riktig og prøv på nytt.")
+    usernameIndex= allUsernames.indexOf(model.inputs.login.username)
+}
+function checkIfAccountExcists(){
+    getAllNamesAndPasswords()
+    if((!allUsernames.includes(loginPage.username))) {
+        alert("Brukernavn er ikke registrert hos oss.")
         console.log(allPasswords )
         console.log(allUsernames)
         return AccountExcists=false
 
     } else return AccountExcists=true
+    
+}
+function checkIfPasswordIsWrong(){
+ 
+checkIfAccountExcists()
+if (AccountExcists==true) {
+     if (!allPasswords.includes(loginPage.password)) {
+         alert("Passord er feil, Prøv på nytt")
+    } else if (allPasswords[usernameIndex]!==loginPage.password) {
+        alert("Passord er feil, Prøv på nytt")
+        }
+      else{ return passwordIsCorrect=true}
+    }
 }
 function login() {
-    getAllNamesAndPasswords()
-    // if (model.inputs.login.username === '') {
-    //     if (model.inputs.login.password === '') {
-    //         console.log('ja');
-    //     }
-    //     else {
-    //         console.log('Ugyldig brukernavn eller passord');
-    //     }
-    // }
-   if (AccountExcists==true) {
+    checkIfPasswordIsWrong()
+   if (passwordIsCorrect==true) {
     for (const key in accountsToBeChecked) {
-        if ( accountsToBeChecked[key].name.includes(model.inputs.login.username)&&accountsToBeChecked[key].password.includes(model.inputs.login.password)) {
+        if ( accountsToBeChecked[key].name.includes(loginPage.username)
+        &&accountsToBeChecked[key].password.includes(loginPage.password)) {
             switch(accountsToBeChecked[key].userType){
                 case "admin":
                     model.app.page="adminDash"
@@ -54,8 +66,8 @@ function login() {
         }
         
         updateView()
-        model.inputs.login.username=""
-        model.inputs.login.password=""
+        loginPage.username=""
+        loginPage.password=""
    }
     
    
