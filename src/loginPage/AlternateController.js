@@ -17,9 +17,10 @@ function login() {
     getAllNames()
     if (allUsernames.includes(loginUsername)) {
         if (findAccountPasswordByName(loginUsername) === loginPassword) {
+            let userId = findAccountIdByName(loginUsername)
             model.app.isLoggedIn = true
-            model.data.currentUser.id = findAccountIdByName(loginUsername)
-            //Trenger en funksjom som finner ut hvilken page de skal til
+            model.data.currentUser.id = userId
+            whereIsHome(userId)
         }
         else {
             alert("Brukernavn eller passord er feil, sjekk at du har skrevet begge riktig og prøv på nytt.")
