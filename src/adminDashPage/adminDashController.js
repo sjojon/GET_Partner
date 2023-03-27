@@ -1,6 +1,4 @@
 //finner antall accounts
-const countRegisteredUsers = model.data.accounts.allAccounts.length;
-
 let countStudents = 0;
 let countCompanies = 0;
 let countPendingCompany = 0;
