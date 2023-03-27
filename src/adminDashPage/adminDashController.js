@@ -1,0 +1,19 @@
+//finner antall accounts
+const countRegisteredUsers = model.data.accounts.allAccounts.length;
+
+let countStudents = 0;
+let countCompanies = 0;
+let countPendingCompany = 0;
+let countAdmins = 0;
+
+for (let account of model.data.accounts.allAccounts) {
+  if (account.userType === 'student') {
+    countStudents++;
+  } else if (account.userType === 'company') {
+    countCompanies++;
+    } else if (account.userType === 'pendingCompany') {
+    countPendingCompany++;
+  } else if (account.userType === 'admin') {
+    countAdmins++;
+  }
+}
