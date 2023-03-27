@@ -1,6 +1,6 @@
 let invalid = '';
-let passwordInput="password"
-const loginPage = model.inputs.login;
+let passwordInput = "password"
+let loginPage = model.inputs.login;
 
 function loginView() {
     return /*HTML*/ `
@@ -34,12 +34,13 @@ function loginView() {
             </div>
             </div>  
 
-                <button id="margin-button" onclick="login()">Logg inn</button>
-
-                <div>Er du bedrift uten bruker?</div>
-                <button id="margin-button" onclick="register()">Registrer deg</button>
-            
             <div>${invalid}</div>
+            <button id="margin-button" onclick="login()">Logg inn</button>
+            
+            
+            <div>Har du en bedrift uten bruker?</div>
+            <button id="margin-button" onclick="register()">Registrer deg</button>
+        
     </div>
     `;
 }

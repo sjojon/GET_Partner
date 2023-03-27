@@ -44,8 +44,8 @@ function login() {
         &&accountsToBeChecked[key].password.includes(loginPage.password)) {
             switch(accountsToBeChecked[key].userType){
                 case "admin":
-                    model.app.page="adminDash"
-                    model.app.isLoggedIn=true
+                    model.app.page = "adminDash"
+                    model.app.isLoggedIn = true
                     break;
                 case "student":
                 case "pendingStudentProfile":
@@ -53,11 +53,11 @@ function login() {
                     model.app.isLoggedIn=true
                     break;  
                 case "company":
-                    model.app.page="browseStudentSearch"
-                    model.app.isLoggedIn=true
+                    model.app.page = "browseStudentSearch"
+                    model.app.isLoggedIn = true
                     break;
-                 case "pendingCompany":
-                   alert("Konto ikke godkjent ennå, Du får høre fra oss så fort som mulig")
+                case "pendingCompany":
+                    alert("Konto ikke godkjent ennå, Du får høre fra oss så fort som mulig")
                     break;
             }
            
@@ -75,21 +75,21 @@ function login() {
 function register() {
 }
 
-function showLoginPagePassword(input){
-    
-    if (input.checked==true&&passwordInput=="password") {
-        
-        passwordInput="text"
-       
-        
-    } else if  (input.checked==true&&passwordInput=="text"){
+function showLoginPagePassword(input) {
+
+    if (input.checked == true && passwordInput == "password") {
+
+        passwordInput = "text"
+
+
+    } else if (input.checked == true && passwordInput == "text") {
         console.log("this if is login ")
-        passwordInput="password"
-       
-        
-       
-        
-    } 
+        passwordInput = "password"
+
+
+
+
+    }
     updateView()
     console.log(model.app.page)
 }
