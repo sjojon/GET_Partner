@@ -12,11 +12,11 @@ function login() {
     if (allUsernames.includes(loginUsername)) {
         if (findAccountPasswordByName(loginUsername) === loginPassword) {
             let userId = findAccountIdByName(loginUsername)
+            console.log('user id ' + model.data.currentUser.id)
+            console.log('is logged in ' + model.app.isLoggedIn)
             model.app.isLoggedIn = true
             model.data.currentUser.id = userId
             whereIsHome(userId)
-            console.log('is logged in ' + model.app.isLoggedIn)
-            console.log('user id ' + model.data.currentUser.id)
         }
         else {
             invalid = 'Brukernavn eller passord er feil, sjekk at du har skrevet begge riktig og prøv på nytt'
