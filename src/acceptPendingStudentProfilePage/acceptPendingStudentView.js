@@ -1,4 +1,4 @@
-const pendingStudentAccounts = model.data.accounts.allAccounts.filter(obj => obj.userType === 'pendingStudentProfile');
+const pendingStudentAccounts = model.data.accounts.filter(obj => obj.userType === 'pendingStudentProfile');
 
 function acceptPendingStudentView() {
     // console.log(acceptStudent);
@@ -31,7 +31,7 @@ function pendingStudentList() {
     for (let i = 0; i < acceptStudent.length; i++) {
         const student = acceptStudent[i];
         html += /*html*/ `
-        <div>
+        <div id="studentEditDiv">
             <div class ="studentDiv">
                 ${student.name} 
             </div>

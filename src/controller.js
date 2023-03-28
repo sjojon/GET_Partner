@@ -1,6 +1,6 @@
 // Finner account med id som parameter
 function findAccountById(id) {
-  for (let account of model.data.accounts.allAccounts) {
+  for (let account of model.data.accounts) {
     if (account.id === id)
       return account
   }
@@ -14,7 +14,7 @@ function findAccountById(id) {
 /////////////////////////////FIX SOMETIME////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 function findAvailableAccountId() {
-  const allAccounts = model.data.accounts.allAccounts
+  const allAccounts = model.data.accounts
   let id = 1
   for (let thisAccount of allAccounts) {
 
@@ -36,7 +36,7 @@ function findAvailableAccountId() {
 // Finner passordet til accounten når man bruker brukernavnet som parameter
 // Funker ikke riktig hvis det er lov å ha duplicate names på accounts
 function findAccountPasswordByName(name) {
-  for (let account of model.data.accounts.allAccounts) {
+  for (let account of model.data.accounts) {
     if (account.name === name) {
       return account.password
     }
@@ -47,7 +47,7 @@ function findAccountPasswordByName(name) {
 // Finner id til accounten når man bruker brukernavnet som parameter
 // Funker ikke riktig hvis det er lov å ha duplicate names på accounts
 function findAccountIdByName(name) {
-  for (let account of model.data.accounts.allAccounts) {
+  for (let account of model.data.accounts) {
     if (account.name === name) {
       return account.id
     }
@@ -57,7 +57,7 @@ function findAccountIdByName(name) {
 
 // Finner userType når man gir account id som parameter
 function findUserTypeById(id) {
-  for (let account of model.data.accounts.allAccounts) {
+  for (let account of model.data.accounts) {
     if (account.id === id) {
       return account.userType
     }
@@ -79,4 +79,29 @@ function whereIsHome(id) {
       model.app.page = ''
       break
   }
+}
+
+//Lager en liste med alle techXp en account har basert på accountId
+function findTechsXpByAccountId(id) {
+  const relations = model.data.techXpRelations
+  const techs = model.data.techXp
+  let techIdList = []
+
+  //Lager en liste med alle tech id'ene til accounten
+  for (let relation of relations) {
+      if (relation.accountId === id) {
+          techIdList.push(relation.technologyId)
+      }
+  }
+
+  //Lager en liste med alle tech navnene
+  let techList = []
+  for (let searchId of techIdList) {
+      for (let techXp of techs) {
+          if (searchId == techXp.id) {
+              techList.push(techXp.name)
+          }
+      }
+  }
+  return techList
 }

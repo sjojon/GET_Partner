@@ -1,0 +1,55 @@
+.outer-box-editStudent{
+    display: flex;
+    flex-direction: row;
+    border: 2px black solid;
+    background-color: white;
+    width: 900px;
+    padding-left: 25px;
+    height: fit-content;
+    
+}
+
+.pageMinusHeader-editStudent{
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.fillDiv1{
+    flex-direction: column;
+    display: flex;
+    height: 1000px;
+    width: 600px;
+    padding-left: 20px;
+}
+.fillDiv2{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 300px;
+    align-items: center;
+}
+.oneInputContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.profilePicture{
+    width: 250px;
+    height: 200px;
+}
+.buttonStyle{
+    width: fit-content;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #f44e01;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.kodeExpSøkefelt{
+    width: 200px;
+    margin-top: 25px;
+}

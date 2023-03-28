@@ -1,7 +1,5 @@
-const accounts = model.data.accounts.allAccounts          //Const på de man aldri vil endre
-let allUsernames = []                                     //Let på de man vil endre
-
-
+const accounts = model.data.accounts.allAccounts         
+let allUsernames = []                                     
 
 
 function login() {

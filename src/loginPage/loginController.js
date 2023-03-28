@@ -60,11 +60,11 @@ function login() {
                     alert("Konto ikke godkjent ennå, Du får høre fra oss så fort som mulig")
                     break;
             }
-           
+            model.data.currentUser.id=accountsToBeChecked[key].id
         } 
          
         }
-        
+       
         updateView()
         loginPage.username=""
         loginPage.password=""

@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'acceptPendingProfilePage',
+        page: 'browseStudent',
         isLoggedIn: false,
     },
 
@@ -37,11 +37,12 @@ const model = {
             interests: '',
             importantInfo: '',
             cv: '',
-            profilePicture: ''
+            profilePicture: '',
+            gitHub: ""
         },
         studentSearchPage: {
             search: '',
-            studentId: '',
+            studentId: '2',
             mapLocation: '',
             searchFilters: [],
         },
@@ -52,26 +53,24 @@ const model = {
             id: '',
             // userType: '' // student, company, admin
         },
-        accounts: {
-            allAccounts: [
-                { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
-                { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
-                { id: 10, name: 'Student2', password: 'passord2', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
-                { id: 3, name: 'Bedrift1', password: 'passord1', userType: 'company', email: 'bedrift1@mail.com', orgNr: '010010001' },
-                { id: 4, name: 'Nidar', password: '!Freia', userType: 'pendingCompany', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
-                { id: 5, name: 'Freia', password: '!Nidar', userType: 'pendingCompany', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
-                { id: 6, name: 'Komplett', password: 'Penger', userType: 'pendingCompany', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
-            ],
 
-        },
+        accounts: [
+            { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
+            { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: '' },
+            { id: 7, name: 'Student2', password: 'passord2', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: '' },
+            { id: 3, name: 'Bedrift1', password: 'passord1', userType: 'company', email: 'bedrift1@mail.com', orgNr: '010010001' },
+            { id: 4, name: 'Nidar', password: '!Freia', userType: 'pendingCompany', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
+            { id: 5, name: 'Freia', password: '!Nidar', userType: 'pendingCompany', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
+            { id: 6, name: 'Komplett', password: 'Penger', userType: 'pendingCompany', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
+        ],
 
-        interests: [
-            { accountId: 1, technologyId: 1 },
-            { accountId: 1, technologyId: 2 },
-            { accountId: 1, technologyId: 10 },
-            { accountId: 4, technologyId: 1 },
-            { accountId: 5, technologyId: 1 },
-            { accountId: 6, technologyId: 1 },
+        techXpRelations: [
+            { accountId: 2, technologyId: 1 },
+            { accountId: 2, technologyId: 2 },
+            { accountId: 2, technologyId: 10 },
+            { accountId: 7, technologyId: 1 },
+            { accountId: 7, technologyId: 4 },
+            { accountId: 7, technologyId: 14 },
         ],
 
         techXp: [
@@ -114,11 +113,5 @@ const model = {
         ]
 
     }
-
-
-
-
-
-
 
 };
