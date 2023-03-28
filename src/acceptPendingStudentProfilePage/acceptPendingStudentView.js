@@ -1,4 +1,4 @@
-const pendingStudentAccounts = model.data.accounts.allAccounts.filter(obj => obj.userType === 'pendingStudentProfile');
+const pendingStudentAccounts = model.data.accounts.filter(obj => obj.userType === 'pendingStudentProfile');
 
 function acceptPendingStudentView() {
     // console.log(acceptStudent);

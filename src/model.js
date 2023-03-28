@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'acceptPendingProfilePage',
+        page: 'browseStudent',
         isLoggedIn: false,
     },
 
@@ -42,7 +42,7 @@ const model = {
         },
         studentSearchPage: {
             search: '',
-            studentId: '',
+            studentId: '2',
             mapLocation: '',
             searchFilters: [],
         },
