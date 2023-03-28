@@ -31,7 +31,7 @@ function pendingStudentList() {
     for (let i = 0; i < acceptStudent.length; i++) {
         const student = acceptStudent[i];
         html += /*html*/ `
-        <div>
+        <div id="studentEditDiv">
             <div class ="studentDiv">
                 ${student.name} 
             </div>

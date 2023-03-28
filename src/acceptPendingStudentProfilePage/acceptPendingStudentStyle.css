@@ -14,5 +14,14 @@
 
 .studentDiv {
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#studentEditDiv {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
