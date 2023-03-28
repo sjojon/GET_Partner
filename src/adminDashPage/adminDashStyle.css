@@ -1,18 +1,24 @@
-#adminDash-box-outer{
+.adminDashGrid{
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row; /* set direction to row */
+    gap: 16px;
+}
+
+.adminDash-box-outer{
     background-color: #ffffff;
     border: solid 1px;
     border-radius: 8px;
     border-color: #d7d9e3;
     width: 200px;
     padding: 15px;
-    position: fixed;
-    top: 160px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 
-#adminDash-tittel-text{
+.adminDash-tittel-text{
     text-align: center;
     font-size: 18px;
     font-weight: 600;
