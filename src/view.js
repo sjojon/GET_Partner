@@ -1,7 +1,7 @@
-const mainPage = document.getElementById("app")
+const mainPage = document.getElementById("app");
 
 // render whole page
-updateView()
+updateView();
 
 function updateView() {
   mainPage.innerHTML = `
@@ -14,46 +14,49 @@ function updateView() {
 
 
 function updatePage() {
-  const page = model.app.page
+  const page = model.app.page;
   //headerVisible = 0 home/not logged in, 1 student, 2 company, 3 admin
-  let html = ''
+  let html = '';
   switch (page) {
     case 'home':
-      html = homeView()
-      break
+      html = homeView();
+      break;
     case 'login':
-      html = loginView()
-      break
+      html = loginView();
+      break;
     case 'registerChoice':
-      html = registerChoiceView()
-      break
+      html = registerChoiceView();
+      break;
     case 'registerCompany':
-      html = registerCompanyView()
-      break
+      html = registerCompanyView();
+      break;
     case 'registerCompanyCompleted':
-      html = registerCompanyCompletedView()
-      break
+      html = registerCompanyCompletedView();
+      break;
     case 'registerStudent':
-      html = registerStudentView()
-      break
+      html = registerStudentView();
+      break;
+    case 'acceptPendingProfilePage':
+      html = acceptPendingStudentView();
+      break;
     case 'browseStudentSearch':
-      html = studentSearchView()
-      break
+      html = studentSearchView();
+      break;
     case 'browseStudent':
-      html = browseStudentView()
-      break
+      html = browseStudentView();
+      break;
     case 'editStudentProfile':
-      html = editStudentProfileView()
-      break
+      html = editStudentProfileView();
+      break;
     case 'studentProfile':
-      html = studentProfileView()
-      break
+      html = studentProfileView();
+      break;
     case 'acceptCompany':
-      html = acceptCompanyView()
-      break
+      html = acceptCompanyView();
+      break;
     case 'adminDash':
-      html = adminDashView()
-      break
+      html = adminDashView();
+      break;
   }
-  return html
+  return html;
 }
