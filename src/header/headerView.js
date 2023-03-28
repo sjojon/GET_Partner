@@ -1,55 +1,57 @@
 //Hvilken header som skal vises
 function updateHeader() {
-  let header = model.app.header
-  const page = model.app.page
+  let header = model.app.header;
+  const page = model.app.page;
   //home,student,company,admin
   if (page === 'home') {
-    header = 'home'
-  } else if   (page === 'login') {
-    header = 'home'
-  } else if   (page === 'registerChoice') {
-    header = 'home'
-  } else if   (page === 'registerCompany') {
-    header = 'home'
-  } else if   (page === 'registerCompanyCompleted') {
-    header = 'company'
-  } else if   (page === 'registerStudent') {
-    header = 'home'
-  } else if   (page === 'browseStudentSearch') {
-    header = 'company'
-  } else if   (page === 'browseStudent') {
-    header = 'company'
-  } else if   (page === 'editStudentProfile') {
-    header = 'student'
-  } else if   (page === 'studentProfile') {
-    header = 'student'
-  } else if   (page === 'acceptCompany') {
-      header = 'company'
+    header = 'home';
+  } else if (page === 'login') {
+    header = 'home';
+  } else if (page === 'registerChoice') {
+    header = 'home';
+  } else if (page === 'registerCompany') {
+    header = 'home';
+  } else if (page === 'registerCompanyCompleted') {
+    header = 'company';
+  } else if (page === 'registerStudent') {
+    header = 'home';
+  } else if (page === 'browseStudentSearch') {
+    header = 'company';
+  } else if (page === 'browseStudent') {
+    header = 'company';
+  } else if (page === 'editStudentProfile') {
+    header = 'student';
+  } else if (page === 'studentProfile') {
+    header = 'student';
+  } else if (page === 'acceptCompany') {
+    header = 'company';
   } else if (page === 'adminDash') {
-    header = 'admin'
+    header = 'admin';
+  } else if (page === 'acceptPendingProfilePage') {
+    header = 'student';
   }
-  let html = ''
+  let html = '';
   switch (header) {
     case 'home':
-      html = homeHeader()
-      break
+      html = homeHeader();
+      break;
     case 'student':
-      html = studentHeader()
-      break
+      html = studentHeader();
+      break;
     case 'company':
-      html = companyHeader()
-      break
+      html = companyHeader();
+      break;
     case 'admin':
-      html = adminHeader()
-      break      
+      html = adminHeader();
+      break;
   }
-  return html
+  return html;
 }
 
 
 //home/not logged in header
 function homeHeader() {
-    return /*html*/ `
+  return /*html*/ `
     <header>
     <div id="header-box">
       <nav>
@@ -75,12 +77,12 @@ function homeHeader() {
     </div>
   </header>
     `;
-  }
+}
 
 
 //student header
-  function studentHeader() {
-    return /*html*/ `
+function studentHeader() {
+  return /*html*/ `
     <header>
     <div id="header-box">
       <nav>
@@ -107,12 +109,12 @@ function homeHeader() {
     </div>
   </header>
     `;
-  }
+}
 
 
 //company header
-  function companyHeader() {
-    return /*html*/ `
+function companyHeader() {
+  return /*html*/ `
     <header>
     <div id="header-box">
       <nav>
@@ -138,12 +140,12 @@ function homeHeader() {
     </div>
   </header>
     `;
-  }
+}
 
 
 //admin header
-  function adminHeader() {
-    return /*html*/ `
+function adminHeader() {
+  return /*html*/ `
     <header>
     <div id="header-box">
       <nav>
@@ -164,4 +166,4 @@ function homeHeader() {
     </div>
   </header>
     `;
-  }
+}
