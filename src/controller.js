@@ -9,12 +9,9 @@ function findAccountById(id) {
 
 
 // Finner en ledig id eller lager en ny om det trengs i data.accounts.allAccounts
-// Funker bare hvis det er sortert liste etter id
-/////////////////////////////////////////////////////////////////////////
-/////////////////////////////FIX SOMETIME////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
 function findAvailableAccountId() {
   const allAccounts = model.data.accounts
+  allAccounts.sort((a, b) => a.id - b.id)
   let id = 1
   for (let thisAccount of allAccounts) {
 
