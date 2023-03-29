@@ -1,0 +1,161 @@
+.student-outer {
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 800px;
+
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.student-inner {
+    display: grid;
+    grid-template-areas:
+        'left right'
+        'links links'
+        'buttons buttons';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 40px;
+    margin: 25px;
+
+}
+
+/* /////Student Info///// */
+
+.student-info {
+    grid-area: left;
+}
+
+.student-name {
+    font-weight: 700;
+}
+
+.student-pic {
+    width: 200px;
+    border: solid;
+    /*pga filler bildet har stygge kanter*/
+    border-radius: 8px;
+}
+
+.student-address {
+    display: flex;
+    font-weight: 600;
+}
+
+.student-address-inner {
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.student-email {
+    display: flex;
+    font-weight: 600;
+}
+
+.student-email-inner {
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.student-tech-xp {
+    display: flex;
+    font-weight: 600;
+}
+
+.student-tech-xp-inner {
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.student-xp {
+    display: flex;
+    font-weight: 600;
+}
+
+.student-xp-inner {
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.student-interests {
+    display: flex;
+    font-weight: 600;
+}
+
+.student-interests-inner {
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+/* /////Links///// */
+
+.student-links {
+    grid-area: links;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: -15px;
+}
+
+.github-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #f44e01;
+
+}
+
+.cv-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #f44e01;
+    margin-left: 30px;
+}
+
+/* /////Map///// */
+
+.student-map {
+    grid-area: right;
+}
+
+/* /////Buttons///// */
+
+.student-buttons{
+    grid-area: buttons;
+    text-align: center;
+}
+.triangle-button {
+    position: relative;
+    padding-left: 20px;
+    background-color: #fff;
+    border: none;
+}
+
+.triangle-button:hover{
+    background-color: transparent;
+}
+
+.triangle-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.triangle-right::before {
+    border-left: 25px solid #f44e01;
+
+}
+
+.triangle-left::before {
+    border-right: 25px solid #f44e01;
+    
+}
