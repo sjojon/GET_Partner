@@ -30,12 +30,9 @@ function updateHeader() {
   } else if (page === 'acceptPendingProfilePage') {
     header = 'student';
   }
-  let html = '';
 
+  let html = '';
   if (header === 'home') {
-    if (model.app.isLoggedIn === true) {
-      
-    }
     html = homeHeader();
   } else if (header === 'student') {
     html = studentHeader();
@@ -90,7 +87,7 @@ function studentHeader() {
             <ul class="dropdown-menu">
               <button class="list-button-dropdown" onclick="goToSeeProfileStudent()">Se profil</button>
               <button class="list-button-dropdown" onclick="goToEditProfileStudent()">Endre profil</button>
-              <button class="list-button-dropdown" onclick="Logout()">Logg ut</button> <!--endre til  dollar tag log inn/ logg ut-->
+              <button class="list-button-dropdown" onclick="logout()">Logg ut</button>
             </ul>
           </li>
           <button class="list-button" onclick="tekst3()">Søk</button>
@@ -123,7 +120,7 @@ function companyHeader() {
           <button class="list-button-dropdown" onclick="tekst2()">Kart søk</button>
         </ul>
       </li>
-        <button class="list-button" onclick="tekst3()">Logg ut</button>
+      <button class="list-button-dropdown" onclick="logout()">Logg ut</button>
           <button class="list-button" onclick="tekst4()">Søk</button>
         </ul>
         <div id="header-contact-button">
@@ -146,15 +143,8 @@ function adminHeader() {
           <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
         </div>
         <ul>
-        <button class="list-button" onclick="window.location.href='https://getacademy.no'">GET Academy</button>
-          <button class="list-button" onclick="tekst1()">Firmagodkjenning</button>
-          <button class="list-button" onclick="tekst2()">Studentgodkjenning</button>
-          <button class="list-button" onclick="tekst3()">Studentoversikt</button>
-          <button class="list-button" onclick="tekst4()">Logg ut</button>
+        <button class="list-button" onclick="logout()">Logg ut</button>
         </ul>
-        <div id="header-contact-button">
-          <button>Kontakt oss</button>
-        </div>
       </nav>
     </div>
   </header>
