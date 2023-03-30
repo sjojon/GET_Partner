@@ -1,40 +1,69 @@
-.adminDashGrid{
+/*------------- GRID -------------*/
+.adminDashGrid {
     position: fixed;
     top: 160px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    flex-direction: row; /* set direction to row */
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
-.adminDash-box-outer{
+/*------------- BOX 1 -------------*/
+.adminDash-box-outer {
     background-color: #ffffff;
     border: solid 1px;
     border-radius: 8px;
     border-color: #d7d9e3;
     width: 200px;
     padding: 15px;
+    grid-column: 1;
+    grid-row: 1 / 3;
 }
 
-
-.adminDash-tittel-text{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;;
-}
-
-.adminDash-info-box{
+.adminDash-box-name {
     margin-bottom: 10px;
     padding: 6px;
     border: solid 1px;
     border-radius: 8px;
     border-color: #e3e3e7;
-}
-
-.adminDash-box-name{
     font-weight: 500;
     margin-right: auto;
-    margin-left: 5px;
+    font-size: 14px;
+}
+
+/*------------- BOX 2 -------------*/
+.adminDash-box-outer2 {
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 470px;
+    padding: 15px;
+    grid-column: 2;
+    grid-row: 1 / 2;
+    
+}
+
+#adminDash-button-grid-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.adminDash-button-box {
+    width: 227px;
+}
+
+/*------------- BOX 3 -------------*/
+.adminDash-box-outer3{
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 470px;
+    padding: 15px;
+    grid-column: 2;
+    grid-row: 2 / 2;
 }
