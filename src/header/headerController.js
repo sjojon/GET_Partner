@@ -26,6 +26,13 @@
     updateView()
   }
 
+  //tar deg til register company
+  function goToRegister() {
+    model.app.page = 'registerCompany'
+    console.log(model.app.page);
+    updateView()
+  }
+
 
   //logger bruker ut
   function Logout(){
