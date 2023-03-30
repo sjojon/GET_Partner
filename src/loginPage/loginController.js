@@ -57,7 +57,7 @@ function login() {
                     model.app.isLoggedIn = true
                     break;
                 case "pendingCompany":
-                    alert("Konto ikke godkjent ennå, Du får høre fra oss så fort som mulig")
+                    alert("Kontoen er enda ikke godkjent, du hører fra oss når kontoen er godkjent.")
                     break;
             }
             model.data.currentUser.id=accountsToBeChecked[key].id
