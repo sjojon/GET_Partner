@@ -39,10 +39,3 @@ function goToSeeProfileStudent() {
   model.app.page = 'studentProfile'
   updateView();
 }
-
-  //logger bruker ut
-  function logout(){
-    model.app.page = 'home';
-    model.app.isLoggedIn = false;
-    updateView();
-  }

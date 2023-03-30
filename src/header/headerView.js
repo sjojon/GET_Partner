@@ -1,5 +1,25 @@
 //Hvilken header som skal vises
 function updateHeader() {
+  if (model.data.currentUser.id === '') {
+    return homeHeader();
+  } else {
+
+    // finner account med riktig id
+    const currentUser = model.data.accounts.find(user => user.id === model.data.currentUser.id);
+    // Check the userType of the logged-in user
+    if (currentUser.userType === 'admin') {
+      return adminHeader();
+    } else if (currentUser.userType === 'company') {
+      return companyHeader();
+    } else if (currentUser.userType === 'student'){
+      return studentHeader();
+    }
+  }
+}
+
+
+/* //Hvilken header som skal vises
+function updateHeader() {
   let header = model.app.header;
   const page = model.app.page;
   //home,student,company,admin
@@ -45,7 +65,7 @@ function updateHeader() {
   return html;
   
 }
-
+ */
 
 //home/not logged in header
 function homeHeader() {
