@@ -24,28 +24,29 @@ function updateHeader() {
   } else if (page === 'studentProfile') {
     header = 'student';
   } else if (page === 'acceptCompany') {
-    header = 'company';
+    header = 'admin';
   } else if (page === 'adminDash') {
     header = 'admin';
   } else if (page === 'acceptPendingProfilePage') {
     header = 'student';
   }
   let html = '';
-  switch (header) {
-    case 'home':
-      html = homeHeader();
-      break;
-    case 'student':
-      html = studentHeader();
-      break;
-    case 'company':
-      html = companyHeader();
-      break;
-    case 'admin':
-      html = adminHeader();
-      break;
+
+  if (header === 'home') {
+    if (model.app.isLoggedIn === true) {
+      
+    }
+    html = homeHeader();
+  } else if (header === 'student') {
+    html = studentHeader();
+  } else if (header === 'company') {
+    html = companyHeader();
+  } else if (header === 'admin') {
+    html = adminHeader();
   }
+  
   return html;
+  
 }
 
 
@@ -64,7 +65,7 @@ function homeHeader() {
           <button class="list-button" onclick="goToLogin()">Logg inn</button>
         </ul>
         <div id="header-contact-button">
-          <button>Kontakt oss</button>
+        <button onclick="window.location.href='https://getacademy.no/kontakt'">Kontakt oss</button>
         </div>
       </nav>
     </div>
@@ -84,19 +85,18 @@ function studentHeader() {
         </div>
         <ul>
         <button class="list-button" onclick="window.location.href='https://getacademy.no'">GET Academy</button>
-          <button class="list-button" onclick="tekst2()">Tekst 2</button>
           <li class="dropdown">
             <a>Profil</a>
             <ul class="dropdown-menu">
-              <button class="list-button-dropdown" onclick="tekst2()">Se profil</button>
-              <button class="list-button-dropdown" onclick="tekst2()">Endre profil</button>
+              <button class="list-button-dropdown" onclick="goToSeeProfileStudent()">Se profil</button>
+              <button class="list-button-dropdown" onclick="goToEditProfileStudent()">Endre profil</button>
               <button class="list-button-dropdown" onclick="Logout()">Logg ut</button> <!--endre til  dollar tag log inn/ logg ut-->
             </ul>
           </li>
           <button class="list-button" onclick="tekst3()">Søk</button>
         </ul>
         <div id="header-contact-button">
-          <button>Kontakt oss</button>
+          <button onclick="window.location.href='https://getacademy.no/kontakt'">Kontakt oss</button>
         </div>
       </nav>
     </div>
@@ -127,7 +127,7 @@ function companyHeader() {
           <button class="list-button" onclick="tekst4()">Søk</button>
         </ul>
         <div id="header-contact-button">
-          <button>Kontakt oss</button>
+        <button onclick="window.location.href='https://getacademy.no/kontakt'">Kontakt oss</button>
         </div>
       </nav>
     </div>

@@ -10,31 +10,39 @@
     );
   });
   
-  
   //tar deg til hjemme skjermen når du hitter logoen
   function goToHome() {
     model.app.page = 'home';
-    console.log(model.app.page);
-    updateView()
+    updateView();
   }
-  
   
   //tar deg til login
   function goToLogin() {
     model.app.page = 'login'
-    console.log(model.app.page);
-    updateView()
+    updateView();
   }
 
   //tar deg til register company
   function goToRegister() {
     model.app.page = 'registerCompany'
-    console.log(model.app.page);
-    updateView()
+    updateView();
   }
 
+//
+function goToEditProfileStudent() {
+  model.app.page = 'editStudentProfile'
+  updateView();
+}
+
+//
+function goToSeeProfileStudent() {
+  model.app.page = 'studentProfile'
+  updateView();
+}
 
   //logger bruker ut
-  function Logout(){
-
+  function logout(){
+    model.app.page = 'home';
+    model.app.isLoggedIn = false;
+    updateView();
   }
