@@ -60,15 +60,8 @@ function homeHeader() {
         </div>
         <ul>
         <button class="list-button" onclick="window.location.href='https://getacademy.no'">GET Academy</button>
+          <button class="list-button" onclick="goToRegister()">Registrer</button>
           <button class="list-button" onclick="goToLogin()">Logg inn</button>
-          <li class="dropdown">
-            <a>Registrer bruker</a>
-            <ul class="dropdown-menu">
-              <button class="list-button-dropdown" onclick="tekst2()">Firma</button>
-              <button class="list-button-dropdown" onclick="tekst2()">Student</button>
-            </ul>
-          </li>
-          <button class="list-button" onclick="tekst3()">Søk</button>
         </ul>
         <div id="header-contact-button">
           <button>Kontakt oss</button>
