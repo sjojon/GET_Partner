@@ -1,6 +1,6 @@
 let allUsernames=[]
 let allPasswords=[]
-let accountsToBeChecked= model.data.accounts.allAccounts
+let accountsToBeChecked= model.data.accounts
 let AccountExcists=true
 let passwordIsCorrect=false
 let usernameIndex;

@@ -53,3 +53,25 @@
     width: 200px;
     margin-top: 25px;
 }
+.shown{
+    opacity: 1;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    overflow-y: scroll;
+}
+.hidden{
+    opacity: 0;
+}
+.codeSkillCLass{
+    border-radius: 0px;
+    background-color: #f44e01;
+    color: white;
+    font-weight: bold;
+    height: fit-content;
+    width: fit-content;
+    margin: 3px;
+    
+}

@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'browseStudent',
+        page: 'editStudentProfile',
         isLoggedIn: false,
     },
 
@@ -50,7 +50,7 @@ const model = {
 
     data: {
         currentUser: {
-            id: '',
+            id: '2',
             // userType: '' // student, company, admin
         },
 

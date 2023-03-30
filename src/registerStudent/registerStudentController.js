@@ -1,7 +1,7 @@
 let allInputsWrittenBoolean=false
 let bothPasswordsMatchBoolean=false
 let registerInputValues=[]
-let newMadeAccount= model.data.accounts.allAccounts
+let newMadeAccount= model.data.accounts
 function showPassword(input){
     
         if (input.checked==true&&switchInputType=="password") {

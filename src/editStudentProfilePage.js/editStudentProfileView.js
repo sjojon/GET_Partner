@@ -1,4 +1,5 @@
 function editStudentProfileView(){
+    assignAvailableInfo()
     return /*html*/`
     <div class="pageMinusHeader-editStudent">
     <div class="outer-box-editStudent">
@@ -13,20 +14,8 @@ function editStudentProfileView(){
     <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.location}" onchange="editStudentProfileInputs.location=this.value">
     </div>
     <div class="oneInputContainer">
-    <label for="navn" class="info-element-editStudent">Interesser:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.interests}" onchange="editStudentProfileInputs.interests=this.value">
-    </div>
-    <div class="oneInputContainer">
-    <label for="navn" class="info-element-editStudent">Hva er viktig at bedrifter vet om deg?:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.importantInfo}" onchange="editStudentProfileInputs.importantInfo=this.value">
-    </div>
-    <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">E-post:</label> 
     <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.email}" onchange="editStudentProfileInputs.email=this.value">
-    </div>
-    <div class="oneInputContainer">
-    <label for="navn" class="info-element-editStudent">Github link:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.gitHub}" onchange="editStudentProfileInputs.gitHub=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Nytt passord:</label> 
@@ -36,18 +25,31 @@ function editStudentProfileView(){
     <label for="navn" class="info-element-editStudent">Bekreft nytt passord:</label> 
     <input type="password" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.repeatedPassword}" onchange="editStudentProfileInputs.repeatedPassword=this.value">
     </div>
+    <div class="oneInputContainer">
+    <label for="navn" class="info-element-editStudent">Interesser:</label> 
+    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.interests}" onchange="editStudentProfileInputs.interests=this.value">
+    </div>
+    <div class="oneInputContainer">
+    <label for="navn" class="info-element-editStudent">Hva er viktig at bedrifter vet om deg?:</label> 
+    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.importantInfo}" onchange="editStudentProfileInputs.importantInfo=this.value">
+    </div>
+    <div class="oneInputContainer">
+    <label for="navn" class="info-element-editStudent">Github link:</label> 
+    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.gitHub}" onchange="editStudentProfileInputs.gitHub=this.value">
+    </div>
     </div>
     <div class="fillDiv2">
     <div class="ImageContainer">
     <h5>profilbilde:</h5>
-    <img src=${imgVariable} alt="" class="profilePicture">
+    <img src=${editStudentProfileInputs.profilePicture} alt="" class="profilePicture">
     <button onclick="changeImg()" class="buttonStyle">Last opp nytt bilde</button>
     </div>
     <h5>CV:</h5>
-    <p>${filSomBleValgt}</p>
+    <p>${editStudentProfileInputs.cv}</p>
     <button onclick="uploadCv()" class="buttonStyle">Last opp fil</button>
-    <input type="text" name="navn" class="kodeExpSøkefelt" value="" onchange=" editStudentProfileInputs.codeExp=this.value" placeHolder="søk her">
-    <button onclick="chooseProgramingExperience()" class="buttonStyle">Legg til kodeerfaring</button>
+    <label for="kodeExpSøkefelt" class="info-element-editStudent">kodeErfaring:</label> 
+    <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt" value="" oninput="chooseProgramingExperience(this)" placeHolder="søk her">
+    <div class="${classToChange}">${codeSkillsLibraryShowed}</div>
     <div>${kodeErfaring}</div>
     </div>
        </div>

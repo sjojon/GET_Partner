@@ -1,4 +1,4 @@
-const accounts = model.data.accounts.allAccounts         
+const accounts = model.data.accounts       
 let allUsernames = []                                     
 
 
