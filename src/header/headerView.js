@@ -163,6 +163,7 @@ function adminHeader() {
           <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
         </div>
         <ul>
+        <button class="list-button" onclick="goToAdminDash()">Admin</button>
         <button class="list-button" onclick="logout()">Logg ut</button>
         </ul>
       </nav>

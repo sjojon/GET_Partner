@@ -157,3 +157,8 @@ function goToStudentProfile(){
   model.app.page = 'studentProfile';
 updateView();
 }
+
+function goToAdminDash(){
+  model.app.page = 'adminDash';
+updateView();
+}
