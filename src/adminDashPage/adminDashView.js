@@ -15,7 +15,7 @@ function adminDashView() {
           <div class="adminDash-box-outer2">
             <div id="adminDash-button-grid-box">
                 <button class="adminDash-button-box" onclick="goToAcceptPendingProfilePage()">Godkjenne student profil endringer</button>
-                <button class="adminDash-button-box" onclick="goToAcceptCompany()">Godkjenne bedrifter (debug)</button>
+                <button class="adminDash-button-box" onclick="goToAcceptCompany()">Godkjenne bedrifter</button>
             </div>
           </div>
           <div class="adminDash-box-outer3">
