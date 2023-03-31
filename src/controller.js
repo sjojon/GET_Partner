@@ -111,3 +111,54 @@ function findTechsXpByAccountId(id) {
   }
   return techList
 }
+
+//goTo funksjoner
+function goToAcceptPendingProfilePage(){
+  model.app.page = 'acceptPendingProfilePage';
+updateView();
+}
+
+function goToAcceptCompany(){
+  model.app.page = 'acceptCompany';
+updateView();
+}
+
+function goToRegisterStudent(){
+  model.app.page = 'registerStudent';
+updateView();
+}
+
+function goToRegisterCompany(){
+  model.app.page = 'registerCompany';
+updateView();
+}
+
+function goToRegisterCompanyCompleted(){
+  model.app.page = 'registerCompanyCompleted';
+updateView();
+}
+
+function goToBrowseStudentSearch(){
+  model.app.page = 'browseStudentSearch';
+updateView();
+}
+
+function goToBrowseStudent(){
+  model.app.page = 'browseStudent';
+updateView();
+}
+
+function goToEditStudentProfile(){
+  model.app.page = 'editStudentProfile';
+updateView();
+}
+
+function goToStudentProfile(){
+  model.app.page = 'studentProfile';
+updateView();
+}
+
+function {
+  model.app.page = '';
+updateView();
+}

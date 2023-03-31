@@ -24,9 +24,6 @@ function updatePage() {
     case 'login':
       html = loginView();
       break;
-    case 'registerChoice':
-      html = registerChoiceView();
-      break;
     case 'registerCompany':
       html = registerCompanyView();
       break;
@@ -41,9 +38,6 @@ function updatePage() {
       break;
     case 'browseStudentSearch':
       html = studentSearchView();
-      break;
-    case 'browseStudent':
-      html = browseStudentView();
       break;
     case 'editStudentProfile':
       html = editStudentProfileView();

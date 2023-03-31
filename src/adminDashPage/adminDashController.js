@@ -17,5 +17,3 @@ for (let account of model.data.accounts) {
     countProfileChange++;
   }
 }
-
-//alle goTo funksjoner ved knappeklikk

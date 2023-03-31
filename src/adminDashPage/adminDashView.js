@@ -14,41 +14,32 @@ function adminDashView() {
           </div>
           <div class="adminDash-box-outer2">
             <div id="adminDash-button-grid-box">
-                <button class="adminDash-button-box" onclick="">Godk. student profil endr.</button>
-                <button class="adminDash-button-box" onclick="">Godkjenne bedrifter</button>
-                <button class="adminDash-button-box" onclick="">Opprett ny student bruker</button>
-                <button class="adminDash-button-box" onclick="">Opprett ny bedrift konto</button>
-                <button class="adminDash-button-box" onclick="">Fjern en student konto</button>
-                <button class="adminDash-button-box" onclick="">Fjern en bedrift konto</button>
-                <button class="adminDash-button-box" onclick="">knapp</button>
-                <button class="adminDash-button-box" onclick="">knapp</button>
+                <button class="adminDash-button-box" onclick="goToAcceptPendingProfilePage()">Godkjenne student profil endringer</button>
+                <button class="adminDash-button-box" onclick="goToAcceptCompany()">Godkjenne bedrifter</button>
             </div>
           </div>
           <div class="adminDash-box-outer3">
             <div id="adminDash-button-grid-box3">
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
-                <button class="adminDash-button-box" onclick=""></button>
+                <button class="adminDash-button-box" onclick="goToRegisterStudent()">Opprett ny student bruker</button>
+                <button class="adminDash-button-box" onclick="goToRegisterCompany()">Opprett ny bedrift konto</button>
+                <button class="adminDash-button-box" onclick="">Fjern en student konto</button>
+                <button class="adminDash-button-box" onclick="">Fjern en bedrift konto</button>
             </div>
           </div>
+        <div class="adminDash-box-outer4">
+          <div id="adminDash-button-grid-box4">
+            <button class="adminDash-button-box4" onclick="goToHome()">Hjem (debug)</button>
+            <button class="adminDash-button-box4" onclick="goToLogin()">Login (debug)</button>
+            <button class="adminDash-button-box4" onclick="goToRegisterCompanyCompleted()">Registrering godkjent (debug)</button>
+            <button class="adminDash-button-box4" onclick="goToBrowseStudentSearch()">Søk på studenter (debug)</button>
+            <button class="adminDash-button-box4" onclick="goToEditStudentProfile()">Rediger student profil (debug)</button>
+            <button class="adminDash-button-box4" onclick="goToStudentProfile()">Se student profil (debug)</button>
+            <button class="adminDash-button-box4" onclick="">Tom knapp 1</button>
+            <button class="adminDash-button-box4" onclick="">Tom knapp 2</button>
+            <button class="adminDash-button-box4" onclick="">Tom knapp 3</button>
+          </div>
         </div>
+    </div>
     `;
 }
 
