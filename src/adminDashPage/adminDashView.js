@@ -22,21 +22,18 @@ function adminDashView() {
             <div id="adminDash-button-grid-box3">
                 <button class="adminDash-button-box" onclick="goToRegisterStudent()">Opprett ny student bruker</button>
                 <button class="adminDash-button-box" onclick="goToRegisterCompany()">Opprett ny bedrift konto</button>
-                <button class="adminDash-button-box" onclick="">Fjern en student konto</button>
-                <button class="adminDash-button-box" onclick="">Fjern en bedrift konto</button>
+                <button class="adminDash-button-box" onclick="">Fjern en student konto (debug)</button>
+                <button class="adminDash-button-box" onclick="">Fjern en bedrift konto (debug)</button>
             </div>
           </div>
         <div class="adminDash-box-outer4">
           <div id="adminDash-button-grid-box4">
-            <button class="adminDash-button-box4" onclick="goToHome()">Hjem (debug)</button>
-            <button class="adminDash-button-box4" onclick="goToLogin()">Login (debug)</button>
-            <button class="adminDash-button-box4" onclick="goToRegisterCompanyCompleted()">Registrering godkjent (debug)</button>
-            <button class="adminDash-button-box4" onclick="goToBrowseStudentSearch()">Søk på studenter (debug)</button>
+            <button class="adminDash-button-box4" onclick="goToHome()">Hjem</button>
+            <button class="adminDash-button-box4" onclick="goToLogin()">Login</button>
+            <button class="adminDash-button-box4" onclick="goToRegisterCompanyCompleted()">Registrering godkjent</button>
+            <button class="adminDash-button-box4" onclick="goToBrowseStudentSearch()">Søk på studenter</button>
             <button class="adminDash-button-box4" onclick="goToEditStudentProfile()">Rediger student profil (debug)</button>
-            <button class="adminDash-button-box4" onclick="goToStudentProfile()">Se student profil (debug)</button>
-            <button class="adminDash-button-box4" onclick="">Tom knapp 1</button>
-            <button class="adminDash-button-box4" onclick="">Tom knapp 2</button>
-            <button class="adminDash-button-box4" onclick="">Tom knapp 3</button>
+            <button class="adminDash-button-box4" onclick="goToStudentProfile()">Se student profil</button>
           </div>
         </div>
     </div>
