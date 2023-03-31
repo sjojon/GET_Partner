@@ -88,6 +88,7 @@
     padding: 15px;
     grid-column: 1 / 3;
     grid-row: 3;
+    width: 730px;
   }
 
   #adminDash-button-grid-box4 {
