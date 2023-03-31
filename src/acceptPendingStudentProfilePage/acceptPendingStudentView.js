@@ -12,8 +12,8 @@ function acceptPendingStudentView() {
 }
 
 function isStudentProfilePendingListEmpty() {
-    const acceptStudent = pendingStudentAccounts;
-    if (acceptStudent.length === 0) {
+    // const acceptStudent = pendingStudentAccounts;
+    if (pendingStudentAccounts.length === 0) {
         return /*HTML*/ `
         <div>
         Ingen oppdateringer tilgjengelig!
@@ -27,11 +27,11 @@ function isStudentProfilePendingListEmpty() {
 
 function pendingStudentList() {
     html = '';
-    const acceptStudent = pendingStudentAccounts;
-    for (let i = 0; i < acceptStudent.length; i++) {
-        const student = acceptStudent[i];
+    // const acceptStudent = pendingStudentAccounts;
+    for (let i = 0; i < pendingStudentAccounts.length; i++) {
+        const student = pendingStudentAccounts[i];
         html += /*html*/ `
-        <div id="studentEditDiv">
+        <div class="studentEditDiv">
             <div class ="studentDiv">
                 ${student.name} 
             </div>
