@@ -34,6 +34,16 @@ button:hover {
   background-color: #1239ff;
 }
 
+input {
+  width: 320px;
+  background-color: #f0f0f0;
+  border-color: transparent;
+  border-radius: 5px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+
 
 /*------------- HEADER -------------*/
 header {

@@ -157,8 +157,3 @@ function goToStudentProfile(){
   model.app.page = 'studentProfile';
 updateView();
 }
-
-function {
-  model.app.page = '';
-updateView();
-}
