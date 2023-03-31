@@ -7,11 +7,13 @@ let currentStudentAccount=accountsToBeChecked.filter(ac=>ac.id==model.data.curre
 let codeSkillsLibrary;
 let classToChange="hidden"
 let codeSkillsLibraryShowed;
+let editStudentProfileInputsArray=[]
 
 function programingExperienceToChooseFrom(){
     return model.data.techXp.map(xp=>xp.name)
 }
-function chooseProgramingExperience(input){
+function chooseProgramingExperience(input,event){
+    event.preventDefault();
     editStudentProfileInputs.codeExp=input.value
     codeSkillsLibraryShowed=""
     if (editStudentProfileInputs.codeExp!=="") {
@@ -44,7 +46,7 @@ function chooseProgramingExperience(input){
    
 // }
 function assignAvailableInfo(){
-    if (currentStudentAccount) {
+    if (currentStudentAccount&& editStudentProfileInputsArray.length==0) {
         editStudentProfileInputs.name = currentStudentAccount[0].name
         editStudentProfileInputs.location=currentStudentAccount[0].address
         editStudentProfileInputs.email=currentStudentAccount[0].email
@@ -59,6 +61,7 @@ function assignAvailableInfo(){
        
 
     }
+    editStudentProfileInputsArray.push("1")
    
 }
 

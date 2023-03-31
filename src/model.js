@@ -42,7 +42,7 @@ const model = {
         },
         studentSearchPage: {
             search: '',
-            studentId: '', // '2' er dummy input for browseStudent
+            studentId: 2, // '2' er dummy input for browseStudent
             mapLocation: '',
             searchFilters: [],
         },
@@ -50,7 +50,8 @@ const model = {
 
     data: {
         currentUser: {
-            id: '',
+            id: 2,
+            // userType: '' // student, company, admin
         },
 
         accounts: [

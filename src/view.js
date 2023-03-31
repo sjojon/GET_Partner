@@ -7,7 +7,7 @@ function updateView() {
   mainPage.innerHTML = `
   
 
-    ${updateHeader()}
+  ${updateHeader()}
     ${updatePage()}
     `;
 }

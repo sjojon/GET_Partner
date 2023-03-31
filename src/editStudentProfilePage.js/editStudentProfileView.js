@@ -48,7 +48,7 @@ function editStudentProfileView(){
     <p>${editStudentProfileInputs.cv}</p>
     <button onclick="uploadCv()" class="buttonStyle">Last opp fil</button>
     <label for="kodeExpSøkefelt" class="info-element-editStudent">kodeErfaring:</label> 
-    <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt" value="" oninput="chooseProgramingExperience(this)" placeHolder="søk her">
+    <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt" value="" oninput="chooseProgramingExperience(this,event)" placeHolder="søk her">
     <div class="${classToChange}">${codeSkillsLibraryShowed}</div>
     <div>${kodeErfaring}</div>
     </div>
