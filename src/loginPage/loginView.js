@@ -1,10 +1,10 @@
 let invalid = '';
-let passwordInput = "password"
+let passwordInput = "password";
 let loginPage = model.inputs.login;
 
 function loginView() {
     return /*HTML*/ `
-    <div id="outer">
+    <div id="outer-login">
         <div id="header">Logg inn</div>
             <div class="text-box">
                 <div class="text-over-box">
