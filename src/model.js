@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'adminDash',
+        page: 'home',
         isLoggedIn: false,
     },
 
@@ -50,7 +50,7 @@ const model = {
 
     data: {
         currentUser: {
-            id: 2,
+            id: '',
             // userType: '' // student, company, admin
         },
 
