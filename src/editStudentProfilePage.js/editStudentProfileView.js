@@ -2,9 +2,10 @@ function editStudentProfileView(){
     assignAvailableInfo()
     return /*html*/`
     <div class="pageMinusHeader-editStudent">
+    <div class="box">
+    <div><h3 class="pageHeading-editStudent"> Rediger studentprofil:</h3></div>
     <div class="outer-box-editStudent">
     <div class="fillDiv1">
-    <h3 class="pageHeading-editStudent"> Rediger studentprofil:</h3>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Navn:</label> 
     <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.name}" onchange="editStudentProfileInputs.name=this.value">
@@ -39,6 +40,10 @@ function editStudentProfileView(){
     </div>
     </div>
     <div class="fillDiv2">
+    <label for="kodeExpSøkefelt" class="element-editStudent">kodeErfaring:</label> 
+    <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt" value="${searchBar}" oninput="chooseProgramingExperience(this)" placeHolder="søk her">
+    <div class="${classToChange}">${codeSkillsLibraryShowed}</div>
+    <div class="erfaringDiv">${kodeErfaring}</div>
     <div class="ImageContainer">
     <h5>profilbilde:</h5>
     <img src=${editStudentProfileInputs.profilePicture} alt="" class="profilePicture">
@@ -47,11 +52,8 @@ function editStudentProfileView(){
     <h5>CV:</h5>
     <p>${editStudentProfileInputs.cv}</p>
     <button onclick="uploadCv()" class="buttonStyle">Last opp fil</button>
-    <label for="kodeExpSøkefelt" class="info-element-editStudent">kodeErfaring:</label> 
-    <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt" value="" oninput="chooseProgramingExperience(this,event)" placeHolder="søk her">
-    <div class="${classToChange}">${codeSkillsLibraryShowed}</div>
-    <div>${kodeErfaring}</div>
     </div>
+       </div>
        </div>
    </div>
    </div>

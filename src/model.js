@@ -50,7 +50,7 @@ const model = {
 
     data: {
         currentUser: {
-            id: '',
+            id: 2,
             // userType: '' // student, company, admin
         },
 

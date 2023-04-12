@@ -1,11 +1,6 @@
 .outer-box-editStudent{
     display: flex;
     flex-direction: row;
-    border: 2px black solid;
-    background-color: white;
-    width: 900px;
-    padding-left: 25px;
-    height: fit-content;
     
 }
 
@@ -74,4 +69,29 @@
     width: fit-content;
     margin: 3px;
     
+}
+.chosenSkills{
+    border-bottom: black solid 2px;
+    margin-right: 5px;
+}
+.chosenSkills:hover{
+    color: blue ;
+    border-bottom: blue solid 2px;
+}
+.erfaringDiv{
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    border: 2px black solid;
+    background-color: white;
+    width: 900px;
+    padding-left: 25px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.element-editStudent{
+    align-self: self-start;
+    margin-top: 7px;
 }
