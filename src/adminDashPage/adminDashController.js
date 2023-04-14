@@ -13,7 +13,7 @@ for (let account of model.data.accounts) {
     countPendingCompany++;
   } else if (account.userType === 'admin') {
     countAdmins++;
-  } else if (account.usertype === '') {
+  } else if (account.userType === 'pendingStudentProfile') {
     countProfileChange++;
   }
 }

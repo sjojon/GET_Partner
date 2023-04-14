@@ -1,9 +1,8 @@
 //Hvilken header som skal vises
 function updateHeader() {
-  if (model.data.currentUser.id === '') {
+  if (!model.app.isLoggedIn) {
     return homeHeader();
   } else {
-
     // finner account med riktig id
     const currentUser = model.data.accounts.find(user => user.id === model.data.currentUser.id);
     // Check the userType of the logged-in user
