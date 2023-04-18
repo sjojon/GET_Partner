@@ -36,8 +36,8 @@ function updatePage() {
     case 'acceptPendingProfilePage':
       html = acceptPendingStudentView();
       break;
-    case 'browseStudentSearch':
-      html = studentSearchView();
+    case 'studentBrowseSearch':
+      html = studentBrowseSearchView();
       break;
     case 'editStudentProfile':
       html = editStudentProfileView();
