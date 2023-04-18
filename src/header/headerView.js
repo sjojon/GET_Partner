@@ -139,7 +139,7 @@ function companyHeader() {
           <button class="list-button-dropdown" onclick="tekst2()">Kart søk</button>
         </ul>
       </li>
-      <button class="list-button-dropdown" onclick="logout()">Logg ut</button>
+      <button class="list-button" onclick="logout()">Logg ut</button>
           <button class="list-button" onclick="tekst4()">Søk</button>
         </ul>
         <div id="header-contact-button">
