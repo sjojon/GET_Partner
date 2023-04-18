@@ -16,56 +16,6 @@ function updateHeader() {
   }
 }
 
-
-/* //Hvilken header som skal vises
-function updateHeader() {
-  let header = model.app.header;
-  const page = model.app.page;
-  //home,student,company,admin
-  if (page === 'home') {
-    header = 'home';
-  } else if (page === 'login') {
-    header = 'home';
-  } else if (page === 'registerChoice') {
-    header = 'home';
-  } else if (page === 'registerCompany') {
-    header = 'home';
-  } else if (page === 'registerCompanyCompleted') {
-    header = 'company';
-  } else if (page === 'registerStudent') {
-    header = 'home';
-  } else if (page === 'browseStudentSearch') {
-    header = 'company';
-  } else if (page === 'browseStudent') {
-    header = 'company';
-  } else if (page === 'editStudentProfile') {
-    header = 'student';
-  } else if (page === 'studentProfile') {
-    header = 'student';
-  } else if (page === 'acceptCompany') {
-    header = 'admin';
-  } else if (page === 'adminDash') {
-    header = 'admin';
-  } else if (page === 'acceptPendingProfilePage') {
-    header = 'student';
-  }
-
-  let html = '';
-  if (header === 'home') {
-    html = homeHeader();
-  } else if (header === 'student') {
-    html = studentHeader();
-  } else if (header === 'company') {
-    html = companyHeader();
-  } else if (header === 'admin') {
-    html = adminHeader();
-  }
-  
-  return html;
-  
-}
- */
-
 //home/not logged in header
 function homeHeader() {
   return /*html*/ `
@@ -88,7 +38,6 @@ function homeHeader() {
   </header>
     `;
 }
-
 
 //student header
 function studentHeader() {
@@ -120,7 +69,6 @@ function studentHeader() {
     `;
 }
 
-
 //company header
 function companyHeader() {
   return /*html*/ `
@@ -150,7 +98,6 @@ function companyHeader() {
   </header>
     `;
 }
-
 
 //admin header
 function adminHeader() {
