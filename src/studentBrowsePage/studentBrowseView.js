@@ -10,13 +10,6 @@ function createSearchParameters() {
     return [].concat(techXpValues, countyValues)
 }
 
-function createStudentArray() {
-    return model.data.accounts.filter(
-        obj =>
-            obj.userType == 'student' ||
-            obj.userType == 'pendingStudentProfile')
-}
-
 function studentBrowseSearchView() {
     return /*HTML*/`
     <div id="student-parent">   
@@ -79,7 +72,7 @@ function createStudentBrowseHtml() {
         if (currentFilters.every(value =>
             Object.values(student).includes(value) ||
             findTechsXpByAccountId(student.id).includes(value)
-            )) {
+        )) {
             html += /*HTML*/`
             <div class="student-card" onclick="showStudentPage(${student.id})">
                 <img class="student-picture" src="${student.pic}"></img>

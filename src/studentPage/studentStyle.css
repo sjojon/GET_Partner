@@ -16,10 +16,9 @@
     display: grid;
     grid-template-areas:
         'left right'
-        'links links'
-        'buttons buttons';
+        'links buttons';
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 40px;
+    grid-template-rows: auto 25px;
     margin: 25px;
 
 }

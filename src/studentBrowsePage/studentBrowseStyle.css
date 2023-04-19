@@ -1,4 +1,4 @@
-#student-parent{
+#student-parent {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,22 +21,24 @@
     margin: 0 auto;
 
     display: grid;
-    
-    grid-template-areas: 
-    "left right"
-    "bottom bottom";
+
+    grid-template-areas:
+        "left right"
+        "bottom bottom";
 }
 
-#student-browse-input{
+#student-browse-input {
     grid-area: left;
 }
+
 #student-search-options {
     height: 45px;
 }
 
-#student-search-options{
+#student-search-options {
     grid-area: right;
 }
+
 #student-browse-filters-filters {
     height: 45px;
 }
@@ -50,17 +52,23 @@
 
 .student-card {
     border-radius: 8px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     height: 70px;
     width: 300px;
     padding: 5px;
     margin: 10px;
+    cursor: pointer;
+
     display: grid;
     grid-template-columns: 25% 1fr;
     grid-template-areas:
         "left topright"
         "left midright"
         "left botright";
+}
+
+.student-card:hover{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .student-picture {

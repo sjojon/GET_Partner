@@ -1,11 +1,11 @@
-  //logger bruker ut
-  function logout(){
-    model.app.page = 'home';
-    model.app.isLoggedIn = false;
-    model.data.currentUser.id = '';
-    updateHeader()
-    updateView();
-  }
+//logger bruker ut
+function logout() {
+  model.app.page = 'home';
+  model.app.isLoggedIn = false;
+  model.data.currentUser.id = '';
+  updateHeader()
+  updateView();
+}
 
 // Finner account med id som parameter
 function findAccountById(id) {
@@ -95,32 +95,41 @@ function findTechsXpByAccountId(id) {
 
   //Lager en liste med alle tech id'ene til accounten
   for (let relation of relations) {
-      if (relation.accountId === id) {
-          techIdList.push(relation.technologyId)
-      }
+    if (relation.accountId === id) {
+      techIdList.push(relation.technologyId)
+    }
   }
 
   //Lager en liste med alle tech navnene
   let techList = []
   for (let searchId of techIdList) {
-      for (let techXp of techs) {
-          if (searchId == techXp.id) {
-              techList.push(techXp.name)
-          }
+    for (let techXp of techs) {
+      if (searchId == techXp.id) {
+        techList.push(techXp.name)
       }
+    }
   }
   return techList
+}
+
+//Lager en liste med alle studenter
+function createStudentArray() {
+  return model.data.accounts.filter(
+    obj =>
+      obj.userType == 'student' ||
+      obj.userType == 'pendingStudentProfile'
+  )
 }
 
 //Teller antall studenter generelt, og per fylke
 function countTotalStudents() {
   model.data.totalStudents = 0;
   for (i in model.data.countiesStudentCount) {
-      model.data.countiesStudentCount[i] = 0;
+    model.data.countiesStudentCount[i] = 0;
   }
 
   for (i in model.data.accounts) {
-    if (model.data.accounts[i].userType = 'student') {
+    if (model.data.accounts[i].userType == 'student') { //Det var bare en '=' og ikke '==' her, så det ødela koden min lolol.
       model.data.totalStudents++;
       model.data.countiesStudentCount[model.data.accounts[i].location]++;
     }
@@ -128,52 +137,52 @@ function countTotalStudents() {
 }
 
 //goTo funksjoner
-function goToAcceptPendingProfilePage(){
+function goToAcceptPendingProfilePage() {
   model.app.page = 'acceptPendingProfilePage';
-updateView();
+  updateView();
 }
 
-function goToAcceptCompany(){
+function goToAcceptCompany() {
   model.app.page = 'acceptCompany';
-updateView();
+  updateView();
 }
 
-function goToRegisterStudent(){
+function goToRegisterStudent() {
   model.app.page = 'registerStudent';
-updateView();
+  updateView();
 }
 
-function goToRegisterCompany(){
+function goToRegisterCompany() {
   model.app.page = 'registerCompany';
-updateView();
+  updateView();
 }
 
-function goToRegisterCompanyCompleted(){
+function goToRegisterCompanyCompleted() {
   model.app.page = 'registerCompanyCompleted';
-updateView();
+  updateView();
 }
 
-function goToBrowseStudentSearch(){
+function goToBrowseStudentSearch() {
   model.app.page = 'browseStudentSearch';
-updateView();
+  updateView();
 }
 
-function goToBrowseStudent(){
+function goToBrowseStudent() {
   model.app.page = 'browseStudent';
-updateView();
+  updateView();
 }
 
-function goToEditStudentProfile(){
+function goToEditStudentProfile() {
   model.app.page = 'editStudentProfile';
-updateView();
+  updateView();
 }
 
-function goToStudentProfile(){
+function goToStudentProfile() {
   model.app.page = 'studentProfile';
-updateView();
+  updateView();
 }
 
-function goToAdminDash(){
+function goToAdminDash() {
   model.app.page = 'adminDash';
-updateView();
+  updateView();
 }

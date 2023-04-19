@@ -22,10 +22,9 @@ function removeFilter(index) {
 }
 
 function showStudentPage(id) {
-    console.log(id)
+    model.inputs.studentSearchPage.searchFilters = currentFilters
     model.inputs.studentSearchPage.studentId = id
     model.app.page = 'studentBrowse'
-    console.log('page: ' + model.app.page)
-    console.log('id: ' + model.inputs.studentSearchPage.studentId)
+
     updateView()
 }

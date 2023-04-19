@@ -45,9 +45,9 @@ function studentBrowseView() {
                 </a>
             </div>
             <div class="student-buttons">
-                <i class="bi bi-caret-left student-navigate"></i> 
-                <i class="bi bi-search student-navigate"></i>
-                <i class="bi bi-caret-right student-navigate"></i>
+                <i class="bi bi-caret-left student-navigate" onclick="previousStudent()"></i> 
+                <i class="bi bi-search student-navigate" onclick="backToStudentBrowse()"></i>
+                <i class="bi bi-caret-right student-navigate" onclick="nextStudent()"></i>
             </div>
         </div>
     </div>
