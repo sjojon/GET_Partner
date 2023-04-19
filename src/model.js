@@ -57,7 +57,7 @@ const model = {
 
         mapsState: {
             mapToShow: false,
-            studentAccountsToShow: 0
+            studentAccountToShow: 'all' //Blir til studentId hvis vi skal se på en spesifikk en
         },
 
         accounts: [
@@ -124,7 +124,9 @@ const model = {
             { id: 9, name: 'Trøndelag' },
             { id: 10, name: 'Vestland' },
             { id: 11, name: 'Møre og Romsdal' },
-        ]
+        ],
+
+        totalStudents: 0,
 
     }
 

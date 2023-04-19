@@ -112,6 +112,16 @@ function findTechsXpByAccountId(id) {
   return techList
 }
 
+//Teller antall studenter
+function countStudents() {
+  model.data.totalStudents = 0;
+  for (i in model.data.accounts) {
+    if (model.data.accounts.userType = 'student') {
+      model.data.totalStudents++;
+    }
+  }
+}
+
 //goTo funksjoner
 function goToAcceptPendingProfilePage(){
   model.app.page = 'acceptPendingProfilePage';

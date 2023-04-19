@@ -11,10 +11,11 @@ function updateView() {
     ${updatePage()}
     `;
 
-  if (model.data.mapsState.mapToShow) {
-    //initMap(); vent til det er klart
+  /*if (model.data.mapsState.mapToShow) {
+    countStudents();
+    initMap();
     mapToShow = false;
-  }
+  }*/
 }
 
 
