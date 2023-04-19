@@ -46,28 +46,32 @@ function login() {
                 case "admin":
                     model.app.page = "adminDash"
                     model.app.isLoggedIn = true
+                    model.data.currentUser.id=accountsToBeChecked[key].id
                     break;
                 case "student":
                 case "pendingStudentProfile":
                     model.app.page="studentProfile"
                     model.app.isLoggedIn=true
+                    model.data.currentUser.id=accountsToBeChecked[key].id
                     break;  
                 case "company":
                     model.app.page = "browseStudentSearch"
                     model.app.isLoggedIn = true
+                    model.data.currentUser.id=accountsToBeChecked[key].id
                     break;
                 case "pendingCompany":
-                    alert("Kontoen er enda ikke godkjent, du hører fra oss når kontoen er godkjent.")
+                    alert("Kontoen er enda ikke godkjent, du hører fra oss når kontoen er godkjent.") 
                     break;
             }
-            model.data.currentUser.id=accountsToBeChecked[key].id
+            // model.data.currentUser.id=accountsToBeChecked[key].id
+            //endre den delen slik at id til pending company ikke lagres i currentUser.
         } 
          
         }
        
         updateView()
-        loginPage.username=""
-        loginPage.password=""
+        // loginPage.username=""
+        // loginPage.password=""
    }
     
    

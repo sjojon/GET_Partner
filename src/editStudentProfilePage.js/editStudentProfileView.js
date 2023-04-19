@@ -12,6 +12,10 @@ function editStudentProfileView(){
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Bosted:</label> 
+    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.address}" onchange="editStudentProfileInputs.address=this.value">
+    </div>
+    <div class="oneInputContainer">
+    <label for="navn" class="info-element-editStudent">Fylke:</label> 
     <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.location}" onchange="editStudentProfileInputs.location=this.value">
     </div>
     <div class="oneInputContainer">
@@ -20,11 +24,11 @@ function editStudentProfileView(){
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Nytt passord:</label> 
-    <input type="password" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.password}" onchange="editStudentProfileInputs.password=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.password}" onchange="editStudentProfileInputs.password=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Bekreft nytt passord:</label> 
-    <input type="password" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.repeatedPassword}" onchange="editStudentProfileInputs.repeatedPassword=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.repeatedPassword}" onchange="editStudentProfileInputs.repeatedPassword=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Interesser:</label> 
@@ -41,21 +45,23 @@ function editStudentProfileView(){
     </div>
     <div class="fillDiv2">
     <label for="kodeExpSøkefelt" class="element-editStudent">kodeErfaring:</label> 
-    <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt" value="${searchBar}" oninput="chooseProgramingExperience(this)" placeHolder="søk her">
+    <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt"  value="${searchBar}" oninput="chooseProgramingExperience(this)" placeHolder="søk her">
     <div class="${classToChange}">${codeSkillsLibraryShowed}</div>
     <div class="erfaringDiv">${kodeErfaring}</div>
+    <p class="element-editStudent">profilbilde:</p>
     <div class="ImageContainer">
-    <h5>profilbilde:</h5>
     <img src=${editStudentProfileInputs.profilePicture} alt="" class="profilePicture">
     <button onclick="changeImg()" class="buttonStyle">Last opp nytt bilde</button>
     </div>
-    <h5>CV:</h5>
+    <p class="element-editStudent">CV:</p>
     <p>${editStudentProfileInputs.cv}</p>
     <button onclick="uploadCv()" class="buttonStyle">Last opp fil</button>
     </div>
        </div>
+       <button class="buttonStyle margin" onclick="saveChanges()">Lagre endringer</button>
        </div>
    </div>
    </div>
     `
-}
+} 
+

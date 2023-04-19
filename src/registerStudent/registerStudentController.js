@@ -10,7 +10,6 @@ function showPassword(input){
            
             
         } else if  (input.checked==true&&switchInputType=="text"){
-            console.log("this if is read")
             switchInputType="password"
            
             
@@ -40,12 +39,21 @@ function bothPasswordsMatch(){
     } else{alert("Gjentatt passord samsvarer ikke med passord.")}
     
 }
+/*save new profile*/
 function saveProfile(){
     allInputsWritten()
     bothPasswordsMatch()
     if (bothPasswordsMatchBoolean==true&&allInputsWrittenBoolean==true) {
         let newStudentAccountId= findAvailableAccountId()
-        newMadeAccount.push({id:newStudentAccountId,name:registerNewStAccount.name,password:registerNewStAccount.password, userType:"student", address:"",email:registerNewStAccount.email, gitHub: '', pic: '', cv: '', counter: 0})
+        newMadeAccount.push({
+            id:newStudentAccountId,
+            name:registerNewStAccount.name,
+            password:registerNewStAccount.password, 
+            userType:"student", 
+            email:registerNewStAccount.email, 
+            gitHub: '', pic: '', cv: '', 
+            counter: 0,importantInfo: '',
+             interests: '', address: '', location:''})
         alert("Profil opprettet. Brukernavn: "+ registerNewStAccount.name +" Passord: " + registerNewStAccount.password)
         clearInputFiles()
         
