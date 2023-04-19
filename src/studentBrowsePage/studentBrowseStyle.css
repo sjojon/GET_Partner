@@ -1,0 +1,81 @@
+#student-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#student-browse-outer {
+    background-color: #ffffff;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: auto;
+    width: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    
+    grid-template-areas: 
+    "left right"
+    "bottom bottom";
+}
+
+#student-browse-input{
+    grid-area: left;
+}
+#student-search-options {
+    height: 45px;
+}
+
+#student-search-options{
+    grid-area: right;
+}
+#student-browse-filters-filters {
+    height: 45px;
+}
+
+#student-browse-students {
+    grid-area: bottom;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+}
+
+.student-card {
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    height: 70px;
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-areas:
+        "left topright"
+        "left midright"
+        "left botright";
+}
+
+.student-picture {
+    grid-area: left;
+    height: 70px;
+}
+
+.student-name {
+    grid-area: topright;
+}
+
+.student-location {
+    grid-area: midright;
+}
+
+.student-tech {
+    grid-area: botright;
+}
