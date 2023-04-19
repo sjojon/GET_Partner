@@ -22,13 +22,22 @@ function initMap() {//Send inn studentlocations array slik at vi kan se enkeltvi
     geocoder = new google.maps.Geocoder();
 
     markers = [];
-    studentCount = model.data.mapsState.studentAccountsToShow;
+    let studentAccountToShow = model.data.mapsState.studentAccountToShow;
 
-    for (i in model.data.accounts) {
-      if (model.data.accounts[i].userType == 'student') {
-        geocode({address: model.data.accounts[i].address})
-      }
-    };
+    if (studentAccountToShow == 'all') {
+      studentCount = model.data.totalStudents;
+      for (i in model.data.accounts) {
+        if (model.data.accounts[i].userType == 'student') {
+          geocode({address: model.data.accounts[i].address})
+        }
+      };
+    }
+
+    else { //Vi har en spesifikk studentId
+      studentCount = 1;
+      let givenAccount = model.data.accounts.find(id == studentAccountToShow);
+      geocode({address: givenAccount.address})
+    }
 
     // Add a feature layer for localities.
     featureLayer = map.getFeatureLayer('ADMINISTRATIVE_AREA_LEVEL_1');
@@ -75,7 +84,7 @@ async function handlePlaceClick(event) {
     '<span style="font-size:small">Fylke: ' +
     county + 
     "<br/> Antall studenter: " +
-    countiesStudentCount[county] +
+    model.data.countiesStudentCount[county] +
     "</span>";
 
   updateInfoWindow(content, event.latLng);

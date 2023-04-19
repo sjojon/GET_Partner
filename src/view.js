@@ -11,10 +11,11 @@ function updateView() {
     ${updatePage()}
     `;
 
-  if (model.data.mapsState.mapToShow) {
-    //initMap(); vent til det er klart
+  /*if (model.data.mapsState.mapToShow) {
+    //countTotalStudents();
+    initMap();
     mapToShow = false;
-  }
+  }*/
 }
 
 
@@ -42,6 +43,7 @@ function updatePage() {
       html = acceptPendingStudentView();
       break;
     case 'studentBrowseSearch':
+      countTotalStudents();
       html = studentBrowseSearchView();
       break;
     case 'studentBrowse':

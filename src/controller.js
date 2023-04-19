@@ -112,6 +112,21 @@ function findTechsXpByAccountId(id) {
   return techList
 }
 
+//Teller antall studenter generelt, og per fylke
+function countTotalStudents() {
+  model.data.totalStudents = 0;
+  for (i in model.data.countiesStudentCount) {
+      model.data.countiesStudentCount[i] = 0;
+  }
+
+  for (i in model.data.accounts) {
+    if (model.data.accounts[i].userType = 'student') {
+      model.data.totalStudents++;
+      model.data.countiesStudentCount[model.data.accounts[i].location]++;
+    }
+  }
+}
+
 //goTo funksjoner
 function goToAcceptPendingProfilePage(){
   model.app.page = 'acceptPendingProfilePage';
