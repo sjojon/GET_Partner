@@ -1,7 +1,7 @@
-function browseStudentView() {
-    let techList = findTechsXpByAccountId(parseInt(model.inputs.studentSearchPage.studentId)) 
-    let student = model.data.accounts[2] //DUMMY
-    
+function studentBrowseView() {
+    let techList = findTechsXpByAccountId(parseInt(model.inputs.studentSearchPage.studentId))
+    let student = findAccountById(model.inputs.studentSearchPage.studentId) //DUMMY
+
     model.data.mapsState.mapToShow = true;
     model.data.mapsState.studentAccountsToShow = 1;
     return /*HTML*/`
@@ -45,8 +45,9 @@ function browseStudentView() {
                 </a>
             </div>
             <div class="student-buttons">
-                <button class="triangle-button triangle-left" onclick=""></button> 
-                <button class="triangle-button triangle-right" onclick=""></button>
+                <i class="bi bi-caret-left student-navigate"></i> 
+                <i class="bi bi-search student-navigate"></i>
+                <i class="bi bi-caret-right student-navigate"></i>
             </div>
         </div>
     </div>
@@ -54,11 +55,11 @@ function browseStudentView() {
     `}
 
 
-function createTechListHtml(list){
+function createTechListHtml(list) {
     let html = ''
-    for(let i = 0; i < list.length; i++){
+    for (let i = 0; i < list.length; i++) {
         html += `${list[i]}`
-        if(i !== (list.length - 1)){
+        if (i !== (list.length - 1)) {
             html += `, `
         }
     }

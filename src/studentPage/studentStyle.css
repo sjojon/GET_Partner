@@ -123,6 +123,14 @@
 
 /* /////Buttons///// */
 
+.student-navigate{
+    text-decoration: none;
+    font-weight: 2000;
+    font-size: 200%;
+    color: #f44e01;
+    margin-left: 30px;
+}
+
 .student-buttons{
     grid-area: buttons;
     text-align: center;

@@ -81,7 +81,7 @@ function createStudentBrowseHtml() {
             findTechsXpByAccountId(student.id).includes(value)
             )) {
             html += /*HTML*/`
-            <div class="student-card">
+            <div class="student-card" onclick="showStudentPage(${student.id})">
                 <img class="student-picture" src="${student.pic}"></img>
                 <div class="student-name">${student.name}</div>
                 <div class="student-location">${student.location}</div>

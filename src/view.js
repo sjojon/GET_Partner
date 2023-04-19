@@ -44,6 +44,9 @@ function updatePage() {
     case 'studentBrowseSearch':
       html = studentBrowseSearchView();
       break;
+    case 'studentBrowse':
+      html = studentBrowseView();
+      break;
     case 'editStudentProfile':
       html = editStudentProfileView();
       break;

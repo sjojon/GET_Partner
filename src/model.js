@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'studentProfile',
+        page: 'studentBrowseSearch',
         isLoggedIn: false,
     },
 
@@ -43,7 +43,7 @@ const model = {
         },
         studentSearchPage: {
             search: '',
-            studentId: 2, // '2' er dummy input for browseStudent
+            studentId: '', 
             mapLocation: '',
             searchFilters: [],
         },
@@ -52,7 +52,6 @@ const model = {
     data: {
         currentUser: {
             id: 2,
-            // userType: '' // student, company, admin
         },
 
         mapsState: {
