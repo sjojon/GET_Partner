@@ -12,7 +12,7 @@ function updateView() {
     `;
 
   /*if (model.data.mapsState.mapToShow) {
-    countStudents();
+    //countTotalStudents();
     initMap();
     mapToShow = false;
   }*/
@@ -43,6 +43,7 @@ function updatePage() {
       html = acceptPendingStudentView();
       break;
     case 'studentBrowseSearch':
+      countTotalStudents();
       html = studentBrowseSearchView();
       break;
     case 'editStudentProfile':

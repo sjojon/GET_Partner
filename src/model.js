@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'studentProfile',
+        page: 'loginPage',
         isLoggedIn: false,
     },
 
@@ -72,7 +72,7 @@ const model = {
             { id: 9, name: 'Student4', password: 'passord', userType: 'student', email: 'student4@mail.com', gitHub: 'github.com/dummyaccount4/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 35, importantInfo: 'A menneske', interests: 'kode, gaming', address: 'Grensegata 1 Porsgrunn', location: 'Vestfold og Telemark' },
             { id: 10, name: 'Student5', password: 'passord', userType: 'student', email: 'student5@mail.com', gitHub: 'github.com/dummyaccount5/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 45, importantInfo: 'A menneske', interests: 'ingenting', address: 'Karl Johans gate 7', location: 'Oslo' },
             { id: 11, name: 'Student6', password: 'passord', userType: 'student', email: 'student6@mail.com', gitHub: 'github.com/dummyaccount6/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 51, importantInfo: 'X menneske', interests: 'være lat', address: 'Holmenkollen Oslo', location: 'Oslo' },
-            { id: 12, name: 'Student7', password: 'passord', userType: 'student', email: 'student7@mail.com', gitHub: 'github.com/dummyaccount7/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 22, importantInfo: 'B menneske', interests: 'trene', address: 'Finnmark', location: 'Troms og Finnmark' },
+            { id: 12, name: 'Student7', password: 'passord', userType: 'student', email: 'student7@mail.com', gitHub: 'github.com/dummyaccount7/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 22, importantInfo: 'B menneske', interests: 'trene', address: 'Finnmark', location: 'Troms og Finnmark fylke' },
             { id: 13, name: 'Student8', password: 'passord', userType: 'student', email: 'student8@mail.com', gitHub: 'github.com/dummyaccount8/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 24, importantInfo: 'B menneske', interests: 'lage god mat fra bunn av', address: 'Studentersamfundet Trondheim', location: 'Trøndelag' },
             { id: 14, name: 'Student9', password: 'passord', userType: 'student', email: 'student9@mail.com', gitHub: 'github.com/dummyaccount9/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 12, importantInfo: 'B menneske', interests: 'jakte hjortedyr', address: 'Skien Telemark', location: 'Vestfold og Telemark' },
         ],
@@ -134,11 +134,25 @@ const model = {
             { id: 5, name: 'Innlandet' },
             { id: 6, name: 'Nordland' },
             { id: 7, name: 'Rogaland' },
-            { id: 8, name: 'Troms og Finnmark' },
+            { id: 8, name: 'Troms og Finnmark fylke' },
             { id: 9, name: 'Trøndelag' },
             { id: 10, name: 'Vestland' },
             { id: 11, name: 'Møre og Romsdal' },
         ],
+
+        countiesStudentCount: {
+            'Agder': '0',
+            'Rogaland': '0',
+            'Vestland': '0',
+            'Møre og Romsdal': '0',
+            'Innlandet': '0',
+            'Viken': '0',
+            'Oslo': '0',
+            'Vestfold og Telemark': '0',
+            'Trøndelag': '0',
+            'Nordland': '0',
+            'Troms og Finnmark fylke': '0',
+          },
 
         totalStudents: 0,
 

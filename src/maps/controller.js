@@ -84,7 +84,7 @@ async function handlePlaceClick(event) {
     '<span style="font-size:small">Fylke: ' +
     county + 
     "<br/> Antall studenter: " +
-    countiesStudentCount[county] +
+    model.data.countiesStudentCount[county] +
     "</span>";
 
   updateInfoWindow(content, event.latLng);

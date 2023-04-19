@@ -3,7 +3,7 @@ function browseStudentView() {
     let student = model.data.accounts[2] //DUMMY
     
     model.data.mapsState.mapToShow = true;
-    model.data.mapsState.studentAccountsToShow = 1;
+    model.data.mapsState.studentAccountToShow = 2; //Sett til studentens id
     return /*HTML*/`
     <div class="student-outer">
         <div class="student-inner">
