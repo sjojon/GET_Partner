@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'login',
+        page: 'studentProfile',
         isLoggedIn: false,
     },
 
@@ -55,6 +55,11 @@ const model = {
             // userType: '' // student, company, admin
         },
 
+        mapsState: {
+            mapToShow: false,
+            studentAccountsToShow: 0
+        },
+
         accounts: [
             { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
             { id: 2, name: 'Student1', password: 'passord1', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5', location:"Vestfold og Telemark" },
@@ -63,13 +68,13 @@ const model = {
             { id: 4, name: 'Nidar', password: '!Freia', userType: 'pendingCompany', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
             { id: 5, name: 'Freia', password: '!Nidar', userType: 'pendingCompany', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
             { id: 6, name: 'Komplett', password: 'Penger', userType: 'pendingCompany', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
-            { id: 8, name: 'Student3', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5' },
-            { id: 9, name: 'Student4', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5' },
-            { id: 10, name: 'Student5', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5' },
-            { id: 11, name: 'Student6', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5' },
-            { id: 12, name: 'Student7', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5' },
-            { id: 13, name: 'Student8', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5' },
-            { id: 14, name: 'Student9', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5' },
+            { id: 8, name: 'Student3', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Skien Telemark' },
+            { id: 9, name: 'Student4', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Grensegata 1 Porsgrunn' },
+            { id: 10, name: 'Student5', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Karl Johans gate 7' },
+            { id: 11, name: 'Student6', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Holmenkollen Oslo' },
+            { id: 12, name: 'Student7', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Finnmark' },
+            { id: 13, name: 'Student8', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Studentersamfundet Trondheim' },
+            { id: 14, name: 'Student9', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 245, importantInfo: 'B menneske', interests: 'fiske', address: 'Skien Telemark' },
 
         ],
 

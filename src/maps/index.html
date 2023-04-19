@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tittel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app"></div>
+    <div id="map"></div>
+    
+    <script>
+        //model
+        var counter = 0;
+        
+        //view
+        view();
+        function view() { /*HTML*/ //<-- dersom du vil få innerhtml stringen til å se ut som HTML
+            document.getElementById("app").innerHTML = `
+            <h1>Velkommen!</h1>
+            <p>Tallet er ${counter}</p>
+            <br>
+            <button onclick=increment()>Inkrementer!</button>
+            `;
+        }
+
+        //controller
+        function increment() {
+            counter++;
+            view();
+        }
+
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUFb7RdE6NYlAYLkdKAIVtCX1uljgK0OA&callback=initMap&v=beta&region=NO&language=no"defer></script>
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+<script src="controller.js"></script>
+</body>    
+</html>

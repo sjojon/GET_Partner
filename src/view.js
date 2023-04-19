@@ -10,6 +10,11 @@ function updateView() {
   ${updateHeader()}
     ${updatePage()}
     `;
+
+  if (model.data.mapsState.mapToShow) {
+    //initMap(); vent til det er klart
+    mapToShow = false;
+  }
 }
 
 

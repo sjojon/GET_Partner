@@ -1,6 +1,9 @@
 function browseStudentView() {
     let techList = findTechsXpByAccountId(parseInt(model.inputs.studentSearchPage.studentId)) 
     let student = model.data.accounts[2] //DUMMY
+    
+    model.data.mapsState.mapToShow = true;
+    model.data.mapsState.studentAccountsToShow = 1;
     return /*HTML*/`
     <div class="student-outer">
         <div class="student-inner">
@@ -29,8 +32,7 @@ function browseStudentView() {
                 </div>
             </div>
             <div class="student-map">
-                <div class="map">
-                    X MARKS THE SPOT
+                <div id="map">
                 </div>
             </div>
             <div class="student-links">
