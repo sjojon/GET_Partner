@@ -6,7 +6,7 @@ function backToStudentBrowse() {
 
 function nextStudent() {
     let studentId = model.inputs.studentSearchPage.studentId
-    let studentIds = createStudentArray().map(obj => obj.id).sort((a,b) => a - b)
+    let studentIds = model.inputs.studentSearchPage.filteredStudentIds
     let result
     let endOfArray = false;
     
@@ -28,7 +28,7 @@ function nextStudent() {
 
 function previousStudent() {
     let studentId = model.inputs.studentSearchPage.studentId;
-    let studentIds = createStudentArray().map(obj => obj.id).sort((a, b) => a - b);
+    let studentIds = model.inputs.studentSearchPage.filteredStudentIds
     let result
     let startOfArray = false;
                                                             //Looper synkene gjennom liste av student id'er

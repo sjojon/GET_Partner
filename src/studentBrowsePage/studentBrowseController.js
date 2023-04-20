@@ -25,6 +25,5 @@ function showStudentPage(id) {
     model.inputs.studentSearchPage.searchFilters = currentFilters
     model.inputs.studentSearchPage.studentId = id
     model.app.page = 'studentBrowse'
-
     updateView()
 }

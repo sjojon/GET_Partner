@@ -36,18 +36,19 @@ function studentBrowseView() {
                 </div>
             </div>
             <div class="student-links">
-                <img width="25px" style="margin-bottom: 4px" src="images/Github_logo.png" >
+                
                 <a class="github-link" href="${student.gitHub}" target="_new">
+                    <i class="bi bi-github"></i> 
                     Github
-                </a> 
-                <a class="cv-link" href="${student.cv}">
+                </a>
+                <a class="cv-link" href="${student.cv}" target="_new">
                     CV
                 </a>
             </div>
             <div class="student-buttons">
-                <i class="bi bi-caret-left student-navigate" onclick="previousStudent()"></i> 
+                <i class="bi bi-caret-left-fill student-navigate" onclick="previousStudent()"></i> 
                 <i class="bi bi-search student-navigate" onclick="backToStudentBrowse()"></i>
-                <i class="bi bi-caret-right student-navigate" onclick="nextStudent()"></i>
+                <i class="bi bi-caret-right-fill student-navigate" onclick="nextStudent()"></i>
             </div>
         </div>
     </div>

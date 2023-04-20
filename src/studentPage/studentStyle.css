@@ -1,3 +1,14 @@
+
+/* ///////////WARNING/////////// */
+
+/* ///////////WARNING/////////// */
+
+/* /////PROCEED AT OWN RISK///// */
+
+/* ///////////WARNING/////////// */
+
+/* ///////////WARNING/////////// */
+
 .student-outer {
     background-color: #ffffff;
     border: solid 1px;
@@ -16,11 +27,11 @@
     display: grid;
     grid-template-areas:
         'left right'
-        'links buttons';
+        'links right'
+        'buttons right';
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 25px;
+    grid-template-rows: auto 35px 40px;
     margin: 25px;
-
 }
 
 /* /////Student Info///// */
@@ -35,8 +46,7 @@
 
 .student-pic {
     width: 200px;
-    border: solid;
-    /*pga filler bildet har stygge kanter*/
+    border: solid; /*hovedsaklig pga filler bildet har stygge kanter*/
     border-radius: 8px;
 }
 
@@ -97,6 +107,7 @@
     font-size: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: -15px;
 }
 
@@ -104,7 +115,9 @@
     text-decoration: none;
     font-weight: 700;
     color: #f44e01;
-
+}
+.github-link:hover{
+    color: #f44e016e;
 }
 
 .cv-link {
@@ -113,7 +126,9 @@
     color: #f44e01;
     margin-left: 30px;
 }
-
+.cv-link:hover{
+    color: #f44e016e;
+}
 /* /////Map///// */
 
 .student-map {
@@ -124,45 +139,20 @@
 
 .student-navigate{
     text-decoration: none;
-    font-weight: 2000;
     font-size: 200%;
     color: #f44e01;
-    margin-left: 30px;
+    margin-top: 25px;
+    padding-left: 15px;
+}
+.student-navigate:hover{
+    cursor: pointer;
+    color: #f44e016e;
 }
 
 .student-buttons{
     grid-area: buttons;
     text-align: center;
-}
-.triangle-button {
-    position: relative;
-    padding-left: 20px;
-    background-color: #fff;
-    border: none;
-}
-
-.triangle-button:hover{
-    background-color: transparent;
-}
-
-.triangle-button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-}
-
-.triangle-right::before {
-    border-left: 25px solid #f44e01;
-
-}
-
-.triangle-left::before {
-    border-right: 25px solid #f44e01;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

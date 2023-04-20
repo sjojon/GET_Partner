@@ -46,6 +46,7 @@ const model = {
             studentId: '', 
             mapLocation: '',
             searchFilters: [],
+            filteredStudentIds: [],
         },
     },
 

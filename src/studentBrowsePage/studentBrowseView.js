@@ -4,6 +4,8 @@ let searchParameters = createSearchParameters()
 let filteredParameters
 let studentArray = createStudentArray()
 
+model.inputs.studentSearchPage.filteredStudentIds
+
 function createSearchParameters() {
     let techXpValues = model.data.techXp.map(x => x.name)
     let countyValues = model.data.county.map(x => x.name)
@@ -17,7 +19,7 @@ function studentBrowseSearchView() {
             <div id="student-browse-input">
                 <div id="student-browse-input-text">
                     Søk:
-                    <input type="text" id="input" placeholder="                 fylker / kode erfaringer" oninput="handleInputChange()">${search}</input>
+                    <input type="text" id="input" placeholder="                       fylker / kode erfaringer" oninput="handleInputChange()">${search}</input>
                 </div>
                 <div id="student-search-options">
                     
@@ -43,11 +45,12 @@ function studentBrowseSearchView() {
 function createSearchParametersHtml() {
     let html = ''
 
-    filteredParameters = searchParameters.filter(x => x.toLowerCase().startsWith(model.inputs.studentSearchPage.search))
-    if (filteredParameters.length < 6) {   //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    filteredParameters = searchParameters.filter(
+        x => x.toLowerCase().startsWith(model.inputs.studentSearchPage.search))
+    if (filteredParameters.length < 6) { 
         for (let i = 0; i < filteredParameters.length; i++) {
             html += /*HTML*/ `
-                <button class="button-margin" onclick="addFilter(this.innerHTML)">${filteredParameters[i]}</button>
+                <button class="button-margin" onclick="addFilter(this.innerHTML)">${filteredParameters[i]}</button> 
             `
         }
     }
@@ -58,7 +61,9 @@ function createStudentFilterHtml() {
     let html = ''
     for (let i = 0; i < currentFilters.length; i++) {
         html += /*HTML*/ `
-            <button class="button-margin" onclick="removeFilter(${i})">${currentFilters[i]}</button>
+            <button class="button-margin" onclick="removeFilter(${i})">
+                ${currentFilters[i]}
+            </button>
         `
     }
     return html
@@ -68,6 +73,8 @@ function createStudentFilterHtml() {
 
 function createStudentBrowseHtml() {
     let html = ''
+    model.inputs.studentSearchPage.filteredStudentIds = []
+
     for (student of studentArray) {
         if (currentFilters.every(value =>
             Object.values(student).includes(value) ||
@@ -81,6 +88,7 @@ function createStudentBrowseHtml() {
                 <div class="student-tech">${findTechsXpByAccountId(student.id)}</div>
             </div>
         `
+        model.inputs.studentSearchPage.filteredStudentIds.push(student.id)
         }
     }
     return html
