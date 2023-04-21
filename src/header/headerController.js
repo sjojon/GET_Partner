@@ -42,12 +42,12 @@ function goToSeeProfileStudent() {
 
 //tar deg til filter søk
 function goToStudentSearchFilter() {
-  model.app.page = 'studentBrowse'
+  model.app.page = 'studentBrowseSearch'
   updateView();
 }
 
 //tar deg til map søk
-goToStudentSewarchMap() {
+goToStudentSearchMap() {
   model.app.page = ''
   updateView();
 }
