@@ -1,32 +1,32 @@
 // dropdown header funksjon
-  $(function () {
-    $('.dropdown').hover(
-      function () {
-        $(this).children('.dropdown-menu').show();
-      },
-      function () {
-        $(this).children('.dropdown-menu').hide();
-      }
-    );
-  });
-  
-  //tar deg til hjemme skjermen når du hitter logoen
-  function goToHome() {
-    model.app.page = 'home';
-    updateView();
-  }
-  
-  //tar deg til login
-  function goToLogin() {
-    model.app.page = 'login'
-    updateView();
-  }
+$(function () {
+  $('.dropdown').hover(
+    function () {
+      $(this).children('.dropdown-menu').show();
+    },
+    function () {
+      $(this).children('.dropdown-menu').hide();
+    }
+  );
+});
 
-  //tar deg til register company
-  function goToRegister() {
-    model.app.page = 'registerCompany'
-    updateView();
-  }
+//tar deg til hjemme skjermen når du hitter logoen
+function goToHome() {
+  model.app.page = 'home';
+  updateView();
+}
+
+//tar deg til login
+function goToLogin() {
+  model.app.page = 'login'
+  updateView();
+}
+
+//tar deg til register company
+function goToRegister() {
+  model.app.page = 'registerCompany'
+  updateView();
+}
 
 //tar deg til rediger student profil
 function goToEditProfileStudent() {
@@ -47,7 +47,7 @@ function goToStudentSearchFilter() {
 }
 
 //tar deg til map søk
-goToStudentSearchMap() {
+function goToStudentSearchMap() {
   model.app.page = ''
   updateView();
 }
