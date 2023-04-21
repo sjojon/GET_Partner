@@ -44,11 +44,11 @@ function editStudentProfileView(){
     </div>
     </div>
     <div class="fillDiv2">
-    <label for="kodeExpSøkefelt" class="element-editStudent">kodeErfaring:</label> 
+    <label for="kodeExpSøkefelt" class="element-editStudent">Kode erfaringer:</label> 
     <input type="text" name="kodeExpSøkefelt" class="kodeExpSøkefelt"  value="${searchBar}" oninput="chooseProgramingExperience(this)" placeHolder="søk her">
     <div class="${classToChange}">${codeSkillsLibraryShowed}</div>
     <div class="erfaringDiv">${kodeErfaring}</div>
-    <p class="element-editStudent">profilbilde:</p>
+    <p class="element-editStudent">Profilbilde:</p>
     <div class="ImageContainer">
     <img src=${editStudentProfileInputs.profilePicture} alt="" class="profilePicture">
     <button onclick="changeImg()" class="buttonStyle">Last opp nytt bilde</button>
