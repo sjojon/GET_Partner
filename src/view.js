@@ -24,9 +24,6 @@ function updatePage() {
   //headerVisible = 0 home/not logged in, 1 student, 2 company, 3 admin
   let html = '';
   switch (page) {
-    case 'home':
-      html = homeView();
-      break;
     case 'login':
       html = loginView();
       break;

@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'studentBrowseSearch',
+        page: 'login',
         isLoggedIn: false,
     },
 

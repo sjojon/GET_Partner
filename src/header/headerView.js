@@ -23,7 +23,7 @@ function homeHeader() {
     <div id="header-box">
       <nav>
         <div id="header-logo">
-          <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
+          <img src="images/GETPartner_logo_header.png"/>
         </div>
         <ul>
         <button class="list-button" onclick="window.location.href='https://getacademy.no'">GET Academy</button>
@@ -46,7 +46,7 @@ function studentHeader() {
     <div id="header-box">
       <nav>
         <div id="header-logo">
-          <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
+          <img src="images/GETPartner_logo_header.png"/>
         </div>
         <ul>
         <button class="list-button" onclick="window.location.href='https://getacademy.no'">GET Academy</button>
@@ -76,7 +76,7 @@ function companyHeader() {
     <div id="header-box">
       <nav>
         <div id="header-logo">
-          <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
+          <img src="images/GETPartner_logo_header.png""/>
         </div>
         <ul>
         <button class="list-button" onclick="window.location.href='https://getacademy.no'">GET Academy</button>
@@ -106,7 +106,7 @@ function adminHeader() {
     <div id="header-box">
       <nav>
         <div id="header-logo">
-          <img src="images/GETPartner_logo_header.png" onclick="goToHome()"/>
+          <img src="images/GETPartner_logo_header.png"/>
         </div>
         <ul>
         <button class="list-button" onclick="goToAdminDash()">Admin</button>
