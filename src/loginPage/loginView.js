@@ -11,26 +11,18 @@ function loginView() {
                 Brukernavn:
                 </div>
             </div>
-                <input type="text" 
-                value="${loginPage.username}" 
-                onchange="loginPage.username=this.value">
+                <input type="text" value="${loginPage.username}" onchange="loginPage.username=this.value">
 
             <div class="text-box">
                 <div class="text-over-box">
                 Passord:
                 </div>
             </div>
-                    <input
-                    type="${passwordInput}" 
-                    value="${loginPage.password}" 
-                    onchange="loginPage.password=this.value">
+                    <input type="${passwordInput}" value="${loginPage.password}" onchange="loginPage.password=this.value">
 
             <div id="checkbox-box">
             <div class="text-over-box">
-                <input 
-                    type="checkbox"
-                    id="checkbox" 
-                    onclick="showLoginPagePassword(this)">Vis passord
+                <input type="checkbox" id="checkbox" onclick="showLoginPagePassword(this)">Vis passord
             </div>
             </div>  
 

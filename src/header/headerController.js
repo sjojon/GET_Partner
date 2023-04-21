@@ -28,14 +28,26 @@
     updateView();
   }
 
-//
+//tar deg til rediger student profil
 function goToEditProfileStudent() {
   model.app.page = 'editStudentProfile'
   updateView();
 }
 
-//
+//tar deg til student profil
 function goToSeeProfileStudent() {
   model.app.page = 'studentProfile'
+  updateView();
+}
+
+//tar deg til filter søk
+function goToStudentSearchFilter() {
+  model.app.page = 'studentBrowse'
+  updateView();
+}
+
+//tar deg til map søk
+goToStudentSewarchMap() {
+  model.app.page = ''
   updateView();
 }
