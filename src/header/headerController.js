@@ -10,12 +10,6 @@ $(function () {
   );
 });
 
-//tar deg til hjemme skjermen når du hitter logoen
-function goToHome() {
-  model.app.page = 'home';
-  updateView();
-}
-
 //tar deg til login
 function goToLogin() {
   model.app.page = 'login'
