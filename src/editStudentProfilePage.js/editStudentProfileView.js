@@ -51,13 +51,14 @@ function editStudentProfileView(){
     <p class="element-editStudent">Profilbilde:</p>
     <div class="ImageContainer">
     <img src=${editStudentProfileInputs.profilePicture} alt="" class="profilePicture">
-    <button onclick="changeImg()" class="buttonStyle">Last opp nytt bilde</button>
+    <input type="file" id="fileInput" class="uploadInputs" onchange="changeImg(this)">
     </div>
     <p class="element-editStudent">CV:</p>
-    <p>${editStudentProfileInputs.cv}</p>
-    <button onclick="uploadCv()" class="buttonStyle">Last opp fil</button>
+    <input type="file" id="fileInput" class="uploadInputs" onchange="uploadCv(this)" accept=".pdf">
+    <button class="cvButton" onclick="openDataUrlInNewTab(this)">link til cv</button>
     </div>
        </div>
+       <p class="message">${Message}</p>
        <button class="buttonStyle margin" onclick="saveChanges()">Lagre endringer</button>
        </div>
    </div>

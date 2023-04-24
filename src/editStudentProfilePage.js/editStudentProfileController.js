@@ -13,6 +13,10 @@ let hidingtool;
 let erfaringarray=[]
 let EditPageValues;
 let editCompleted=false
+let image;
+let pdf;
+let editStudentProfileInputsRefresh=true
+let Message=""
 // function focusOnInput(input){
 //     if (!(input.focus)) {
 //         input.focus();
@@ -71,7 +75,8 @@ function hideProgExp(){
    
 // }
 function assignAvailableInfo(){
-    if (currentStudentAccount&& editStudentProfileInputsArray.length==0) {
+    if (currentStudentAccount&& editStudentProfileInputsRefresh) {
+        editStudentProfileInputsRefresh=false
         editStudentProfileInputs.name = currentStudentAccount[0].name
         editStudentProfileInputs.location=currentStudentAccount[0].location
         editStudentProfileInputs.address=currentStudentAccount[0].address
@@ -158,16 +163,18 @@ function allInputsWrittenEditPage(){
     }
     console.log(EditPageValues)
     if (EditPageValues.includes("")) {
-     alert("Du må fylle inn alle felt")
+        Message="*Du må fylle inn alle felt"
     } 
     else{
      if (!editStudentProfileInputs.email.includes("@")){
-         alert("Du må skrive riktig e-mail")
+        Message="*Du må skrive riktig e-mail"
      } else if(passwordsMtchEditPage()){
          return true
      }
      
-    } }
+    } 
+    updateView()
+}
     let techIds;
     let v;
 function getTechXpRelations(){
@@ -207,7 +214,8 @@ function focusOnInput(){
 }
 function passwordsMtchEditPage(){
     if (editStudentProfileInputs.password!==editStudentProfileInputs.repeatedPassword) {
-        alert(" Begge passord må være like")
+        Message="* Begge passord må være like"
+        updateView()
     } else return true
 }
 
@@ -249,5 +257,105 @@ function clearInputs(){
         editStudentProfileInputs.profilePicture= ""
         editStudentProfileInputs.codeExpList=[]
         editStudentProfileInputs.codeExp=""
+        editStudentProfileInputsArray=[]
+        editStudentProfileInputsRefresh=true
 }
 
+function changeImg(fileInput) {
+   let file = fileInput.files[0];
+    let reader = new FileReader();
+
+    reader.addEventListener('load', () => {
+        file = reader.result;
+        editStudentProfileInputs.profilePicture=`${file}`
+        console.log(reader.result); // Logger stringen til bildet i consollen
+        editStudentProfileInputs.profilePicture= reader.result
+        updateView()
+    });
+
+    reader.readAsDataURL(file);
+  
+}
+
+// document.addEventListener('DOMContentLoaded', uploadCv(cvFile), false);
+
+function uploadCv(cvFile) {
+    // cvFile.addEventListener('change', ()=>{
+    //     const file = cvFile.files[0];
+
+    //     const reader = new FileReader();
+    //     reader.onload = function(event) {
+    //       const base64String = event.target.result.split(',')[1];
+    //       pdf= base64String
+    //       console.log(base64String); // log the Base64 string to the console
+    //       console.log(pdf)
+    //     };
+    //     reader.readAsDataURL(file);
+    //     // updateView()
+    // });
+    // let file = cvFile.files[0];
+    // let reader = new FileReader();
+    // reader.addEventListener('load', () => {
+    //     file = reader.result;
+    //    let replaceFile= file.split((`,`),[0])
+    //    let sixFourString= file.replace(replaceFile+`,`,"")
+    //    pdf=sixFourString
+    //    console.log(sixFourString)
+        // console.log(reader.result); // Logger stringen til bildet i consollen
+        // updateView()
+    let file = cvFile.files[0];
+    let reader = new FileReader();
+
+    reader.addEventListener('load', () => {
+        file = reader.result;
+        pdf=`${file}`
+        console.log(reader.result); // Logger stringen til bildet i consollen
+        editStudentProfileInputs.cv=reader.result
+        updateView()
+    });
+
+    reader.readAsDataURL(file);
+    };
+    
+    function openDataUrlInNewTab() {
+        const dataUrl =editStudentProfileInputs.cv
+        const htmlContent = /*html*/`
+          <html>
+            <head>
+              <title>Data URL Viewer</title>
+              <style>
+              body, html {
+                margin: 0;
+                padding: 0;
+              }
+              object, iframe {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: none;
+                margin: 0;
+                padding: 0;
+              }
+            </style>
+            </head>
+            <body>
+              <object data="${dataUrl}" type="application/pdf">
+                // <embed src="${dataUrl}" type="application/pdf" />
+              </object>
+            </body>
+          </html>
+        `;
+      
+        const newTab = window.open();
+        newTab.document.open();
+        newTab.document.write(htmlContent);
+        newTab.document.close();
+        
+      }
+      
+      
+      
+      
+      
+      
+      
