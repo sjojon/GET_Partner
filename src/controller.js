@@ -2,7 +2,7 @@
 function logout() {
   model.app.page = 'home';
   model.app.isLoggedIn = false;
-  model.data.currentUser.id = '';
+  model.data.currentUser.id = 0;
   updateHeader();
   updateView();
 }

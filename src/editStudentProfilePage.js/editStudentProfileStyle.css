@@ -202,3 +202,7 @@ border-bottom: 2px blue solid;
 .github{
     padding-top: 4px;
 }
+.errorPTagStudentProfile{
+    color: red;
+    margin-bottom: 50px;
+}

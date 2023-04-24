@@ -243,6 +243,8 @@ function saveChanges(){
 //    currentStudentAccount[0].pic=editStudentProfileInputs.profilePicture
    getTechXpRelations()
    alert("Endringene er lagret og må godkjennes av GET IT før de blir innført")
+//    editButton="venter på godkjenning"
+//    disableingTool="disabled"
 //    currentStudentAccount[0].userType="pendingStudentProfile"
    model.app.page="studentProfile"
    

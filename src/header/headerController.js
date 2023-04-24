@@ -24,8 +24,13 @@ function goToRegister() {
 
 //tar deg til rediger student profil
 function goToEditProfileStudent() {
-  model.app.page = 'editStudentProfile'
-  updateView();
+  pendigAccountExists= model.data.pendingProfileChanges.accounts.filter(ac=>ac.id==model.data.currentUser.id)
+  if (pendigAccountExists.length>0){
+    return
+  } else{
+    model.app.page = 'editStudentProfile'
+    updateView();
+  }
 }
 
 //tar deg til student profil

@@ -67,12 +67,27 @@ function openDataUrlInNewTabProfile(linken){
     newTab.document.close();
 }
 function Edit(){
-    model.app.page="editStudentProfile"
-    updateView()
+
+  model.app.page="editStudentProfile"
+  updateView()
+   
 }
 function openDataUrlInNewTabgithub(linken){
     const dataUrl = linken;
 
   // Open a new tab with the data URL
   window.open(dataUrl, "_blank");
+}
+let pendigAccountExists;
+function showOrHideEditButton(){
+  pendigAccountExists= model.data.pendingProfileChanges.accounts.filter(ac=>ac.id==model.data.currentUser.id)
+  if (pendigAccountExists.length>0) {
+    pendigAccountExists=true
+    return /*html*/`
+    <p class="errorPTagStudentProfile">*Endringene må godkjennes av Get IT før du kan redigere profilen på nytt</p>
+    ` 
+  } else return /*html*/`
+  <button class="buttonStyleProfile margin" onclick="Edit(this)">Rediger profil</button>
+  `
+  
 }

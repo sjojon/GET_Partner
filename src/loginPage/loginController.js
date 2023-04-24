@@ -8,39 +8,44 @@ function getAllNamesAndPasswords(){
     allUsernames=[]
     allPasswords=[]
     for (const key in accountsToBeChecked) {
-        allUsernames.push(accountsToBeChecked[key].name) 
+        allUsernames.push(accountsToBeChecked[key].name.toLowerCase()) 
        allPasswords.push(accountsToBeChecked[key].password)
     }
-    usernameIndex= allUsernames.indexOf(model.inputs.login.username)
+    usernameIndex= allUsernames.indexOf(model.inputs.login.username.toLowerCase())
 }
 function checkIfAccountExcists(){
     getAllNamesAndPasswords()
-    if((!allUsernames.includes(loginPage.username))) {
-        alert("Brukernavn er ikke registrert hos oss.")
+    if((!allUsernames.includes(loginPage.username.toLowerCase()))) {
+       invalid="Brukernavn er ikke registrert hos oss."
+       updateView()
         console.log(allPasswords )
         console.log(allUsernames)
         return AccountExcists=false
 
-    } else return AccountExcists=true
+    } else return true
     
 }
 function checkIfPasswordIsWrong(){
  
-checkIfAccountExcists()
-if (AccountExcists==true) {
+
+if (checkIfAccountExcists()) {
      if (!allPasswords.includes(loginPage.password)) {
-         alert("Passord er feil, Prøv på nytt")
+        console.log("førsteIf")
+        invalid="Passord er feil, Prøv på nytt"
+        updateView()
     } else if (allPasswords[usernameIndex]!==loginPage.password) {
-        alert("Passord er feil, Prøv på nytt")
+        console.log("andreIf")
+       invalid="Passord er feil, Prøv på nytt"
+       updateView()
         }
-      else{ return passwordIsCorrect=true}
+      else{ return true}
     }
 }
 function login() {
-    checkIfPasswordIsWrong()
-   if (passwordIsCorrect==true) {
+    
+   if (checkIfPasswordIsWrong()) {
     for (const key in accountsToBeChecked) {
-        if ( accountsToBeChecked[key].name.includes(loginPage.username)
+        if ( accountsToBeChecked[key].name.toLowerCase().includes(loginPage.username.toLowerCase())
         &&accountsToBeChecked[key].password.includes(loginPage.password)) {
             switch(accountsToBeChecked[key].userType){
                 case "admin":
@@ -60,7 +65,8 @@ function login() {
                     model.data.currentUser.id=accountsToBeChecked[key].id
                     break;
                 case "pendingCompany":
-                    alert("Kontoen er enda ikke godkjent, du hører fra oss når kontoen er godkjent.") 
+                   invalid="Kontoen er enda ikke godkjent, du hører fra oss når kontoen er godkjent." 
+                   updateView()
                     break;
             }
             // model.data.currentUser.id=accountsToBeChecked[key].id
@@ -70,12 +76,19 @@ function login() {
         }
        
         updateView()
-        // loginPage.username=""
-        // loginPage.password=""
+        clearLoginInputs()
+       
    }
-    
    
 }
+
+function clearLoginInputs(){
+    if (model.app.page!=="login") {
+        loginPage.username=""
+        loginPage.password=""
+    }
+}
+
 function register() {
 }
 
@@ -97,4 +110,6 @@ function showLoginPagePassword(input) {
     updateView()
     console.log(model.app.page)
 }
+
+
 

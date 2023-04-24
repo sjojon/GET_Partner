@@ -18,7 +18,7 @@ function loginView() {
                 Passord:
                 </div>
             </div>
-                    <input type="${passwordInput}" value="${loginPage.password}" onchange="loginPage.password=this.value">
+                    <input type="${passwordInput}" value="${loginPage.password}" oninput="loginPage.password=this.value" onkeydown = " if (event.keyCode == 13) login()">
 
             <div id="checkbox-box">
             <div class="text-over-box">

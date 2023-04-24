@@ -1,4 +1,6 @@
 let profileInfo;
+// let editButton="Rediger profil"
+// let disableingTool=""
 function studentProfileView(){
   profileInfo=model.data.accounts.filter(ac=>ac.id==model.data.currentUser.id)
   getSavedTech()
@@ -54,7 +56,7 @@ function studentProfileView(){
     <button class="cvButton" onclick="openDataUrlInNewTabProfile(profileInfo[0].cv)">link til cv</button>
     </div>
        </div>
-       <button class="buttonStyleProfile margin" onclick="Edit()">Rediger profil</button>
+       ${showOrHideEditButton()}
        </div>
    </div>
    </div>
