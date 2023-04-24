@@ -52,7 +52,7 @@ const model = {
 
     data: {
         currentUser: {
-            id: 2,
+            id: 0,
         },
 
         mapsState: {

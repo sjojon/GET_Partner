@@ -1,5 +1,6 @@
-let profileInfo= model.data.accounts.filter(ac=>ac.id==model.data.currentUser.id)
+let profileInfo;
 function studentProfileView(){
+  profileInfo=model.data.accounts.filter(ac=>ac.id==model.data.currentUser.id)
   getSavedTech()
     return /*html*/`
     <div class="pageMinusHeader-editStudent">
