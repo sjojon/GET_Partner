@@ -91,7 +91,10 @@ function showChangedProfile() {
                 </a>
             </div>
         </div>
-        <div><button onclick="acceptProfileChange(model.data.currentPendingUser.id)">Godkjenn</button></div>
+        <div>
+        <button onclick="acceptProfileChange(model.data.currentPendingUser.id)">Godkjenn</button>
+        <button onclick="backToAdminPage()">Avslå</button>
+        </div>
     </div>
     `;
 }

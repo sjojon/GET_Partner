@@ -29,3 +29,8 @@ function acceptProfileChange(id) {
     model.app.page = 'acceptPendingProfilePage';
     updateView();
 }
+
+function backToAdminPage() {
+    model.app.page = 'adminDash';
+    updateView();
+}
