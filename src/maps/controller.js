@@ -12,10 +12,16 @@ function initMap() {//Send inn studentlocations array slik at vi kan se enkeltvi
 
     // The map, centered at Norway
     map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 5,
+      zoom: 4,
       center: centerOfNorway,
       mapId: 'bd0c37776b4d0d83',
       //mapTypeId: 'roadmap',
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: false
     });
 
     // Add geocoder
@@ -35,7 +41,7 @@ function initMap() {//Send inn studentlocations array slik at vi kan se enkeltvi
 
     else { //Vi har en spesifikk studentId
       studentCount = 1;
-      let givenAccount = model.data.accounts.find(id == studentAccountToShow);
+      const givenAccount = findAccountById(studentAccountToShow);
       geocode({address: givenAccount.address})
     }
 
@@ -167,7 +173,7 @@ const averageLatitude = 64.57;
 const averageLongitude = 17.82;
 
 //const centerOfNorway = { lat: 65.400113, lng: 12.896478};
-const centerOfNorway = { lat: averageLatitude+1, lng: averageLongitude-10};
+const centerOfNorway = { lat: averageLatitude+1, lng: averageLongitude-2.5};
 
 
 const countiesPlaceId = {
@@ -184,6 +190,7 @@ const countiesPlaceId = {
   'Troms og Finnmark': 'ChIJhwjlWeowz0URUqTmfXklFw8',
 };
 
+/* Testdata
 const countiesStudentCount = {
   'Agder': '353',
   'Rogaland': '21',
@@ -196,37 +203,37 @@ const countiesStudentCount = {
   'Trøndelag': '53',
   'Nordland': '9',
   'Troms og Finnmark fylke': '1',
-};
+};*/
 
 const countiesZoomLevel = {
-  'Agder': 8,
+  'Agder': 7,
   'Rogaland': 7,
-  'Vestland': 7,
-  'Møre og Romsdal': 8,
-  'Innlandet': 7,
-  'Viken': 8,
-  'Oslo': 10,
-  'Vestfold og Telemark': 8,
-  'Trøndelag': 7,
-  'Nordland': 6,
-  'Troms og Finnmark fylke': 6,
+  'Vestland': 6,
+  'Møre og Romsdal': 7,
+  'Innlandet': 6,
+  'Viken': 6,
+  'Oslo': 9,
+  'Vestfold og Telemark': 7,
+  'Trøndelag': 6,
+  'Nordland': 5,
+  'Troms og Finnmark fylke': 5,
 }
 
 const countiesCenterCoordinates = { //Sparer på api-kall
   'Agder': {lat: 58.696484, lng: 7.736577},
-  'Rogaland': {lat: 59.160225, lng: 6.005729},
-  'Vestland': {lat: 61.037559, lng: 6.336326},
-  'Møre og Romsdal': {lat: 62.609717, lng: 7.445671},
+  'Rogaland': {lat: 59.160225, lng: 5.905729},
+  'Vestland': {lat: 61.037559, lng: 6.136326},
+  'Møre og Romsdal': {lat: 62.609717, lng: 7.345671},
   'Innlandet': {lat: 61.654627, lng: 10.018519},
   'Viken': {lat: 60.000262, lng: 10.049301},
-  'Oslo': {lat: 60.026252, lng: 10.786417},
-  'Vestfold og Telemark': {lat: 59.438294, lng: 8.978853},
-  'Trøndelag': {lat: 63.995328, lng: 11.733980},
-  'Nordland': {lat: 66.758829, lng: 15.137535},
+  'Oslo': {lat: 60.526252, lng: 10.286417},
+  'Vestfold og Telemark': {lat: 59.438294, lng: 8.778853},
+  'Trøndelag': {lat: 63.995328, lng: 10.733980},
+  'Nordland': {lat: 66.758829, lng: 14.037535},
   'Troms og Finnmark fylke': {lat: 69.767556, lng: 23.126765},
 }
 
-
+/*
 const testAccounts = 
   [
     { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
@@ -243,3 +250,4 @@ const testAccounts =
     { id: 2, name: 'StudentEnslig', password: 'passord1', userType: 'student', address: 'Finnmark', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
     { id: 2, name: 'StudentKristen', password: 'passord1', userType: 'student', address: 'Studentersamfundet Trondheim', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount/', pic: 'images/bilde.jpg', cv: 'cv.com/cv', counter: 245, },
 ]
+*/
