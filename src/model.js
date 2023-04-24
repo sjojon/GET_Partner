@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'acceptPendingProfilePage',
+        page: 'login',
         isLoggedIn: false,
     },
 
@@ -83,11 +83,14 @@ const model = {
 
         pendingProfileChanges: {
             accounts: [
-                { id: 7, name: 'Student2', password: 'passord', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
+                { id: 7, name: 'Student2', password: 'hei', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
             ],
 
             techXpRelations: [
-
+                { accountId: 7, technologyId: 1 },
+                { accountId: 7, technologyId: 4 },
+                { accountId: 7, technologyId: 14 },
+                { accountId: 7, technologyId: 19 },
             ],
         },
 

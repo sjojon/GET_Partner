@@ -17,7 +17,7 @@ function findAccountById(id) {
 }
 
 function findPendingProfileAccountById(id) {
-  for (let account of model.data.pendingProfileChanges) {
+  for (let account of model.data.pendingProfileChanges.accounts) {
     if (account.id === id)
       return account;
   }

@@ -1,4 +1,4 @@
-const pendingStudentAccounts = model.data.pendingProfileChanges;
+const pendingStudentAccounts = model.data.pendingProfileChanges.accounts;
 let student;
 
 function acceptPendingStudentView() {
@@ -91,7 +91,7 @@ function showChangedProfile() {
                 </a>
             </div>
         </div>
-        <div><button onclick="acceptProfileChange(x.id)">Godkjenn</button></div>
+        <div><button onclick="acceptProfileChange(model.data.currentPendingUser.id)">Godkjenn</button></div>
     </div>
     `;
 }
