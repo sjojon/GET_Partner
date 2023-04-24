@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'login',
+        page: 'acceptPendingProfilePage',
         isLoggedIn: false,
     },
 
@@ -43,7 +43,7 @@ const model = {
         },
         studentSearchPage: {
             search: '',
-            studentId: '', 
+            studentId: '',
             mapLocation: '',
             searchFilters: [],
             filteredStudentIds: [],
@@ -63,7 +63,6 @@ const model = {
         accounts: [
             { id: 1, name: 'admin', password: 'admin', userType: 'admin', countyId: 2 },
             { id: 2, name: 'Student1', password: 'passord', userType: 'student', email: 'student1@mail.com', gitHub: 'github.com/dummyaccount1/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 45, importantInfo: 'B menneske', interests: 'fiske', address: 'Amtmann Michelets vei 5', location: "Vestfold og Telemark" },
-            { id: 7, name: 'Student2', password: 'passord', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
             { id: 3, name: 'Bedrift1', password: 'passord', userType: 'company', email: 'bedrift1@mail.com', orgNr: '010010001' },
             { id: 4, name: 'Nidar', password: 'passord', userType: 'pendingCompany', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
             { id: 5, name: 'Freia', password: 'passord', userType: 'pendingCompany', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
@@ -75,6 +74,10 @@ const model = {
             { id: 12, name: 'Student7', password: 'passord', userType: 'student', email: 'student7@mail.com', gitHub: 'github.com/dummyaccount7/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 22, importantInfo: 'B menneske', interests: 'trene', address: 'Finnmark', location: 'Troms og Finnmark fylke' },
             { id: 13, name: 'Student8', password: 'passord', userType: 'student', email: 'student8@mail.com', gitHub: 'github.com/dummyaccount8/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 24, importantInfo: 'B menneske', interests: 'lage god mat fra bunn av', address: 'Studentersamfundet Trondheim', location: 'Trøndelag' },
             { id: 14, name: 'Student9', password: 'passord', userType: 'student', email: 'student9@mail.com', gitHub: 'github.com/dummyaccount9/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 12, importantInfo: 'B menneske', interests: 'jakte hjortedyr', address: 'Skien Telemark', location: 'Vestfold og Telemark' },
+        ],
+
+        pendingProfileChanges: [
+            { id: 7, name: 'Student2', password: 'passord', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
         ],
 
         techXpRelations: [
@@ -152,7 +155,7 @@ const model = {
             'Trøndelag': '0',
             'Nordland': '0',
             'Troms og Finnmark fylke': '0',
-          },
+        },
 
         totalStudents: 0,
 

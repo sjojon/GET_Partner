@@ -58,6 +58,9 @@ function updatePage() {
     case 'adminDash':
       html = adminDashView();
       break;
+    case 'showChangedProfile':
+      html = showChangedProfile();
+      break;
   }
   return html;
 }

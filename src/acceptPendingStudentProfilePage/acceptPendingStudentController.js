@@ -1,3 +1,3 @@
-function showProfileChange(id) {
+function handleProfileInfo(id) {
     console.log(id);
 }
