@@ -180,12 +180,12 @@ function allInputsWrittenEditPage(){
     let v;
 function getTechXpRelations(){
      techIds=[]
-     model.data.techXpRelations=model.data.techXpRelations.filter(el=>el.accountId!==model.data.currentUser.id)
+    //  model.data.techXpRelations=model.data.techXpRelations.filter(el=>el.accountId!==model.data.currentUser.id)
     
     for (let i = 0; i < editStudentProfileInputs.codeExpList.length; i++) { 
        techIds.push((model.data.techXp.filter(el=>el.name==(editStudentProfileInputs.codeExpList[i]))).map(el=>el.id));
        techIds=[].concat.apply([],techIds);
-       model.data.techXpRelations.push({ accountId: model.data.currentUser.id, technologyId: parseInt(techIds[i] )})
+       model.data.pendingProfileChanges.techXpRelations.push({ accountId: model.data.currentUser.id, technologyId: parseInt(techIds[i] )})
      
        
     
@@ -224,18 +224,26 @@ function passwordsMtchEditPage(){
 
 function saveChanges(){
    if (allInputsWrittenEditPage()) {
-   currentStudentAccount[0].name=editStudentProfileInputs.name
-   currentStudentAccount[0].location=editStudentProfileInputs.location
-   currentStudentAccount[0].address=editStudentProfileInputs.address
-   currentStudentAccount[0].email= editStudentProfileInputs.email
-   currentStudentAccount[0].password= editStudentProfileInputs.password
-   currentStudentAccount[0].interests= editStudentProfileInputs.interests
-   currentStudentAccount[0].importantInfo=editStudentProfileInputs.importantInfo
-   currentStudentAccount[0].gitHub=editStudentProfileInputs.gitHub
-   currentStudentAccount[0].cv= editStudentProfileInputs.cv
-   currentStudentAccount[0].pic=editStudentProfileInputs.profilePicture
+    model.data.pendingProfileChanges.accounts.push(  { id: model.data.currentUser.id, name: editStudentProfileInputs.name,
+         password:editStudentProfileInputs.password, userType: 'pendingStudentProfile',
+     email: editStudentProfileInputs.email, gitHub:editStudentProfileInputs.gitHub,
+      pic:editStudentProfileInputs.profilePicture,
+       cv: editStudentProfileInputs.cv, counter: 45, importantInfo: editStudentProfileInputs.importantInfo, 
+       interests: editStudentProfileInputs.interests, address: editStudentProfileInputs.address,
+        location:editStudentProfileInputs.location })
+//    currentStudentAccount[0].name=editStudentProfileInputs.name
+//    currentStudentAccount[0].location=editStudentProfileInputs.location
+//    currentStudentAccount[0].address=editStudentProfileInputs.address
+//    currentStudentAccount[0].email= editStudentProfileInputs.email
+//    currentStudentAccount[0].password= editStudentProfileInputs.password
+//    currentStudentAccount[0].interests= editStudentProfileInputs.interests
+//    currentStudentAccount[0].importantInfo=editStudentProfileInputs.importantInfo
+//    currentStudentAccount[0].gitHub=editStudentProfileInputs.gitHub
+//    currentStudentAccount[0].cv= editStudentProfileInputs.cv
+//    currentStudentAccount[0].pic=editStudentProfileInputs.profilePicture
    getTechXpRelations()
-   currentStudentAccount[0].userType="pendingStudentProfile"
+   alert("Endringene er lagret og må godkjennes av GET IT før de blir innført")
+//    currentStudentAccount[0].userType="pendingStudentProfile"
    model.app.page="studentProfile"
    
  updateView()
