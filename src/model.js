@@ -2,7 +2,7 @@ const model = {
 
     app: {
         header: '',  //home,student,company,admin
-        page: 'registerStudent',
+        page: 'login',
         isLoggedIn: false,
     },
 
@@ -39,7 +39,7 @@ const model = {
             importantInfo: '',
             cv: '',
             profilePicture: '',
-            gitHub: ""
+            gitHub: ''
         },
         studentSearchPage: {
             search: '',
