@@ -46,7 +46,9 @@ function pendingStudentList() {
 }
 
 function showChangedProfile() {
-    let x = model.inputs.editStudentProfile;
+    let x = findPendingProfileAccountById(model.data.currentPendingUser.id);
+    let techList = findTechsXpByAccountId(parseInt(model.data.currentPendingUser.id));
+
     return /*HTML*/ `
     <div class="student-outer">
         <div class="student-inner">
@@ -88,13 +90,8 @@ function showChangedProfile() {
                     CV
                 </a>
             </div>
-            <div class="student-buttons">
-                <i class="bi bi-caret-left-fill student-navigate" onclick="previousStudent()"></i> 
-                <i class="bi bi-search student-navigate" onclick="backToStudentBrowse()"></i>
-                <i class="bi bi-caret-right-fill student-navigate" onclick="nextStudent()"></i>
-            </div>
         </div>
-        <div><button>Godkjenn</button></div>
+        <div><button onclick="acceptProfileChange()">Godkjenn</button></div>
     </div>
     `;
 }

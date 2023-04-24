@@ -55,6 +55,10 @@ const model = {
             id: 0,
         },
 
+        currentPendingUser: {
+            id: 0,
+        },
+
         mapsState: {
             mapToShow: false,
             studentAccountToShow: 'all' //Blir til studentId hvis vi skal se på en spesifikk en
