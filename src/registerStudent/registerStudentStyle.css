@@ -1,53 +1,70 @@
-.outer-box{
-    display: flex;
-    flex-direction: column;
-    border: 2px black solid;
-    background-color: white;
-    width: 500px;
-    padding-left: 25px;
-    height: 400px;
-}
-
-.showPasswordDiv{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    margin-bottom: 20px;
-    
-}
-.checkBox{
-    width: 20px;
-    margin-bottom: 3px;
-}
-.labelCheckBox{
-    align-self: center;
-}
-.profileButton{
-    width: 150px;
-    height: 35px;
-    border-radius: 4px;
-    background-color: #f44e01;
-    color: white;
-    font-weight: bold;
-}
-.pageHeading{
-    color: #f44e01;
-    font-weight: bolder;
-}
-.pageMinusHeader{
-    display: flex;
-    width: 100%;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
-   
-    
-}
-.input-element{
+input {
     width: 320px;
     background-color: #f0f0f0;
     border-color: transparent;
     border-radius: 5px;
     height: 20px;
     margin-bottom: 10px;
+}
+
+.text-box-rsv {
+    text-align: left;
+    margin-left: 36px;
+    left: 50%;
+    width: 320px;
+    text-size-adjust: 60%;
+}
+
+.text-over-box-rsv {
+    font-size: 14px;
+}
+
+.outer-rsv {
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 400px;
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#checkbox-box-rsv {
+    text-align: left;
+    margin-left: 36px;
+}
+
+#header-text-rsv {
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+#top-margin-rsv {
+    margin-top: 30px;
+}
+
+#checkbox-rsv {
+    width: 20px;
+    height: 15px;
+}
+
+#reg-button-rsv {
+    margin-top: 30px;
+}
+
+#error-text-rsv {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#bottom-margin-rsv {
+    margin-bottom: 20px;
+}
+
+#completed-button-rsv {
+    margin-top: 10px;
 }
