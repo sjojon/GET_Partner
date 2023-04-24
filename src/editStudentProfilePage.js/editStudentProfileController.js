@@ -3,7 +3,7 @@ let filSomBleValgt=editStudentProfileInputs.cv
 let kodeErfaring=""
 let imgVariable;
 let programingExpVariable=""
-let currentStudentAccount=accountsToBeChecked.filter(ac=>ac.id==model.data.currentUser.id)
+let currentStudentAccount=model.data.accounts.filter(ac=>ac.id==model.data.currentUser.id)
 let codeSkillsLibrary;
 let classToChange="hidden"
 let codeSkillsLibraryShowed;
@@ -75,6 +75,7 @@ function hideProgExp(){
    
 // }
 function assignAvailableInfo(){
+    currentStudentAccount=model.data.accounts.filter(ac=>ac.id==model.data.currentUser.id)
     if (currentStudentAccount&& editStudentProfileInputsRefresh) {
         editStudentProfileInputsRefresh=false
         editStudentProfileInputs.name = currentStudentAccount[0].name
@@ -234,6 +235,7 @@ function saveChanges(){
    currentStudentAccount[0].cv= editStudentProfileInputs.cv
    currentStudentAccount[0].pic=editStudentProfileInputs.profilePicture
    getTechXpRelations()
+   currentStudentAccount[0].userType="pendingStudentProfile"
    model.app.page="studentProfile"
    
  updateView()
