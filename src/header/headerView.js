@@ -84,7 +84,7 @@ function companyHeader() {
         <a>Studenter</a>
         <ul class="dropdown-menu">
           <button class="list-button-dropdown" onclick="goToStudentSearchFilter()">Filter søk</button>
-          <button class="list-button-dropdown" onclick="goToStudentSewarchMap()">Kart søk</button>
+          <button class="list-button-dropdown" onclick="goToStudentSearchMap()">Kart søk</button>
         </ul>
       </li>
       <button class="list-button" onclick="logout()">Logg ut</button>
