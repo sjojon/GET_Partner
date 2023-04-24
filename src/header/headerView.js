@@ -10,7 +10,7 @@ function updateHeader() {
       return adminHeader();
     } else if (currentUser.userType === 'company') {
       return companyHeader();
-    } else if (currentUser.userType === 'student'){
+    } else if (currentUser.userType === 'student' || 'pendingStudentProfile') {
       return studentHeader();
     }
   }
