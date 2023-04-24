@@ -91,7 +91,7 @@ function showChangedProfile() {
                 </a>
             </div>
         </div>
-        <div><button onclick="acceptProfileChange()">Godkjenn</button></div>
+        <div><button onclick="acceptProfileChange(x.id)">Godkjenn</button></div>
     </div>
     `;
 }

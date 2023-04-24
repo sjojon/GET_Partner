@@ -81,9 +81,15 @@ const model = {
             { id: 7, name: 'Student2', password: 'passord', userType: 'student', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" }
         ],
 
-        pendingProfileChanges: [
-            { id: 7, name: 'Student2', password: 'passord', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
-        ],
+        pendingProfileChanges: {
+            accounts: [
+                { id: 7, name: 'Student2', password: 'passord', userType: 'pendingStudentProfile', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
+            ],
+
+            techXpRelations: [
+
+            ],
+        },
 
         techXpRelations: [
             { accountId: 2, technologyId: 1 },
