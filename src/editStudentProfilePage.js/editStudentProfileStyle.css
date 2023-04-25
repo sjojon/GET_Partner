@@ -93,6 +93,7 @@
 .erfaringDiv{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .box{
     border: 2px black solid;
