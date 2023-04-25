@@ -48,7 +48,21 @@ function acceptProfileChange(id) {
     updateView();
 }
 
-function backToAdminPage() {
-    model.app.page = 'adminDash';
+function denyProfileChanges(id) {
+    for (let i = 0; i <= pending.length; i++) {
+        if (id === pending[i].id) {
+            pending[i].userType = 'student';
+            pending.splice(i, 1);
+        }
+    }
+
+    let newFilter = newTechXpRelations.filter(x => x.accountId === id);
+    newFilter.forEach(x => {
+        let newIndex = newTechXpRelations.indexOf(x);
+        newTechXpRelations.splice(newIndex, 1);
+    });
+
+    updateAdminCounter();
+    model.app.page = 'acceptPendingProfilePage';
     updateView();
 }
