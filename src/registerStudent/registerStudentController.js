@@ -2,6 +2,7 @@ let allInputsWrittenBoolean=false
 let bothPasswordsMatchBoolean=false
 let registerInputValues=[]
 let newMadeAccount= model.data.accounts
+// let errorMessage;
 function showPassword(input){
     
         if (input.checked==true&&switchInputType=="password") {
@@ -21,13 +22,15 @@ function showPassword(input){
 function allInputsWritten(){
    registerInputValues= Object.values(registerNewStAccount)
    if (registerInputValues.includes("")) {
-    alert("Du må fylle inn alle felt")
+    errorMessage="Du må fylle inn alle felt"
+    updateView()
    } 
    else{
     if (!registerNewStAccount.email.includes("@")){
-        alert("Du må skrive riktig e-mail")
+        errorMessage="Du må skrive riktig e-mail"
+        updateView()
     } else{
-        return allInputsWrittenBoolean=true
+        return true
     }
     
    } 
@@ -35,15 +38,17 @@ function allInputsWritten(){
 }
 function bothPasswordsMatch(){
     if (registerNewStAccount.password==registerNewStAccount.repeatedPassword) {
-        return bothPasswordsMatchBoolean=true
-    } else{alert("Gjentatt passord samsvarer ikke med passord.")}
+        return true
+    } else{errorMessage="Gjentatt passord samsvarer ikke med passord."
+    updateView()
+}
     
 }
 /*save new profile*/
 function saveProfile(){
-    allInputsWritten()
-    bothPasswordsMatch()
-    if (bothPasswordsMatchBoolean==true&&allInputsWrittenBoolean==true) {
+    
+    
+    if (allInputsWritten()&&bothPasswordsMatch()) {
         let newStudentAccountId= findAvailableAccountId()
         newMadeAccount.push({
             id:newStudentAccountId,
@@ -54,7 +59,8 @@ function saveProfile(){
             gitHub: '', pic: '', cv: '', 
             counter: 0,importantInfo: '',
              interests: '', address: '', location:''})
-        alert("Profil opprettet. Brukernavn: "+ registerNewStAccount.name +" Passord: " + registerNewStAccount.password)
+       alert("Profil opprettet. Brukernavn: "+ registerNewStAccount.name +" Passord: " + registerNewStAccount.password)
+        updateView()
         clearInputFiles()
         
     }
@@ -62,8 +68,10 @@ function saveProfile(){
 
 function clearInputFiles(){
     Object.keys(registerNewStAccount).forEach(function(key){ registerNewStAccount[key] = "" });
-        bothPasswordsMatchBoolean=false
-        allInputsWrittenBoolean=false
+        // bothPasswordsMatchBoolean=false
+        // allInputsWrittenBoolean=false
+            errorMessage=""
+       
 
       updateView() 
     }
