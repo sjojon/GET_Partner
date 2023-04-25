@@ -55,7 +55,7 @@ function login() {
                     model.data.currentUser.id=accountsToBeChecked[key].id
                     break;  
                 case "company":
-                    model.app.page = "studentBrowseSearch"
+                    model.app.page = "companyLandingPage"
                     model.app.isLoggedIn = true
                     model.data.currentUser.id=accountsToBeChecked[key].id
                     break;

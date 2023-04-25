@@ -10,6 +10,9 @@
     left: 50%;
     transform: translateX(-50%);
 
+}
+
+#companyPageInner {
     display: grid;
     grid-template-areas:
         'left right'
@@ -20,9 +23,18 @@
 }
 
 #getPartnerInfo {
+    font-weight: 500;
+    font-size: 24px;
     grid-area: left;
 }
 
 #companyPageMapContainer {
     grid-area: right;
+}
+
+#companyLandingPageSearchLink {
+    font-size: 16px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }
