@@ -194,3 +194,8 @@ function goToAdminDash() {
   model.app.page = 'adminDash';
   updateView();
 }
+
+function goToStudentBrowseSearch() {
+  model.app.page = 'studentBrowseSearch';
+  updateView();
+}

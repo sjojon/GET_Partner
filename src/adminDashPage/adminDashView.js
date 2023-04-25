@@ -28,12 +28,8 @@ function adminDashView() {
           </div>
         <div class="adminDash-box-outer4">
           <div id="adminDash-button-grid-box4">
-            <button class="adminDash-button-box4" onclick="goToHome()">Hjem</button>
-            <button class="adminDash-button-box4" onclick="goToLogin()">Login</button>
-            <button class="adminDash-button-box4" onclick="goToRegisterCompanyCompleted()">Registrering godkjent</button>
-            <button class="adminDash-button-box4" onclick="goToBrowseStudentSearch()">Søk på studenter</button>
-            <button class="adminDash-button-box4" onclick="goToEditStudentProfile()">Rediger student profil (debug)</button>
-            <button class="adminDash-button-box4" onclick="goToStudentProfile()">Se student profil</button>
+            <button class="adminDash-button-box4" onclick="goToStudentBrowseSearch()">Se student profiler</button>
+            <button class="adminDash-button-box4" onclick="goToHome()">Se alle bedrifter (debug)</button>
           </div>
         </div>
     </div>
