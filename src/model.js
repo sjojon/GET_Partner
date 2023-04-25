@@ -71,6 +71,7 @@ const model = {
             { id: 4, name: 'Nidar', password: 'passord', userType: 'pendingCompany', contactPerson: 'Jens Bakkeskam', email: 'jens@nidar.no', orgNr: '101666102' },
             { id: 5, name: 'Freia', password: 'passord', userType: 'pendingCompany', contactPerson: 'Odin van Gjøken', email: 'odin@freia.no', orgNr: '110123001' },
             { id: 6, name: 'Komplett', password: 'passord', userType: 'pendingCompany', contactPerson: 'Gjøran Han Gjør', email: 'gjøran@komplett.no', orgNr: '110012241' },
+            { id: 7, name: 'Student2', password: 'passord', userType: 'student', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
             { id: 8, name: 'Student3', password: 'passord', userType: 'student', email: 'student3@mail.com', gitHub: 'github.com/dummyaccount3/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 52, importantInfo: 'A menneske', interests: 'fiske', address: 'Skien Telemark', location: 'Vestfold og Telemark' },
             { id: 9, name: 'Student4', password: 'passord', userType: 'student', email: 'student4@mail.com', gitHub: 'github.com/dummyaccount4/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 35, importantInfo: 'A menneske', interests: 'kode, gaming', address: 'Grensegata 1 Porsgrunn', location: 'Vestfold og Telemark' },
             { id: 10, name: 'Student5', password: 'passord', userType: 'student', email: 'student5@mail.com', gitHub: 'github.com/dummyaccount5/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 45, importantInfo: 'A menneske', interests: 'ingenting', address: 'Karl Johans gate 7', location: 'Oslo' },
@@ -78,7 +79,6 @@ const model = {
             { id: 12, name: 'Student7', password: 'passord', userType: 'student', email: 'student7@mail.com', gitHub: 'github.com/dummyaccount7/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 22, importantInfo: 'B menneske', interests: 'trene', address: 'Finnmark', location: 'Troms og Finnmark fylke' },
             { id: 13, name: 'Student8', password: 'passord', userType: 'student', email: 'student8@mail.com', gitHub: 'github.com/dummyaccount8/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 24, importantInfo: 'B menneske', interests: 'lage god mat fra bunn av', address: 'Studentersamfundet Trondheim', location: 'Trøndelag' },
             { id: 14, name: 'Student9', password: 'passord', userType: 'student', email: 'student9@mail.com', gitHub: 'github.com/dummyaccount9/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 12, importantInfo: 'B menneske', interests: 'jakte hjortedyr', address: 'Hemsedal', location: 'Viken' },
-            { id: 7, name: 'Student2', password: 'passord', userType: 'student', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
             { id: 15, name: 'StudentVest', password: 'passord', userType: 'student', email: 'studentVest@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 11, importantInfo: 'C menneske', interests: 'elsker å kjøre båt', address: 'Bryggen Bergen', location: "Vestland" },
             { id: 16, name: 'StudentNord', password: 'passord', userType: 'student', email: 'studentNord@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 36, importantInfo: 'A menneske', interests: 'steke vafler', address: 'Å Lofoten', location: "Nordland" }
         ],
@@ -118,11 +118,11 @@ const model = {
             { accountId: 13, technologyId: 5 },
             { accountId: 13, technologyId: 9 },
             { accountId: 14, technologyId: 6 },
-            { accountId: 15, technologyId: 12},
-            { accountId: 15, technologyId: 21},
-            { accountId: 16, technologyId: 1},
-            { accountId: 16, technologyId: 13},
-            { accountId: 16, technologyId: 14},
+            { accountId: 15, technologyId: 12 },
+            { accountId: 15, technologyId: 21 },
+            { accountId: 16, technologyId: 1 },
+            { accountId: 16, technologyId: 13 },
+            { accountId: 16, technologyId: 14 },
         ],
 
         techXp: [
