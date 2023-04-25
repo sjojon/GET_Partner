@@ -105,7 +105,7 @@ function registerCompanyCompletedView() {
             Takk for registreringen! <br> Du får en epost når vi har bekreftet informasjonen
         </div>
         <div id="completed-button">
-            <button onclick="goToHome()">OnLick</button>
+            <button onclick="model.app.page=login, updateView()">OnLick</button>
         </div>
     </div>
     `
