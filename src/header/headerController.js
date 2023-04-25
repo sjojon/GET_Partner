@@ -47,6 +47,6 @@ function goToStudentSearchFilter() {
 
 //tar deg til map søk
 function goToStudentSearchMap() {
-  model.app.page = ''
+  model.app.page = 'companyLandingPage'
   updateView();
 }

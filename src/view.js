@@ -43,6 +43,10 @@ function updatePage() {
       countTotalStudents();
       html = studentBrowseSearchView();
       break;
+    case 'companyLandingPage':
+      countTotalStudents();
+      html = companyLandingPageView();
+      break;
     case 'studentBrowse':
       html = studentBrowseView();
       break;

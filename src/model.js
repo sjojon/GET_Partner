@@ -77,8 +77,10 @@ const model = {
             { id: 11, name: 'Student6', password: 'passord', userType: 'student', email: 'student6@mail.com', gitHub: 'github.com/dummyaccount6/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 51, importantInfo: 'X menneske', interests: 'være lat', address: 'Holmenkollen Oslo', location: 'Oslo' },
             { id: 12, name: 'Student7', password: 'passord', userType: 'student', email: 'student7@mail.com', gitHub: 'github.com/dummyaccount7/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 22, importantInfo: 'B menneske', interests: 'trene', address: 'Finnmark', location: 'Troms og Finnmark fylke' },
             { id: 13, name: 'Student8', password: 'passord', userType: 'student', email: 'student8@mail.com', gitHub: 'github.com/dummyaccount8/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 24, importantInfo: 'B menneske', interests: 'lage god mat fra bunn av', address: 'Studentersamfundet Trondheim', location: 'Trøndelag' },
-            { id: 14, name: 'Student9', password: 'passord', userType: 'student', email: 'student9@mail.com', gitHub: 'github.com/dummyaccount9/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 12, importantInfo: 'B menneske', interests: 'jakte hjortedyr', address: 'Skien Telemark', location: 'Vestfold og Telemark' },
-            { id: 7, name: 'Student2', password: 'passord', userType: 'student', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" }
+            { id: 14, name: 'Student9', password: 'passord', userType: 'student', email: 'student9@mail.com', gitHub: 'github.com/dummyaccount9/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 12, importantInfo: 'B menneske', interests: 'jakte hjortedyr', address: 'Hemsedal', location: 'Viken' },
+            { id: 7, name: 'Student2', password: 'passord', userType: 'student', email: 'student2@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 25, importantInfo: 'A menneske', interests: 'liker natur', address: 'Iver Jernskjeggs vei 3', location: "Vestfold og Telemark" },
+            { id: 15, name: 'StudentVest', password: 'passord', userType: 'student', email: 'studentVest@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 11, importantInfo: 'C menneske', interests: 'elsker å kjøre båt', address: 'Bryggen Bergen', location: "Vestland" },
+            { id: 16, name: 'StudentNord', password: 'passord', userType: 'student', email: 'studentNord@mail.com', gitHub: 'github.com/dummyaccount2/', pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Pqhsyl0AMubS8TOtQ-obqHiDb2NfeqnKxw&usqp=CAU', cv: 'cv.com/cv', counter: 36, importantInfo: 'A menneske', interests: 'steke vafler', address: 'Å Lofoten', location: "Nordland" }
         ],
 
         pendingProfileChanges: {
@@ -116,6 +118,11 @@ const model = {
             { accountId: 13, technologyId: 5 },
             { accountId: 13, technologyId: 9 },
             { accountId: 14, technologyId: 6 },
+            { accountId: 15, technologyId: 12},
+            { accountId: 15, technologyId: 21},
+            { accountId: 16, technologyId: 1},
+            { accountId: 16, technologyId: 13},
+            { accountId: 16, technologyId: 14},
         ],
 
         techXp: [

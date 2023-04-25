@@ -4,6 +4,7 @@ let countCompanies = 0;
 let countPendingCompany = 0;
 let countAdmins = 0;
 let countProfileChange = 0;
+
 for (let account of model.data.accounts) {
   if (account.userType === 'student') {
     countStudents++;
@@ -13,7 +14,11 @@ for (let account of model.data.accounts) {
     countPendingCompany++;
   } else if (account.userType === 'admin') {
     countAdmins++;
-  } else if (account.userType === 'pendingStudentProfile') {
+  }
+}
+
+for (let account of model.data.pendingProfileChanges.accounts) {
+    if (account.userType === 'pendingStudentProfile') {
     countProfileChange++;
   }
 }

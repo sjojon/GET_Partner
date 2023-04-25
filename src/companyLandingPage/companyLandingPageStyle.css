@@ -1,0 +1,40 @@
+#companyPageWrapper {
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+    width: 800px;
+
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#companyPageInner {
+    display: grid;
+    grid-template-areas:
+        'left right'
+        ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 35px 40px;
+    margin: 25px;
+}
+
+#getPartnerInfo {
+    font-weight: 500;
+    font-size: 24px;
+    grid-area: left;
+}
+
+#companyPageMapContainer {
+    grid-area: right;
+}
+
+#companyLandingPageSearchLink {
+    font-size: 16px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

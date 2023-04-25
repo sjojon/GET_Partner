@@ -3,7 +3,7 @@ function studentBrowseView() {
     let student = findAccountById(model.inputs.studentSearchPage.studentId) //DUMMY
 
     model.data.mapsState.mapToShow = true;
-    model.data.mapsState.studentAccountToShow = 2; //Sett til studentens id
+    model.data.mapsState.studentAccountToShow = student.id; //Sett til studentens id
     return /*HTML*/`
     <div class="student-outer">
         <div class="student-inner">
