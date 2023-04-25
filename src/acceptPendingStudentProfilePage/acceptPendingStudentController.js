@@ -43,7 +43,6 @@ function acceptProfileChange(id) {
         return a.accountId - b.accountId;
     });
 
-    updateAdminCounter();
     model.app.page = 'acceptPendingProfilePage';
     updateView();
 }
@@ -62,7 +61,6 @@ function denyProfileChanges(id) {
         newTechXpRelations.splice(newIndex, 1);
     });
 
-    updateAdminCounter();
     model.app.page = 'acceptPendingProfilePage';
     updateView();
 }

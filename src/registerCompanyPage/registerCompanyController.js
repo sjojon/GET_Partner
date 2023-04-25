@@ -56,6 +56,5 @@ function createCompany() {
 
     model.data.accounts.push(newCompany);
     model.app.page = 'registerCompanyCompleted';
-    updateAdminCounter();
 }
 

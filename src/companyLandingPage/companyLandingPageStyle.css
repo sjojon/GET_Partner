@@ -24,8 +24,9 @@
 
 #getPartnerInfo {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     grid-area: left;
+    margin-right: 12px;
 }
 
 #companyPageMapContainer {
@@ -33,7 +34,7 @@
 }
 
 #companyLandingPageSearchLink {
-    font-size: 16px;
+    font-size: 14px;
     color: blue;
     text-decoration: underline;
     cursor: pointer;
