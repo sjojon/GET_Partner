@@ -11,14 +11,14 @@ function loginView() {
                 Brukernavn:
                 </div>
             </div>
-                <input type="text" value="${loginPage.username}" onchange="loginPage.username=this.value">
+                <input type="text" value="${loginPage.username}" onchange="loginPage.username=this.value" onchange="login()">
 
             <div class="text-box">
                 <div class="text-over-box">
                 Passord:
                 </div>
             </div>
-                    <input type="${passwordInput}" value="${loginPage.password}" oninput="loginPage.password=this.value" onkeydown = " if (event.keyCode == 13) login()">
+                    <input type="${passwordInput}" value="${loginPage.password}" oninput="loginPage.password=this.value" onkeydown = " if (event.keyCode == 13) login()" onchange="login()">
 
             <div id="checkbox-box">
             <div class="text-over-box">
