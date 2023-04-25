@@ -8,7 +8,7 @@ function companyLandingPageView() {
             <div id="getPartnerInfo">
                 <h2>Velkommen til GET-partner!</h2>
                 <p>Ved hjelp av GET-partner finner du akkurat de studentene du trenger til bedriften din.</p> 
-                <p>GET sine studenter bor over hele landet, og du finner kontaktinformasjonen deres ved hjelp av verktøyet.</p>
+                <p>GET sine studenter bor over hele landet, og du finner kontaktinformasjonen deres ved hjelp av dette verktøyet.</p>
                 <p id="companyLandingPageSearchLink" onclick="goToStudentSearchFilter()">Søk etter studenter</p>
             </div>    
             <div id="companyPageMapContainer">
