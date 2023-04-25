@@ -1,6 +1,6 @@
 //logger bruker ut
 function logout() {
-  model.app.page = 'home';
+  model.app.page = 'login';
   model.app.isLoggedIn = false;
   model.data.currentUser.id = 0;
   updateHeader();
