@@ -12,7 +12,7 @@ function registerStudentView() {
             </h3>
             <div class="text-box-rsv">
                 <div class="text-over-box-rsv">
-                    Navn:
+                    Brukernavn:
                 </div>
             </div>
             <input 
