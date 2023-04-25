@@ -118,11 +118,11 @@ const model = {
             { accountId: 13, technologyId: 5 },
             { accountId: 13, technologyId: 9 },
             { accountId: 14, technologyId: 6 },
-            { accountId: 15, technologyId: 12 },
-            { accountId: 15, technologyId: 21 },
-            { accountId: 16, technologyId: 1 },
-            { accountId: 16, technologyId: 13 },
-            { accountId: 16, technologyId: 14 },
+            { accountId: 15, technologyId: 12},
+            { accountId: 15, technologyId: 21},
+            { accountId: 16, technologyId: 1},
+            { accountId: 16, technologyId: 13},
+            { accountId: 16, technologyId: 14},
         ],
 
         techXp: [

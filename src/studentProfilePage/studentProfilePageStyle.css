@@ -1,0 +1,16 @@
+.boxProfile{
+    border: 2px black solid;
+    background-color: white;
+    width: 900px;
+    padding-left: 25px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 600px;
+    background-color: #ffffff;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d7d9e3;
+}
