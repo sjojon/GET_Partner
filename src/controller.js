@@ -199,3 +199,4 @@ function goToStudentBrowseSearch() {
   model.app.page = 'studentBrowseSearch';
   updateView();
 }
+
