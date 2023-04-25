@@ -247,7 +247,7 @@ function saveChanges(){
 //    disableingTool="disabled"
 //    currentStudentAccount[0].userType="pendingStudentProfile"
    model.app.page="studentProfile"
-   
+updateAdminCounter()
  updateView()
  clearInputs()
 
