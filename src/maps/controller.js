@@ -28,13 +28,15 @@ function initMap() {//Send inn studentlocations array slik at vi kan se enkeltvi
     geocoder = new google.maps.Geocoder();
 
     markers = [];
+    iteratedStudents = [];
     let studentAccountToShow = model.data.mapsState.studentAccountToShow;
 
     if (studentAccountToShow == 'all') {
       studentCount = model.data.totalStudents;
       for (i in model.data.accounts) {
         if (model.data.accounts[i].userType == 'student') {
-          geocode({address: model.data.accounts[i].address})
+          iteratedStudents.push(model.data.accounts[i].id);
+          geocode({address: model.data.accounts[i].address}, model.data.accounts[i].id);
         }
       };
     }
@@ -42,7 +44,7 @@ function initMap() {//Send inn studentlocations array slik at vi kan se enkeltvi
     else { //Vi har en spesifikk studentId
       studentCount = 1;
       const givenAccount = findAccountById(studentAccountToShow);
-      geocode({address: givenAccount.address})
+      geocode({address: givenAccount.address}, studentAccountToShow)
     }
 
     // Add a feature layer for localities.
@@ -121,7 +123,7 @@ function updateInfoWindow(content, center) {
   });
 };
 
-function geocode(request) {
+function geocode(request, id) {
   geocoder.geocode(request)
     .then((result) => {
       const { results } = result;
@@ -145,6 +147,14 @@ function geocode(request) {
       const newMarker =  new google.maps.Marker({
         position: parsedLocation,
         map: map,
+      });
+
+      newMarker.addListener('click', function(){
+        console.log('clicked maps marker');
+        console.log(findAccountById(id));
+        model.inputs.studentSearchPage.studentId = id;
+        model.app.page = 'studentBrowse';
+        updateView();
       });
 
       markers.push(newMarker);
