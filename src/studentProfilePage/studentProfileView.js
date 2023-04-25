@@ -27,10 +27,6 @@ function studentProfileView(){
     <p  class="ptag">${profileInfo[0].email}</p>
     </div>
     <div class="oneInputContainerProfile">
-    <label for="navn" class="info-element-editStudent infoTitle">Nytt passord:</label> 
-    <p  class="ptag">${profileInfo[0].password}</p>
-    </div>
-    <div class="oneInputContainerProfile">
     <label for="navn" class="info-element-editStudent infoTitle">Interesser:</label> 
     <p  class="ptag">${profileInfo[0].interests}</p>
     </div>
