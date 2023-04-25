@@ -60,6 +60,7 @@ function updatePage() {
       html = acceptCompanyView();
       break;
     case 'adminDash':
+      updateAdminCounter();
       html = adminDashView();
       break;
     case 'showChangedProfile':
