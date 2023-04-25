@@ -1,5 +1,6 @@
-function editStudentProfileView(){
-    assignAvailableInfo()
+editStudentProfileInputs = model.inputs.editStudentProfile;
+function editStudentProfileView() {
+    assignAvailableInfo();
     return /*html*/`
     <div class="pageMinusHeader-editStudent">
     <div class="box">
@@ -63,6 +64,6 @@ function editStudentProfileView(){
        </div>
    </div>
    </div>
-    `
-} 
+    `;
+}
 
