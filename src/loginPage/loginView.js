@@ -11,14 +11,14 @@ function loginView() {
                 Brukernavn:
                 </div>
             </div>
-                <input type="text" value="${loginPage.username}" oninput="loginPage.username=this.value" onkeydown = " if (event.keyCode == 13) login()">
+                <input type="text" value="${loginPage.username}" oninput="loginPage.username=this.value" onkeydown = " if (event.keyCode == 13) document.getElementById('passwordField').focus()">
 
             <div class="text-box">
                 <div class="text-over-box">
                 Passord:
                 </div>
             </div>
-                    <input type="${passwordInput}" value="${loginPage.password}" oninput="loginPage.password=this.value" onkeydown = " if (event.keyCode == 13) login()">
+                    <input id="passwordField" type="${passwordInput}" value="${loginPage.password}" oninput="loginPage.password=this.value" onkeydown = " if (event.keyCode == 13) login()">
 
             <div id="checkbox-box">
             <div class="text-over-box">
