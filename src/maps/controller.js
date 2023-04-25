@@ -8,60 +8,60 @@ let studentCount;
 
 // Initialize and add the map
 function initMap() {//Send inn studentlocations array slik at vi kan se enkeltvis for andre profiler
-    
 
-    // The map, centered at Norway
-    map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: centerOfNorway,
-      mapId: 'bd0c37776b4d0d83',
-      //mapTypeId: 'roadmap',
-      zoomControl: true,
-      mapTypeControl: false,
-      scaleControl: false,
-      streetViewControl: false,
-      rotateControl: false,
-      fullscreenControl: false
-    });
 
-    // Add geocoder
-    geocoder = new google.maps.Geocoder();
+  // The map, centered at Norway
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: centerOfNorway,
+    mapId: 'bd0c37776b4d0d83',
+    //mapTypeId: 'roadmap',
+    zoomControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    fullscreenControl: false
+  });
 
-    markers = [];
-    iteratedStudents = [];
-    let studentAccountToShow = model.data.mapsState.studentAccountToShow;
+  // Add geocoder
+  geocoder = new google.maps.Geocoder();
 
-    if (studentAccountToShow == 'all') {
-      studentCount = model.data.totalStudents;
-      for (i in model.data.accounts) {
-        if (model.data.accounts[i].userType == 'student') {
-          iteratedStudents.push(model.data.accounts[i].id);
-          geocode({address: model.data.accounts[i].address}, model.data.accounts[i].id);
-        }
-      };
-    }
+  markers = [];
+  iteratedStudents = [];
+  let studentAccountToShow = model.data.mapsState.studentAccountToShow;
 
-    else { //Vi har en spesifikk studentId
-      studentCount = 1;
-      const givenAccount = findAccountById(studentAccountToShow);
-      geocode({address: givenAccount.address}, studentAccountToShow)
-    }
+  if (studentAccountToShow == 'all') {
+    studentCount = model.data.totalStudents;
+    for (i in model.data.accounts) {
+      if (model.data.accounts[i].userType == 'student') {
+        iteratedStudents.push(model.data.accounts[i].id);
+        geocode({ address: model.data.accounts[i].address }, model.data.accounts[i].id);
+      }
+    };
+  }
 
-    // Add a feature layer for localities.
-    featureLayer = map.getFeatureLayer('ADMINISTRATIVE_AREA_LEVEL_1');
-    //const municipalityLayer = map.getFeatureLayer('ADMINISTRATIVE_AREA_LEVEL_2'); redefiner featureLayer likesågreit!
-    // Add the event listener for the feature layer.
-    featureLayer.addListener("click", handlePlaceClick);
-    applyStyleToSelected();
+  else { //Vi har en spesifikk studentId
+    studentCount = 1;
+    const givenAccount = findAccountById(studentAccountToShow);
+    geocode({ address: givenAccount.address }, studentAccountToShow);
+  }
 
-    infoWindow = new google.maps.InfoWindow({});
+  // Add a feature layer for localities.
+  featureLayer = map.getFeatureLayer('ADMINISTRATIVE_AREA_LEVEL_1');
+  //const municipalityLayer = map.getFeatureLayer('ADMINISTRATIVE_AREA_LEVEL_2'); redefiner featureLayer likesågreit!
+  // Add the event listener for the feature layer.
+  featureLayer.addListener("click", handlePlaceClick);
+  applyStyleToSelected();
+
+  infoWindow = new google.maps.InfoWindow({});
 };
 
 // Stroke and fill with minimum opacity value.
 const styleDefault = {
-  strokeColor: "#810FCB",
-  strokeOpacity: 1.0,
-  strokeWeight: 2.0,
+  strokeColor: "#1239ff",
+  strokeOpacity: 0.3,
+  strokeWeight: 1.0,
   fillColor: "white",
   fillOpacity: 0.1, // Polygons must be visible to receive click events.
 };
@@ -69,7 +69,7 @@ const styleDefault = {
 // Style for the clicked Administrative Area Level 1 polygon.
 const styleClicked = {
   ...styleDefault,
-  fillColor: "#810FCB",
+  fillColor: "#1239ff",
   fillOpacity: 0.5,
 };
 
@@ -90,7 +90,7 @@ async function handlePlaceClick(event) {
   // Add the info window. Se click events dokumentasjon
   let content =
     '<span style="font-size:small">Fylke: ' +
-    county + 
+    county +
     "<br/> Antall studenter: " +
     model.data.countiesStudentCount[county] +
     "</span>";
@@ -104,13 +104,13 @@ function applyStyleToSelected(placeid) {
     // Style fill and stroke for a polygon.
     if (placeid && options.feature.placeId == placeid) { //Ifølge maps api dokumentasjonen trenger vi ikke filtrere på Norge, siden den vil kun trykke på fylker som allerede er rammet inn.
       return styleClicked;
-      
+
     }
     // Style only the stroke for the entire feature type.
     if (Object.values(countiesPlaceId).includes(options.feature.placeId)) {
       return styleDefault;
     }
-    
+
   };
 };
 
@@ -139,17 +139,17 @@ function geocode(request, id) {
       }*/
 
       const viewport = results[0].geometry.viewport;
-      tempLng = (viewport.La.hi + viewport.La.lo)/2;
-      tempLat = (viewport.eb.hi + viewport.eb.lo)/2; //Denne breaka en gang fordi google valgte å bytte fra fb til eb XD
+      tempLng = (viewport.La.hi + viewport.La.lo) / 2;
+      tempLat = (viewport.eb.hi + viewport.eb.lo) / 2; //Denne breaka en gang fordi google valgte å bytte fra fb til eb XD
 
-      const parsedLocation = {lat: tempLat, lng: tempLng};
+      const parsedLocation = { lat: tempLat, lng: tempLng };
 
-      const newMarker =  new google.maps.Marker({
+      const newMarker = new google.maps.Marker({
         position: parsedLocation,
         map: map,
       });
 
-      newMarker.addListener('click', function(){
+      newMarker.addListener('click', function () {
         console.log('clicked maps marker');
         console.log(findAccountById(id));
         model.inputs.studentSearchPage.studentId = id;
@@ -161,7 +161,7 @@ function geocode(request, id) {
       if (markers.length == studentCount) {
         const markerCluster = new markerClusterer.MarkerClusterer({ markers, map });
       }
-      
+
       //console.log(results)
       return results;
     })
@@ -183,7 +183,7 @@ const averageLatitude = 64.57;
 const averageLongitude = 17.82;
 
 //const centerOfNorway = { lat: 65.400113, lng: 12.896478};
-const centerOfNorway = { lat: averageLatitude+1, lng: averageLongitude-2.5};
+const centerOfNorway = { lat: averageLatitude + 1, lng: averageLongitude - 2.5 };
 
 
 const countiesPlaceId = {
@@ -227,20 +227,20 @@ const countiesZoomLevel = {
   'Trøndelag': 6,
   'Nordland': 5,
   'Troms og Finnmark fylke': 5,
-}
+};
 
 const countiesCenterCoordinates = { //Sparer på api-kall
-  'Agder': {lat: 58.696484, lng: 7.736577},
-  'Rogaland': {lat: 59.160225, lng: 5.905729},
-  'Vestland': {lat: 61.037559, lng: 6.136326},
-  'Møre og Romsdal': {lat: 62.609717, lng: 7.345671},
-  'Innlandet': {lat: 61.654627, lng: 10.018519},
-  'Viken': {lat: 60.000262, lng: 10.049301},
-  'Oslo': {lat: 60.526252, lng: 10.286417},
-  'Vestfold og Telemark': {lat: 59.438294, lng: 8.778853},
-  'Trøndelag': {lat: 63.995328, lng: 10.733980},
-  'Nordland': {lat: 66.758829, lng: 14.037535},
-  'Troms og Finnmark fylke': {lat: 69.767556, lng: 23.126765},
+  'Agder': { lat: 58.696484, lng: 7.736577 },
+  'Rogaland': { lat: 59.160225, lng: 5.905729 },
+  'Vestland': { lat: 61.037559, lng: 6.136326 },
+  'Møre og Romsdal': { lat: 62.609717, lng: 7.345671 },
+  'Innlandet': { lat: 61.654627, lng: 10.018519 },
+  'Viken': { lat: 60.000262, lng: 10.049301 },
+  'Oslo': { lat: 60.526252, lng: 10.286417 },
+  'Vestfold og Telemark': { lat: 59.438294, lng: 8.778853 },
+  'Trøndelag': { lat: 63.995328, lng: 10.733980 },
+  'Nordland': { lat: 66.758829, lng: 14.037535 },
+  'Troms og Finnmark fylke': { lat: 69.767556, lng: 23.126765 },
 }
 
 /*
