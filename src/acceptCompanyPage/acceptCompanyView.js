@@ -5,24 +5,25 @@ function acceptCompanyView() {
             ${emptyListOrNot()}
         </div>
     </div>    
-    `}
+    `;
+}
 
 function emptyListOrNot() {
-    let companies = model.data.accounts.allAccounts.filter(obj => obj.userType === 'pendingCompany')
+    let companies = model.data.accounts.filter(obj => obj.userType === 'pendingCompany');
     if (companies.length > 0) {
-        return createCompanyList()
+        return createCompanyList();
     } else {
         return /*html*/`
         Ingen bedrifter som venter.
-        `
+        `;
 
     }
 }
 
 function createCompanyList() {
     let html = '';
-    let companies = model.data.accounts.allAccounts.filter(
-        obj => obj.userType === 'pendingCompany')
+    let companies = model.data.accounts.filter(
+        obj => obj.userType === 'pendingCompany');
 
     for (let i = 0; i < companies.length; i++) {
         const company = companies[i];
@@ -50,7 +51,7 @@ function createCompanyList() {
                 </div>
                 
             </div>
-            `
+            `;
     }
-    return html
+    return html;
 }
