@@ -111,5 +111,10 @@ function showLoginPagePassword(input) {
     console.log(model.app.page)
 }
 
+function register(){
+    model.app.page= "registerCompany"
+    updateView()
+}
+
 
 
