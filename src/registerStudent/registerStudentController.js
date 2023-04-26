@@ -1,7 +1,7 @@
 let allInputsWrittenBoolean = false;
 let bothPasswordsMatchBoolean = false;
 let registerInputValues = [];
-let newMadeAccount = model.data.accounts;
+// let newMadeAccount = model.data.accounts;
 // let errorMessage;
 function showPassword(input) {
 
@@ -51,7 +51,7 @@ function saveProfile() {
 
     if (allInputsWritten() && bothPasswordsMatch()) {
         let newStudentAccountId = findAvailableAccountId();
-        newMadeAccount.push({
+       model.data.accounts.push({
             id: newStudentAccountId,
             name: registerNewStAccount.name,
             password: registerNewStAccount.password,

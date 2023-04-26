@@ -1,6 +1,6 @@
 let invalid = '';
 let passwordInput = "password";
-let loginPage = model.inputs.login;
+// let model.inputs.login = model.inputs.login;
 
 function loginView() {
     return /*HTML*/ `
@@ -11,14 +11,14 @@ function loginView() {
                 Brukernavn:
                 </div>
             </div>
-                <input type="text" value="${loginPage.username}" oninput="loginPage.username=this.value" onkeydown = " if (event.keyCode == 13) document.getElementById('passwordField').focus()">
+                <input type="text" value="${model.inputs.login.username}" oninput="model.inputs.login.username=this.value" onkeydown = " if (event.keyCode == 13) document.getElementById('passwordField').focus()">
 
             <div class="text-box">
                 <div class="text-over-box">
                 Passord:
                 </div>
             </div>
-                    <input id="passwordField" type="${passwordInput}" value="${loginPage.password}" oninput="loginPage.password=this.value" onkeydown = " if (event.keyCode == 13) login()">
+                    <input id="passwordField" type="${passwordInput}" value="${model.inputs.login.password}" oninput="model.inputs.login.password=this.value" onkeydown = " if (event.keyCode == 13) login()">
 
             <div id="checkbox-box">
             <div class="text-over-box">

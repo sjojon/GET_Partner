@@ -1,4 +1,4 @@
-editStudentProfileInputs = model.inputs.editStudentProfile;
+// model.inputs.editStudentProfile = model.inputs.editStudentProfile;
 function editStudentProfileView() {
     assignAvailableInfo();
     return /*html*/`
@@ -9,39 +9,39 @@ function editStudentProfileView() {
     <div class="fillDiv1">
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Navn:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.name}" onchange="editStudentProfileInputs.name=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.name}" onchange="model.inputs.editStudentProfile.name=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Bosted:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.address}" onchange="editStudentProfileInputs.address=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.address}" onchange="model.inputs.editStudentProfile.address=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Fylke:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.location}" onchange="editStudentProfileInputs.location=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.location}" onchange="model.inputs.editStudentProfile.location=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">E-post:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.email}" onchange="editStudentProfileInputs.email=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.email}" onchange="model.inputs.editStudentProfile.email=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Nytt passord:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.password}" onchange="editStudentProfileInputs.password=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.password}" onchange="model.inputs.editStudentProfile.password=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Bekreft nytt passord:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.repeatedPassword}" onchange="editStudentProfileInputs.repeatedPassword=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.repeatedPassword}" onchange="model.inputs.editStudentProfile.repeatedPassword=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Interesser:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.interests}" onchange="editStudentProfileInputs.interests=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.interests}" onchange="model.inputs.editStudentProfile.interests=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Hva er viktig at bedrifter vet om deg?:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.importantInfo}" onchange="editStudentProfileInputs.importantInfo=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.importantInfo}" onchange="model.inputs.editStudentProfile.importantInfo=this.value">
     </div>
     <div class="oneInputContainer">
     <label for="navn" class="info-element-editStudent">Github link:</label> 
-    <input type="text" name="navn" class="input-element-editStudent" value="${editStudentProfileInputs.gitHub}" onchange="editStudentProfileInputs.gitHub=this.value">
+    <input type="text" name="navn" class="input-element-editStudent" value="${model.inputs.editStudentProfile.gitHub}" onchange="model.inputs.editStudentProfile.gitHub=this.value">
     </div>
     </div>
     <div class="fillDiv2">
@@ -51,7 +51,7 @@ function editStudentProfileView() {
     <div class="erfaringDiv">${kodeErfaring}</div>
     <p class="element-editStudent">Profilbilde:</p>
     <div class="ImageContainer">
-    <img src=${editStudentProfileInputs.profilePicture} alt="" class="profilePicture">
+    <img src=${model.inputs.editStudentProfile.profilePicture} alt="" class="profilePicture">
     <input type="file" id="fileInput" class="uploadInputs" onchange="changeImg(this)">
     </div>
     <p class="element-editStudent">CV:</p>

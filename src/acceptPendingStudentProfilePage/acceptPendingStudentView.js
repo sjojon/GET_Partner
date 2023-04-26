@@ -1,4 +1,4 @@
-const pendingStudentAccounts = model.data.pendingProfileChanges.accounts;
+// const model.data.pendingProfileChanges.accounts = model.data.pendingProfileChanges.accounts;
 let student;
 
 function acceptPendingStudentView() {
@@ -13,8 +13,8 @@ function acceptPendingStudentView() {
 }
 
 function isStudentProfilePendingListEmpty() {
-    // const acceptStudent = pendingStudentAccounts;
-    if (pendingStudentAccounts.length === 0) {
+    // const acceptStudent = model.data.pendingProfileChanges.accounts;
+    if (model.data.pendingProfileChanges.accounts.length === 0) {
         return /*HTML*/ `
         <div>
         Ingen oppdateringer tilgjengelig!
@@ -28,9 +28,9 @@ function isStudentProfilePendingListEmpty() {
 
 function pendingStudentList() {
     html = '';
-    // const acceptStudent = pendingStudentAccounts;
-    for (let i = 0; i < pendingStudentAccounts.length; i++) {
-        student = pendingStudentAccounts[i];
+    // const acceptStudent = model.data.pendingProfileChanges.accounts;
+    for (let i = 0; i < model.data.pendingProfileChanges.accounts.length; i++) {
+        student = model.data.pendingProfileChanges.accounts[i];
         html += /*html*/ `
         <div class="studentEditDiv">
             <div class ="studentDiv">
