@@ -37,10 +37,11 @@ function pendingStudentList() {
                 ${student.name} 
             </div>
             <div class="studentButton">
-                <button onclick="handleProfileInfo(student.id)">Se endring</button>
+                <button onclick="handleProfileInfo(${student.id})">Se endring</button>
             </div>
         </div>
         `;
+        console.log(i);
     }
     return html;
 }
