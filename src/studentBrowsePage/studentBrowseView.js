@@ -2,7 +2,7 @@ const search = model.inputs.studentSearchPage.search
 let currentFilters = []
 let searchParameters = createSearchParameters()
 let filteredParameters
-let studentArray = createStudentArray()
+let studentArray
 
 model.inputs.studentSearchPage.filteredStudentIds
 
@@ -13,6 +13,7 @@ function createSearchParameters() {
 }
 
 function studentBrowseSearchView() {
+    studentArray = createStudentArray()
     return /*HTML*/`
     <div id="student-parent">   
         <div id="student-browse-outer">
