@@ -137,10 +137,10 @@ function geocode(request, id) {
         tempLat = (bounds.La.hi + bounds.La.lo)/2;
         tempLng = (bounds.fb.hi + bounds.fb.lo)/2;
       }*/
-
+      
       const viewport = results[0].geometry.viewport;
-      tempLng = (viewport.La.hi + viewport.La.lo) / 2;
-      tempLat = (viewport.eb.hi + viewport.eb.lo) / 2; //Denne breaka en gang fordi google valgte å bytte fra fb til eb XD
+      tempLng = (viewport.Ka.hi + viewport.Ka.lo) / 2;
+      tempLat = (viewport.fb.hi + viewport.fb.lo) / 2; //Denne breaka en gang fordi google valgte å bytte fra fb til eb XD
 
       const parsedLocation = { lat: tempLat, lng: tempLng };
 
