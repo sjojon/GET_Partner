@@ -76,9 +76,14 @@ const styleClicked = {
 async function handlePlaceClick(event) {
   let feature = event.features[0];
 
-  let county = event.features[0].m;
+  let placeId = feature.placeId
+  //console.log(event);
+  //console.log(feature.placeId)
 
-  if (!feature.placeId) return;
+  //let county = event.features[0].m;
+  const county = placeIdCounties[placeId];
+
+  if (!placeId) return;
 
   map.setCenter(countiesCenterCoordinates[county]);
   map.setZoom(countiesZoomLevel[county]);
@@ -197,8 +202,22 @@ const countiesPlaceId = {
   'Vestfold og Telemark': 'ChIJVfIRGaRaR0YReuL0C6KfSvw',
   'Trøndelag': 'ChIJvTic8NUzbUYRflObX3-sL_0',
   'Nordland': 'ChIJU1QPxFM-30URIB3dD6sIAgM',
-  'Troms og Finnmark': 'ChIJhwjlWeowz0URUqTmfXklFw8',
+  'Troms og Finnmark fylke': 'ChIJhwjlWeowz0URUqTmfXklFw8',
 };
+
+const placeIdCounties = { //Google-oppdatering :)))
+  'ChIJD0JSTvhPOEYR8vitVnMQwW0': 'Agder',
+  'ChIJC9fcKj81OkYRvMAMC7ocBuA': 'Rogaland',
+  'ChIJv16rc8s5FkYROwJbXfdDQg0': 'Vestland',
+  'ChIJWcLG1x1UEUYRWmPHRZ1TRJ4': 'Møre og Romsdal',
+  'ChIJi7dNxCDIakYRGiV44hMlmp8': 'Innlandet',
+  'ChIJcU9uGtfvQEYRag4KtVvjDxo': 'Viken',
+  'ChIJvRIImcJtQUYReQpUuAPqbBA': 'Oslo',
+  'ChIJVfIRGaRaR0YReuL0C6KfSvw': 'Vestfold og Telemark',
+  'ChIJvTic8NUzbUYRflObX3-sL_0': 'Trøndelag',
+  'ChIJU1QPxFM-30URIB3dD6sIAgM': 'Nordland',
+  'ChIJhwjlWeowz0URUqTmfXklFw8': 'Troms og Finnmark fylke'
+}
 
 /* Testdata
 const countiesStudentCount = {
